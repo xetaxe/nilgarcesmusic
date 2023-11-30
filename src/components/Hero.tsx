@@ -1,6 +1,6 @@
 import { BackgroundImage } from '@/components/BackgroundImage'
 import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
+import { Container } from '@/components/layout/Container'
 
 export function Hero() {
   return (

@@ -5,7 +5,7 @@ import { Tab } from '@headlessui/react'
 import clsx from 'clsx'
 
 import { BackgroundImage } from '@/components/BackgroundImage'
-import { Container } from '@/components/Container'
+import { Container } from '@/components/layout/Container'
 
 interface Day {
   date: React.ReactNode

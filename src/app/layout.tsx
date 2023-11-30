@@ -18,12 +18,8 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: {
-    template: '%s - DeceptiConf',
-    default: 'DeceptiConf - A community-driven design conference',
-  },
-  description:
-    'At DeceptiConf you’ll learn about the latest dark patterns being developed to trick even the smartest visitors, and you’ll learn how to deploy them without ever being detected.',
+  title: "Nil Garcés music",
+  description: "Music page of Nil Garcés. Solo guitar compositions to heal your soul"
 }
 
 export default function RootLayout({
