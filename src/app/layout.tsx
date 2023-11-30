@@ -1,10 +1,10 @@
-import { type Metadata } from 'next'
-import { DM_Sans, Inter } from 'next/font/google'
-import clsx from 'clsx'
-
 import '@/styles/tailwind.css'
 
-const dmSans = DM_Sans({
+import { type Metadata } from 'next'
+import { DM_Sans } from 'next/font/google'
+
+
+const font = DM_Sans({
   subsets: ['latin'],
   weight: ['400', '500', '700'],
   display: 'swap',
@@ -16,12 +16,13 @@ export const metadata: Metadata = {
   description: "Music page of Nil Garcés. Solo guitar compositions to heal your soul"
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }:{ children: React.ReactNode }) {
   return (
-    <html lang="en" className={`h-full bg-white antialiased ${dmSans.className}`}
-    >
+    <html lang="en" className={`h-full bg-white antialiased ${font.className}`}>
       <body className="flex min-h-full">
-        <div className="flex w-full flex-col">{children}</div>
+        <div className="flex w-full flex-col">
+          {children}
+        </div>
       </body>
     </html>
   )

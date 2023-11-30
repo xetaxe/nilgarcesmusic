@@ -191,11 +191,11 @@ export function Speakers() {
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2
             id="speakers-title"
-            className="font-display text-4xl font-medium tracking-tighter text-blue-600 sm:text-5xl"
+            className=" text-4xl font-medium tracking-tighter text-blue-600 sm:text-5xl"
           >
             Speakers
           </h2>
-          <p className="mt-4 font-display text-2xl tracking-tight text-blue-900">
+          <p className="mt-4  text-2xl tracking-tight text-blue-900">
             Learn from the experts on the cutting-edge of deception at the most
             sinister companies.
           </p>
@@ -280,7 +280,7 @@ export function Speakers() {
                         />
                       </div>
                     </div>
-                    <h3 className="mt-8 font-display text-xl font-bold tracking-tight text-slate-900">
+                    <h3 className="mt-8  text-xl font-bold tracking-tight text-slate-900">
                       {speaker.name}
                     </h3>
                     <p className="mt-1 text-base tracking-tight text-slate-500">

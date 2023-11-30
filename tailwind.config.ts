@@ -24,9 +24,6 @@ export default {
         '4xl': '2rem',
         '5xl': '2.5rem',
       },
-      fontFamily: {
-        // display: 'var(--font-dm-sans)',
-      },
       maxWidth: {
         '2xl': '40rem',
       },
