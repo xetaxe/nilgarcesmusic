@@ -4,12 +4,6 @@ import clsx from 'clsx'
 
 import '@/styles/tailwind.css'
 
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-inter',
-})
-
 const dmSans = DM_Sans({
   subsets: ['latin'],
   weight: ['400', '500', '700'],
@@ -22,19 +16,9 @@ export const metadata: Metadata = {
   description: "Music page of Nil Garcés. Solo guitar compositions to heal your soul"
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      lang="en"
-      className={clsx(
-        'h-full bg-white antialiased',
-        inter.variable,
-        dmSans.variable,
-      )}
+    <html lang="en" className={`h-full bg-white antialiased ${dmSans.className}`}
     >
       <body className="flex min-h-full">
         <div className="flex w-full flex-col">{children}</div>

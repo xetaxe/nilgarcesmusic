@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      {/* <Speakers /> */}
+      <Speakers />
       <Schedule />
       <Sponsors />
       <Newsletter />
