@@ -31,6 +31,9 @@ export default {
         logo: {
           400: '#2d1f12',
         },
+        bg: {
+          400: '#f1f0ee',
+        },
       }
     },
   },

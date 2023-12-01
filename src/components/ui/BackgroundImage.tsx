@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import clsx from 'clsx'
 
-import backgroundImage from '@/images/background2.jpg'
+import backgroundImage from '@/images/background.jpg'
 
 export function BackgroundImage({
   className,
@@ -13,23 +13,24 @@ export function BackgroundImage({
   return (
     <div
       className={clsx(
-        'absolute inset-0 overflow-hidden bg-indigo-50',
+        // 'absolute inset-0 overflow-hidden bg-indigo-50',
+        'absolute inset-0 overflow-hidden bg-bg-400',
         className,
       )}
     >
       <Image
-        // className={clsx(
-        //   'absolute top-0',
-        //   position === 'left' &&
-        //     'left-0 translate-x-[-55%] translate-y-[-10%] -scale-x-100 sm:left-1/2 sm:translate-x-[-98%] sm:translate-y-[-6%] lg:translate-x-[-106%] xl:translate-x-[-122%]',
-        //   position === 'right' &&
-        //     'left-full -translate-x-1/2 sm:left-1/2 sm:translate-x-[-20%] sm:translate-y-[-15%] md:translate-x-0 lg:translate-x-[5%] lg:translate-y-[4%] xl:translate-x-[27%] xl:translate-y-[-8%]',
-        // )}
+        className={clsx(
+          'absolute top-0',
+          // position === 'left' &&
+          //   'left-0 translate-x-[-55%] translate-y-[-10%] -scale-x-100 sm:left-1/2 sm:translate-x-[-98%] sm:translate-y-[-6%] lg:translate-x-[-106%] xl:translate-x-[-122%]',
+          // position === 'right' &&
+          //   'left-full -translate-x-1/2 sm:left-1/2 sm:translate-x-[-20%] sm:translate-y-[-15%] md:translate-x-0 lg:translate-x-[5%] lg:translate-y-[4%] xl:translate-x-[27%] xl:translate-y-[-8%]',
+        )}
         src={backgroundImage}
         alt=""
-        // width={918}
-        // height={1495}
-        fill
+        width={918}
+        height={1495}
+        // fill
         priority
         unoptimized
       />

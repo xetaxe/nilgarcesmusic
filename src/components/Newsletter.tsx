@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 import { Button } from '@/components/ui/Button'
 import { Container } from '@/components/layout/Container'
-import backgroundImage from '@/images/background-newsletter.jpg'
+import backgroundImage from '@/images/background2.jpg'
 
 function ArrowRightIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
