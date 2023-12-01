@@ -1,6 +1,6 @@
 import { Container } from '@/components/layout/Container'
-import { Logo } from '@/components/Logo'
-import { logoFont } from '@/app/fonts'
+import { Logo } from '@/components/ui/Logo'
+import { logoFont } from '@/styles/fonts'
 
 export function Header() {
   return (

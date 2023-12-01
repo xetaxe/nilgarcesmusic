@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import { Tab } from '@headlessui/react'
 import clsx from 'clsx'
 
-import { BackgroundImage } from '@/components/BackgroundImage'
+import { BackgroundImage } from '@/components/ui/BackgroundImage'
 import { Container } from '@/components/layout/Container'
 
 interface Day {

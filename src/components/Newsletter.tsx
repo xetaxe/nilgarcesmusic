@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import { Button } from '@/components/Button'
+import { Button } from '@/components/ui/Button'
 import { Container } from '@/components/layout/Container'
 import backgroundImage from '@/images/background-newsletter.jpg'
 

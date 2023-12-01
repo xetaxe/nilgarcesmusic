@@ -6,7 +6,6 @@ import { Tab } from '@headlessui/react'
 import clsx from 'clsx'
 
 import { Container } from '@/components/layout/Container'
-import { DiamondIcon } from '@/components/DiamondIcon'
 import andrewGreeneImage from '@/images/avatars/andrew-greene.jpg'
 import cathleneBurrageImage from '@/images/avatars/cathlene-burrage.jpg'
 import damarisKimuraImage from '@/images/avatars/damaris-kimura.jpg'
@@ -212,14 +211,6 @@ export function Speakers() {
                 <>
                   {days.map((day, dayIndex) => (
                     <div key={day.dateTime} className="relative lg:pl-8">
-                      <DiamondIcon
-                        className={clsx(
-                          'absolute left-[-0.5px] top-[0.5625rem] hidden h-1.5 w-1.5 overflow-visible lg:block',
-                          dayIndex === selectedIndex
-                            ? 'fill-blue-600 stroke-blue-600'
-                            : 'fill-transparent stroke-slate-400',
-                        )}
-                      />
                       <div className="relative">
                         <div
                           className={clsx(

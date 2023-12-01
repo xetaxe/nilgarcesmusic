@@ -1,7 +1,7 @@
 import '@/styles/tailwind.css'
 
 import { type Metadata } from 'next'
-import { font } from './fonts'
+import { font } from '../styles/fonts'
 
 
 export const metadata: Metadata = {
