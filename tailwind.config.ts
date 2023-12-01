@@ -27,6 +27,11 @@ export default {
       maxWidth: {
         '2xl': '40rem',
       },
+      colors: {
+        logo: {
+          400: '#2d1f12',
+        },
+      }
     },
   },
   

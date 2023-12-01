@@ -3,13 +3,17 @@ import { Logo } from '@/components/Logo'
 
 export function Footer() {
   return (
-    <footer className="flex-none py-16">
+    <footer className="flex-none py-6 text-logo-400">
       <Container className="flex flex-col items-center justify-between md:flex-row">
-        <Logo className="h-12 w-auto text-slate-900" />
-        <p className="mt-6 text-base text-slate-500 md:mt-0">
-          Copyright &copy; {new Date().getFullYear()} DeceptiConf, LLC. All
-          rights reserved.
-        </p>
+        <span>
+          &copy; Nil Garcés
+        </span>
+        <span className="flex items-center gap-2">
+          <a href="">IG</a>
+          <a href="">FB</a>
+          <a href="">YT</a>
+          <a href="">SP</a>
+        </span>
       </Container>
     </footer>
   )
