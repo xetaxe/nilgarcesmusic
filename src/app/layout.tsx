@@ -1,15 +1,8 @@
 import '@/styles/tailwind.css'
 
 import { type Metadata } from 'next'
-import { DM_Sans } from 'next/font/google'
+import { font } from './fonts'
 
-
-const font = DM_Sans({
-  subsets: ['latin'],
-  weight: ['400', '500', '700'],
-  display: 'swap',
-  variable: '--font-dm-sans',
-})
 
 export const metadata: Metadata = {
   title: "Nil Garcés music",
