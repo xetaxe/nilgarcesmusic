@@ -35,6 +35,16 @@ export default {
           200: '#fcf9fc',
           400: '#d1dfe8',
         },
+      },
+      keyframes: {
+        fadein: {
+          "0%": { transform: 'translateY(-20px)', opacity: '0' },
+          "20%": { opacity: '0'},
+          "100%": { transform: 'translateY(0)', opacity: '1' }
+        }
+      },
+      animation: {
+        fadein: 'fadein 2.5s ease-in-out',
       }
     },
   },

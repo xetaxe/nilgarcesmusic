@@ -4,6 +4,7 @@ import Image from 'next/image'
 
 import backgroundImage from '@/images/background.jpg'
 import MobileMenu from './MobileMenu'
+import { Button } from './ui/Button'
 
 export function Hero() {
   return (
@@ -42,7 +43,7 @@ export function Hero() {
             priority
             unoptimized
           />
-          <div className="absolute top-[10%] left-[49%] sm:left-[55%] lg:top-[20%] lg:left-1/2 text-right">
+          <div className="absolute top-[10%] left-[49%] sm:left-[55%] lg:top-[20%] lg:left-1/2 text-right animate-fadein">
             <svg aria-hidden="true" viewBox="0 0 360 72" height="64" width="348" className={`hidden lg:block ${logoFont.className} text-6xl`}>
               <text x="0" y="48" style={{fill: "#2d1f12"}}>
                 El fred i la primavera
@@ -56,21 +57,21 @@ export function Hero() {
                 i la primavera
               </text>
             </svg>
-            <a href="https://open.spotify.com/intl-es/album/7rV5S7qfyVeDpGZsfrzo1c?si=IjH70tsBT8-4Xrs4-GLYdQ" target="_blank" className="hidden lg:inline-block mt-4 bg-logo-400 text-white px-4 py-2 rounded-lg cursor-pointer">
+            <Button href="https://open.spotify.com/intl-es/album/7rV5S7qfyVeDpGZsfrzo1c?si=IjH70tsBT8-4Xrs4-GLYdQ" target="_blank" className="hidden lg:inline-block mt-4">
               Escolta'l a Spotify
               <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" className="ml-1 inline-block">
                 <path fill="#fff" d="m553.846-253.847-42.153-43.384 152.77-152.77H180.001v-59.998h484.462l-152.77-152.77 42.153-43.384L779.999-480 553.846-253.847Z"/>
               </svg>
-            </a>
+              </Button>
           </div>
 
-          <div className="w-full px-4 lg:hidden absolute bottom-[12.5%] lg:left-1/2 text-center">
-            <a href="https://open.spotify.com/intl-es/album/7rV5S7qfyVeDpGZsfrzo1c?si=IjH70tsBT8-4Xrs4-GLYdQ" target="_blank" className="inline-block w-full max-w-sm mt-4 bg-logo-400 text-white px-4 py-2 rounded-lg text-lg cursor-pointer">
+          <div className="w-full px-4 lg:hidden absolute bottom-[12.5%] lg:left-1/2 text-center animate-fadein">
+            <Button href="https://open.spotify.com/intl-es/album/7rV5S7qfyVeDpGZsfrzo1c?si=IjH70tsBT8-4Xrs4-GLYdQ" target="_blank" className="inline-block w-full max-w-sm mt-4">
               Escolta'l a Spotify
               <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" className="ml-2 inline-block">
                 <path fill="#fff" d="m553.846-253.847-42.153-43.384 152.77-152.77H180.001v-59.998h484.462l-152.77-152.77 42.153-43.384L779.999-480 553.846-253.847Z"/>
               </svg>
-            </a>
+              </Button>
           </div>
 
           <div className="absolute inset-x-0 h-20 bg-gradient-to-b from-[#d1dfe8]" />
