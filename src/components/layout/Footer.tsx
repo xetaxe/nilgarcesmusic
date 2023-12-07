@@ -4,7 +4,7 @@ import { Logo } from '@/components/ui/Logo'
 export function Footer() {
   return (
     <footer className="flex-none py-6 text-logo-400">
-      <Container className="flex flex-col items-center justify-between md:flex-row">
+      <Container className="flex items-center justify-between flex-row">
         <span>
           &copy; Nil Garcés
         </span>
