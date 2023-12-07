@@ -32,6 +32,7 @@ export default {
           400: '#2d1f12',
         },
         bg: {
+          200: '#fcf9fc',
           400: '#d1dfe8',
         },
       }
