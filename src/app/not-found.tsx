@@ -1,11 +1,11 @@
-import { BackgroundImage } from '@/components/ui/BackgroundImage'
+// import { BackgroundImage } from '@/components/ui/BackgroundImage'
 import { Button } from '@/components/ui/Button'
 import { Container } from '@/components/layout/Container'
 
 export default function NotFound() {
   return (
     <div className="relative flex h-full items-center py-20 sm:py-36">
-      <BackgroundImage className="-top-36 bottom-0" />
+      {/* <BackgroundImage className="-top-36 bottom-0" /> */}
       <Container className="relative flex w-full flex-col items-center">
         <p className=" text-2xl tracking-tight text-blue-900">
           404

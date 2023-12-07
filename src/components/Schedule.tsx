@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import { Tab } from '@headlessui/react'
 import clsx from 'clsx'
 
-import { BackgroundImage } from '@/components/ui/BackgroundImage'
+// import { BackgroundImage } from '@/components/ui/BackgroundImage'
 import { Container } from '@/components/layout/Container'
 
 interface Day {
@@ -321,7 +321,7 @@ export function Schedule() {
         </div>
       </Container>
       <div className="relative mt-14 sm:mt-24">
-        <BackgroundImage position="right" className="-bottom-32 -top-40" />
+        {/* <BackgroundImage position="right" className="-bottom-32 -top-40" /> */}
         <Container className="relative">
           <ScheduleTabbed />
           <ScheduleStatic />
