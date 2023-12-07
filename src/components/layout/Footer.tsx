@@ -1,5 +1,4 @@
 import { Container } from '@/components/layout/Container'
-import { Logo } from '@/components/ui/Logo'
 
 export function Footer() {
   return (
