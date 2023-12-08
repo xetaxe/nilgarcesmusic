@@ -1,16 +1,27 @@
 import { Button } from '@/components/ui/Button'
 import { Container } from '@/components/layout/Container'
 import Image from 'next/image'
-import backgroundImage from '@/images/background2.jpg'
+import backgroundLeft from '@/images/left.jpg'
+import backgroundRight from '@/images/right.jpg'
 
 export default function NotFound() {
   return (
     <div className="relative flex h-full items-center py-20 sm:py-36">
-      <div className="absoluteinset-x-0 bottom-10 overflow-hidden">
+      <div className="absolute inset-y-0 left-0 right-0 sm:right-1/2 overflow-hidden">
         <Image
           className= "absolute object-cover object-top"
-          src={backgroundImage}
-          alt="El fred i la primavera cover image"
+          src={backgroundLeft}
+          alt="Marge esquerre"
+          fill
+          priority
+          unoptimized
+        />
+      </div>
+      <div className="hidden sm:block absolute inset-y-0 left-1/2 right-0 overflow-hidden">
+        <Image
+          className= "absolute object-cover object-top"
+          src={backgroundRight}
+          alt="Marge dret"
           fill
           priority
           unoptimized
@@ -20,7 +31,7 @@ export default function NotFound() {
         <p className=" text-2xl tracking-tight text-blue-900">
           404
         </p>
-        <h1 className="mt-4  text-4xl font-medium tracking-tighter text-logo-400 sm:text-5xl">
+        <h1 className="mt-4 text-4xl font-medium tracking-tighter text-logo-400 sm:text-5xl text-center">
           La pàgina no existeix
         </h1>
         <Button href="/" className="mt-8">
