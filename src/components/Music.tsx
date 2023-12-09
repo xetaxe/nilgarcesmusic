@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 import { Container } from '@/components/layout/Container'
 import { EpisodePlayButton } from './music/EpisodePlayButton'
-import { type Episode, getAllEpisodes } from '@/lib/episodes'
+import { type Episode, getAllEpisodes } from '@/assets/episodes'
 import { AudioProvider } from '@/components/music/AudioProvider'
 import { AudioPlayer } from '@/components/music/player/AudioPlayer'
 import posterImage from '@/assets/img/captura_subtil.jpg'
