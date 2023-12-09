@@ -1,9 +1,28 @@
+export type Song =       {
+  number: number,
+  title: string,
+  engTitle?: string,
+  link: string,
+  download: string,
+  sheet?: string,
+}
+
+export type Album = {
+  title: string,
+  catDescription: string,
+  engDescription: string,
+  img: string,
+  spotifyLink: string,
+  youtubeLink: string,
+  songs: Song[]
+}
+
 export const musicLinks = [
   {
     title: "Captura subtil",
     catDescription: "Primer disc, publicat el 2016. Cada cançó va acompanyada d'un poema.",
     engDescription: "",
-    img: "./img/captura_subtil.jpg",
+    img: "/captura_subtil.jpg",
     spotifyLink: "https://open.spotify.com/intl-es/album/3kw6YVcxOHF78yoStWeFGV?si=CUCczvHQTyi-toGwUFgFiw",
     youtubeLink: "https://www.youtube.com/watch?v=4l1vCxnO8D4",
     songs: [

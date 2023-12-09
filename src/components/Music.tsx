@@ -1,3 +1,5 @@
+"use client"
+
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -9,6 +11,8 @@ import { AudioProvider } from '@/components/music/AudioProvider'
 import { AudioPlayer } from '@/components/music/player/AudioPlayer'
 import posterImage from '@/assets/img/captura_subtil.jpg'
 import { SpotifyIcon, YoutubeIcon } from '@/assets/icons'
+import { type Song, musicLinks } from '@/assets/musicLinks'
+import { useState } from 'react'
 
 function PauseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -26,34 +30,34 @@ function PlayIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
-function EpisodeEntry({ episode }: { episode: Episode }) {
+function SongEntry({ song }: { song: Song }) {
 
   return (
     <div
-      aria-labelledby={`episode-${episode.id}-title`}
+      aria-labelledby={`episode-${song.number}-title`}
       className="py-2"
     >
       <Container>
         <div className="flex flex-col lg:flex-row items-start lg:items-center">
           <h2
-            id={`episode-${episode.id}-title`}
+            id={`episode-${song.number}-title`}
             className="mt-2 text-lg font-bold text-slate-900"
           >
             <div className="flex gap-2">
-              <EpisodePlayButton
-                episode={episode}
+              {/* <EpisodePlayButton
+                song={song}
                 className="flex items-center gap-x-3 text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900"
                 playing={ <PauseIcon className="h-2.5 w-2.5 fill-current" /> }
                 paused={ <PlayIcon className="h-2.5 w-2.5 fill-current" /> }
-              />
-              {episode.title}
+              /> */}
+              {song.number}. {song.title}
             </div>
           </h2>
           <div className="mt-2 lg:mt-0 flex items-center gap-4">
             <Link
-              href={`/${episode.id}`}
+              href={`/${song.link}`}
               className="flex items-center text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900"
-              aria-label={`Show notes for episode ${episode.title}`}
+              aria-label={`Show notes for episode ${song.title}`}
             >
               Descarrega
             </Link>
@@ -64,9 +68,9 @@ function EpisodeEntry({ episode }: { episode: Episode }) {
               /
             </span>
             <Link
-              href={`/${episode.id}`}
+              href={`/${song.number}`}
               className="flex items-center text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900"
-              aria-label={`Show notes for episode ${episode.title}`}
+              aria-label={`Show notes for episode ${song.title}`}
             >
               Partitura
             </Link>
@@ -78,8 +82,8 @@ function EpisodeEntry({ episode }: { episode: Episode }) {
 }
 
 export async function Music() {
-
-  let episodes = await getAllEpisodes()
+  
+  const [currentAlbum, setCurrentAlbum] = useState(0);
   
   return (
     <AudioProvider>
@@ -98,7 +102,7 @@ export async function Music() {
               >
                 <Image
                   className="w-full"
-                  src={posterImage}
+                  src={ musicLinks[currentAlbum].img }
                   alt=""
                   fill
                   priority
@@ -107,10 +111,10 @@ export async function Music() {
               </span>
               <div className="mt-10 text-center lg:mt-12 lg:text-left">
                 <p className="text-xl font-bold text-slate-900">
-                  Captura subtil
+                  { musicLinks[currentAlbum].title }
                 </p>
                 <p className="mt-3 text-lg font-medium leading-8 text-slate-700">
-                  Primer disc, publicat el 2016. Cada cançó va acompanyada d'un poema.
+                  { musicLinks[currentAlbum].catDescription }
                 </p>
               </div>
               <section className="mt-4">
@@ -118,23 +122,28 @@ export async function Music() {
                   role="list"
                   className="mt-4 flex justify-center gap-10 text-base font-medium leading-7 text-slate-700 sm:gap-8 lg:gap-4"
                 >
-                  {(
-                    [
-                      ['Spotify', SpotifyIcon],
-                      ['Youtube', YoutubeIcon],
-                    ] as const
-                  ).map(([label, Icon]) => (
-                    <li key={label} className="flex">
-                      <Link
-                        href="/"
-                        className="group flex items-center"
-                        aria-label={label}
-                      >
-                        <Icon className="h-8 w-8 fill-slate-400 group-hover:fill-slate-600" />
-                        <span className="ml-3">{label}</span>
-                      </Link>
-                    </li>
-                  ))}
+                  <li className="flex">
+                    <Link
+                      href={musicLinks[currentAlbum].spotifyLink}
+                      className="group flex items-center"
+                      aria-label="spotify"
+                      target="_blank"
+                    >
+                      <SpotifyIcon className="h-8 w-8 fill-slate-400 group-hover:fill-slate-600" />
+                      <span className="ml-3">Spotify</span>
+                    </Link>
+                  </li>
+                  <li className="flex">
+                    <Link
+                      href={musicLinks[currentAlbum].youtubeLink}
+                      className="group flex items-center"
+                      aria-label="youtube"
+                      target="_blank"
+                    >
+                      <YoutubeIcon className="h-8 w-8 fill-slate-400 group-hover:fill-slate-600" />
+                      <span className="ml-3">Youtube</span>
+                    </Link>
+                  </li>
                 </ul>
               </section>
             </div>
@@ -148,8 +157,8 @@ export async function Music() {
                   </h1>
                 </Container>
                 <div className="divide-y divide-slate-100 mt-2 lg:mt-4 lg:border-t lg:border-slate-100">
-                  {episodes.map((episode) => (
-                    <EpisodeEntry key={episode.id} episode={episode} />
+                  {musicLinks[currentAlbum].songs.map((song) => (
+                    <SongEntry key={song.number} song={song} />
                   ))}
                 </div>
               </div>
