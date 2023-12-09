@@ -4,9 +4,9 @@ import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 
 const solutions = [
+  { name: 'MÚSICA', href: '#music' },
   { name: 'BIO', href: '#bio' },
-  { name: 'MÚSICA', href: '#musica' },
-  { name: 'CONTACTE', href: '#contacte' },
+  { name: 'CONTACTE', href: '#contact' },
 ]
 
 export default function MobileMenu() {

@@ -90,7 +90,9 @@ export async function Music() {
   
   return (
     <AudioProvider>
-      <div id="musica" className="bg-bg-200 w-full pt-6">
+      <section id="music" className="bg-bg-200 w-full">
+        <div className="bg-bg-200 py-10 sm:py-20 bg-gradient-to-b from-[#d1dfe8] sc">
+        </div>
         <h1 className="mx-auto max-w-7xl font-bold text-2xl text-center">
           Música
         </h1>
@@ -164,7 +166,7 @@ export async function Music() {
             <AudioPlayer />
           </div>
         </Container>
-      </div>
+      </section>
     </AudioProvider>
   )
 }

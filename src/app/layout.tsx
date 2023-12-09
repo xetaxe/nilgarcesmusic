@@ -5,7 +5,7 @@ import { font } from '../styles/fonts'
 
 
 export const metadata: Metadata = {
-  title: "Nil Garcés music",
+  title: "Nil Garcés - MUSIC",
   description: "Music page of Nil Garcés. Solo guitar compositions to heal your soul"
 }
 

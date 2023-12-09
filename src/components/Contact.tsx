@@ -4,7 +4,7 @@ import { Container } from './layout/Container'
 
 export function Contact() {
   return (
-    <section id="contacte" className="bg-white py-6 text-center">
+    <section id="contact" className="bg-white py-6 text-center">
       <Container>
         <h1 className="mx-auto max-w-7xl font-bold text-2xl text-center">
           Contacte
@@ -18,7 +18,7 @@ export function Contact() {
             </span>
           </p>
           <p className="py-4">
-            O qualsevol de les meves xarxes socials
+            O qualsevol de les xarxes socials
           </p>
         </div>
       </Container>

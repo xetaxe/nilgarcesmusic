@@ -20,8 +20,8 @@ export function Hero() {
           </a>
         </div>
         <div className="hidden mt-3 pr-12 sm:flex lg:grow lg:basis-0 lg:justify-end text-lg gap-8 font-medium">
-          <a href="#bio" className="text-logo-400">BIO</a>
           <a href="#music" className="text-logo-400">MÚSICA</a>
+          <a href="#bio" className="text-logo-400">BIO</a>
           <a href="#contact" className="text-logo-400">CONTACTE</a>
         </div>
         <span className="hidden sm:inline-block absolute top-9 right-3 basis-0">
