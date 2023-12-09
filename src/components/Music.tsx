@@ -1,4 +1,3 @@
-import { Fragment } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -6,19 +5,14 @@ import Image from 'next/image'
 import { Container } from '@/components/layout/Container'
 import { EpisodePlayButton } from './music/EpisodePlayButton'
 import { type Episode, getAllEpisodes } from '@/lib/episodes'
-import { AboutSection } from '@/components/music/AboutSection'
 import { AudioProvider } from '@/components/music/AudioProvider'
 import { AudioPlayer } from '@/components/music/player/AudioPlayer'
-import posterImage from '@/images/captura_subtil.jpg'
+import posterImage from '@/assets/img/captura_subtil.jpg'
 
 function PauseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg aria-hidden="true" viewBox="0 0 10 10" {...props}>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M1.496 0a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5H2.68a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5H1.496Zm5.82 0a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5H8.5a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5H7.316Z"
-      />
+      <path fillRule="evenodd" clipRule="evenodd" d="M1.496 0a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5H2.68a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5H1.496Zm5.82 0a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5H8.5a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5H7.316Z" />
     </svg>
   )
 }
@@ -32,15 +26,14 @@ function PlayIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 }
 
 function EpisodeEntry({ episode }: { episode: Episode }) {
-  let date = new Date(episode.published)
 
   return (
-    <article
+    <div
       aria-labelledby={`episode-${episode.id}-title`}
-      className="py-4"
+      className="py-2"
     >
       <Container>
-        <div className="flex flex-col items-start">
+        <div className="flex flex-col lg:flex-row items-start lg:items-center">
           <h2
             id={`episode-${episode.id}-title`}
             className="mt-2 text-lg font-bold text-slate-900"
@@ -55,7 +48,7 @@ function EpisodeEntry({ episode }: { episode: Episode }) {
               {episode.title}
             </div>
           </h2>
-          <div className="mt-4 flex items-center gap-4">
+          <div className="mt-2 lg:mt-0 flex items-center gap-4">
             <Link
               href={`/${episode.id}`}
               className="flex items-center text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900"
@@ -79,7 +72,7 @@ function EpisodeEntry({ episode }: { episode: Episode }) {
           </div>
         </div>
       </Container>
-    </article>
+    </div>
   )
 }
 
@@ -91,13 +84,16 @@ function SpotifyIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
-export default async function Music() {
+export async function Music() {
 
   let episodes = await getAllEpisodes()
   
   return (
     <AudioProvider>
-      <div id="musica" className="bg-bg-200 w-full">
+      <div id="musica" className="bg-bg-200 w-full pt-6">
+        <h1 className="mx-auto max-w-7xl font-bold text-2xl text-center">
+          Música
+        </h1>
         <Container className="mx-auto max-w-7xl flex flex-col sm:flex-row justify-center">
           <div className="bg-slate-50 sm:basis-80 md:basis-96 lg:items-start lg:overflow-y-auto xl:basis-120">
             <div className="z-10 flex flex-col mx-auto px-4 py-8 lg:border-slate-200">
@@ -122,7 +118,7 @@ export default async function Music() {
                   Primer disc, publicat el 2016. Cada cançó va acompanyada d'un poema.
                 </p>
               </div>
-              <section className="mt-4 sm:mt-8">
+              <section className="mt-4">
                 <ul
                   role="list"
                   className="mt-4 flex justify-center gap-10 text-base font-medium leading-7 text-slate-700 sm:gap-8 lg:gap-4"
@@ -156,7 +152,7 @@ export default async function Music() {
                     Cançons
                   </h1>
                 </Container>
-                <div className="divide-y divide-slate-100 sm:mt-4 lg:mt-8 lg:border-t lg:border-slate-100">
+                <div className="divide-y divide-slate-100 mt-2 lg:mt-4 lg:border-t lg:border-slate-100">
                   {episodes.map((episode) => (
                     <EpisodeEntry key={episode.id} episode={episode} />
                   ))}

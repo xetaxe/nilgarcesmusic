@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import nilGarcesImage from '@/images/nilgarces.jpg'
+import nilGarcesImage from '@/assets/img/nilgarces.jpg'
 
 export function Bio() {
   return (

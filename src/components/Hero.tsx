@@ -2,7 +2,7 @@ import { Container } from '@/components/layout/Container'
 import { logoFont } from '@/styles/fonts'
 import Image from 'next/image'
 
-import backgroundImage from '@/images/background.jpg'
+import backgroundImage from '@/assets/img/background.jpg'
 import MobileMenu from './MobileMenu'
 import { Button } from './ui/Button'
 

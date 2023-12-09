@@ -1,8 +1,8 @@
 import { Button } from '@/components/ui/Button'
 import { Container } from '@/components/layout/Container'
 import Image from 'next/image'
-import backgroundLeft from '@/images/left.jpg'
-import backgroundRight from '@/images/right.jpg'
+import backgroundLeft from '@/assets/img/left.jpg'
+import backgroundRight from '@/assets/img/right.jpg'
 
 export default function NotFound() {
   return (
