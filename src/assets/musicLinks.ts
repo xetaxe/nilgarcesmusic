@@ -20,6 +20,7 @@ export type Album = {
 export const musicLinks = [
   {
     title: "Captura subtil",
+    engTitle: "Subtle Capture",
     catDescription: "Primer disc, publicat el 2016. Cada cançó va acompanyada d'un poema.",
     engDescription: "",
     img: "/captura_subtil.jpg",
@@ -114,6 +115,151 @@ export const musicLinks = [
         download: "",
         sheet: "",
       }
+    ]
+  },
+  {
+    title: "Versions I",
+    engTitle: "Versions I",
+    catDescription: "Disc de versions",
+    engDescription: "",
+    img: "/versions.jpg",
+    spotifyLink: "https://open.spotify.com/intl-es/album/3VsXXCGpDk4DmhfqFq0U7k?si=7aQXHg5sTL-dLGCXJRz02g",
+    youtubeLink: "https://www.youtube.com/watch?v=NfcBHuHtOe0",
+    songs: [
+      {
+        number: 1,
+        title: "Reflections in D",
+        engTitle: "",
+        link: "",
+        download: "",
+        sheet: "",
+      },
+      {
+        number: 2,
+        title: "Cançó de suburbi",
+        engTitle: "",
+        link: "",
+        download: "",
+        sheet: "",
+      },
+      {
+        number: 3,
+        title: "Bad Day",
+        engTitle: "",
+        link: "",
+        download: "",
+        sheet: "",
+      },
+      {
+        number: 4,
+        title: "The Girl from Ipanema",
+        engTitle: "",
+        link: "",
+        download: "",
+        sheet: "",
+      },
+      {
+        number: 5,
+        title: "Waltz of Chihiro",
+        engTitle: "",
+        link: "",
+        download: "",
+        sheet: "",
+      },
+      {
+        number: 6,
+        title: "Fletcher's Song in a Club",
+        engTitle: "",
+        link: "",
+        download: "",
+        sheet: "",
+      },
+      {
+        number: 7,
+        title: "You Raise Me Up",
+        engTitle: "",
+        link: "",
+        download: "",
+        sheet: "",
+      },
+      {
+        number: 8,
+        title: "What a Wonderful World",
+        engTitle: "",
+        link: "",
+        download: "",
+        sheet: "",
+      }
+    ]
+  },
+  {
+    title: "El fred i la primavera",
+    engTitle: "Breeze & Spring",
+    catDescription: "Últim disc, de caire conceptual",
+    engDescription: "",
+    img: "/el_fred_i_la_primavera.jpg",
+    spotifyLink: "https://open.spotify.com/intl-es/album/7rV5S7qfyVeDpGZsfrzo1c?si=o6snXPNAQoivGFoguYGYKw",
+    youtubeLink: "https://www.youtube.com/watch?v=AdoTT5BJvzs",
+    songs: [
+      {
+        number: 1,
+        title: "Flor de cirerer",
+        engTitle: "",
+        link: "",
+        download: "",
+        sheet: "",
+      },
+      {
+        number: 2,
+        title: "Les fulles verdes",
+        engTitle: "",
+        link: "",
+        download: "",
+        sheet: "",
+      },
+      {
+        number: 3,
+        title: "Els ocells",
+        engTitle: "",
+        link: "",
+        download: "",
+        sheet: "",
+      },
+      {
+        number: 4,
+        title: "Llavor",
+        engTitle: "",
+        link: "",
+        download: "",
+        sheet: "",
+      },
+      {
+        number: 5,
+        title: "Els ocells tornen",
+        engTitle: "",
+        link: "",
+        download: "",
+        sheet: "",
+      }
+    ]
+  },
+  {
+    title: "Altres",
+    engTitle: "Others",
+    catDescription: "Singles o cançons a part",
+    engDescription: "",
+    img: "/altres.jpg",
+    spotifyLink: "https://open.spotify.com/intl-es/artist/0rvOkwdehM4VznxtpJwgC2?si=zyzET0XMQ--lg9LDFHysGA",
+    youtubeLink: "https://www.youtube.com/@nilgarces9969",
+    songs: [
+      {
+        number: 1,
+        title: "Becaines d'estiu",
+        engTitle: "",
+        link: "",
+        download: "",
+        sheet: "",
+      },
     ]
   },
 ]
