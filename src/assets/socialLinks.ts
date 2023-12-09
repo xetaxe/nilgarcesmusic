@@ -1,14 +1,16 @@
-import { FacebookIcon } from '@/assets/icons/FacebookIcon'
-import { InstagramIcon } from '@/assets/icons/InstagramIcon'
-import { YoutubeIcon } from '@/assets/icons/YoutubeIcon'
 import { SVGProps } from 'react'
-import { SpotifyIcon } from './icons/SpotifyIcon'
+import { SpotifyIcon, AppleMusicIcon, InstagramIcon, YoutubeIcon, FacebookIcon } from "./icons";
 
 export const socialLinks = [
   {
     name: 'Spotify',
     href: 'https://open.spotify.com/intl-es/artist/0rvOkwdehM4VznxtpJwgC2',
     icon: (props: SVGProps<SVGSVGElement>) => SpotifyIcon(props)
+  },
+  {
+    name: 'Apple Music',
+    href: 'https://music.apple.com/es/artist/nil-garc%C3%A9s/1436841437',
+    icon: (props: SVGProps<SVGSVGElement>) => AppleMusicIcon(props)
   },
   {
     name: 'Instagram',
