@@ -81,20 +81,20 @@ function SongEntry({ song }: { song: Song }) {
 
 export function Music() {
   
-  const [currentAlbum, setCurrentAlbum] = useState(0);
+  const [currentAlbum, setCurrentAlbum] = useState(3);
   
   return (
     <AudioProvider>
       <div className="bg-bg-300 py-10 md:py-16 bg-gradient-to-b from-[#d1dfe8] sc">
       </div>
-      <section id="music" className="bg-gradient-to-b from-[#e7ecf2] bg-bg-200 w-full py-4 px-4 lg:px-8">
+      <section id="music" className="bg-gradient-to-b from-[#e7ecf2] bg-bg-200 w-full py-8 px-4 lg:px-8">
         <h1 id="music" className="mx-auto max-w-7xl font-bold text-2xl text-center">
           Música
         </h1>
-        <div className="mx-auto max-w-[80ch] text-center py-8">
-        Nil Garcés és un projecte musical en solitari, basat en peces de guitarra instrumentals, a les fronteres del pop. A través d'aquestes, es busca crear un paisatge sonor i evocador on predominen imatges emotives i de natura.<br/>
-        
-        Captura subtil (2016), el primer treball, compta amb onze cançons (amb poema) d'estils diversos, que exploren els límits sonors i compositius de la guitarra. Posteriorment ve Versions I (2018), un recull de vuit cançons variades ja existents, adaptades a guitarra sola. Després d'un període d'inactivitat creativa, torna amb El fred i la primavera (2022), amb un so més madur, concebut de manera unitària i de mirada introspectiva.
+        <div className="mx-auto max-w-[76ch] py-8">
+          Totes les pistes d'àudio es poden reproduir i descarregar lliurement en bona qualitat. També podeu obtenir gratuïtament bona part de les partitures en format PDF.<br/><br/>
+          
+          Si podeu i voleu fer un donatiu per ajudar a mantenir viu aquest projecte, ho podeu fer des d'<a href="#donate" className=" font-bold text-slate-900 underline">aquí ↓</a>.
         </div>
         <Container className="mx-auto max-w-7xl flex flex-col md:flex-row justify-center bg-bg-200 rounded-md md:py-4">
           <div className=" md:basis-80 lg:basis-96 lg:items-start lg:overflow-y-auto xl:basis-120">
@@ -171,6 +171,11 @@ export function Music() {
             <AudioPlayer />
           </div>
         </Container>
+        <div id="donate" className="mx-auto max-w-[76ch] py-8">
+          Nil Garcés és un projecte musical completament autogestionat. Actualment, i des de fa uns anys, no hi ha concerts previstos, tot i ser aquests la principal font d'ingressos de la majoria d'artistes avui en dia. <br/><br/>
+          Qualsevol contribució econòmica m'ajuda a cobrir despeses de futures creacions i altres aspectes logístics (publicitat, web, etc). Aquests diners també ajuden a tots aquells artistes locals involucrats en l'elaboració de nous treballs, per exemple en els processos de disseny, producció o gravació.<br/><br/>
+          Gràcies per fer-ho possible.
+        </div>
       </section>
     </AudioProvider>
   )

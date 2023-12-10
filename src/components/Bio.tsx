@@ -5,9 +5,9 @@ import nilGarcesImageLandscape from '@/assets/img/nilgarces_landscape.jpg'
 export function Bio() {
   return (
     <>
-      <div className="bg-bg-200 py-10 md:py-16">
-      </div>
-      <section id="bio" className="bg-bg-200 py-4">
+      {/* <div className="bg-bg-200 py-10 md:py-16">
+      </div> */}
+      <section id="bio" className="bg-bg-400 py-12">
         <h1 className="mx-auto max-w-7xl font-bold text-2xl text-center mb-8">
           Bio
         </h1>

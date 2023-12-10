@@ -5,9 +5,9 @@ import { Container } from './layout/Container'
 export function Contact() {
   return (
     <>
-      <div className="bg-white py-10 sm:py-16 bg-gradient-to-b from-[#fcf9fc] sc">
-      </div>
-      <section id="contact" className="bg-white text-center py-4">
+      {/* <div className="bg-white py-4 sm:py-8 bg-gradient-to-b from-[#d1dfe8] sc">
+      </div> */}
+      <section id="contact" className="bg-white text-center py-12">
         <Container className="mb-8">
           <h1 className="mx-auto max-w-7xl font-bold text-2xl text-center mb-8">
             Contacte
