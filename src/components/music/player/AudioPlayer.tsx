@@ -36,14 +36,20 @@ export function AudioPlayer() {
 
   useEffect(() => {
     setCurrentTime(null)
-  }, [player.currentTime])
+  }  
+  , [player.currentTime])
 
   if (!player.song) {
     return null
   }
 
   return (
-    <div className="flex items-center gap-4 bg-white/90 px-4 py-4 shadow shadow-slate-200/80 ring-1 ring-slate-900/5 backdrop-blur-sm md:px-6 rounded-md">
+    <div className={`flex items-center gap-4 bg-white/90 px-4 py-4 shadow shadow-slate-200/80 ring-1 ring-slate-900/5 backdrop-blur-sm md:px-6 rounded-md relative ${player.closed ? "hidden" : ""}`}>
+      <span className="absolute top-2 right-2 cursor-pointer text-slate-500 hover:bg-slate-100 hover:text-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2" onClick={() => player.close()}>
+        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" className="fill-current">
+          <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+        </svg>
+      </span>
       <div className="hidden md:block">
         <PlayButton player={player} />
       </div>

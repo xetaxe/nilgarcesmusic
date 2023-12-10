@@ -5,6 +5,7 @@ import { createContext, useContext, useMemo, useReducer, useRef } from 'react'
 import { type Song } from '@/assets/musicLinks'
 
 interface PlayerState {
+  closed: boolean,
   playing: boolean
   muted: boolean
   duration: number
@@ -15,6 +16,7 @@ interface PlayerState {
 interface PublicPlayerActions {
   play: (song?: Song) => void
   pause: () => void
+  close: () => void
   toggle: (song?: Song) => void
   seekBy: (amount: number) => void
   seek: (time: number) => void
@@ -27,6 +29,7 @@ export type PlayerAPI = PlayerState & PublicPlayerActions
 
 const enum ActionKind {
   SET_META = 'SET_META',
+  CLOSE = 'CLOSE',
   PLAY = 'PLAY',
   PAUSE = 'PAUSE',
   TOGGLE_MUTE = 'TOGGLE_MUTE',
@@ -36,6 +39,7 @@ const enum ActionKind {
 
 type Action =
   | { type: ActionKind.SET_META; payload: Song }
+  | { type: ActionKind.CLOSE }
   | { type: ActionKind.PLAY }
   | { type: ActionKind.PAUSE }
   | { type: ActionKind.TOGGLE_MUTE }
@@ -48,8 +52,10 @@ function audioReducer(state: PlayerState, action: Action): PlayerState {
   switch (action.type) {
     case ActionKind.SET_META:
       return { ...state, song: action.payload }
+    case ActionKind.CLOSE:
+      return { ...state, playing: false, closed: true }
     case ActionKind.PLAY:
-      return { ...state, playing: true }
+      return { ...state, playing: true, closed: false }
     case ActionKind.PAUSE:
       return { ...state, playing: false }
     case ActionKind.TOGGLE_MUTE:
@@ -63,6 +69,7 @@ function audioReducer(state: PlayerState, action: Action): PlayerState {
 
 export function AudioProvider({ children }: { children: React.ReactNode }) {
   let [state, dispatch] = useReducer(audioReducer, {
+    closed: false,
     playing: false,
     muted: false,
     duration: 0,
@@ -73,6 +80,10 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
 
   let actions = useMemo<PublicPlayerActions>(() => {
     return {
+      close() {
+        playerRef.current?.pause()
+        dispatch({ type: ActionKind.CLOSE })
+      },
       play(song) {
         if (song) {
           dispatch({ type: ActionKind.SET_META, payload: song })
