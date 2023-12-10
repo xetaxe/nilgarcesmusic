@@ -1,26 +1,26 @@
 'use client'
 
 import { useAudioPlayer } from './AudioProvider'
-import { type Episode } from '@/assets/episodes'
+import { type Song } from '@/assets/musicLinks'
 
-export function EpisodePlayButton({
-  episode,
+export function SongPlayButton({
+  song,
   playing,
   paused,
   ...props
 }: React.ComponentPropsWithoutRef<'button'> & {
-  episode: Episode
+  song: Song
   playing: React.ReactNode
   paused: React.ReactNode
 }) {
-  let player = useAudioPlayer(episode)
+  let player = useAudioPlayer(song)
 
   return (
     <button
       type="button"
       onClick={() => player.toggle()}
-      aria-label={`${player.playing ? 'Pause' : 'Play'} episode ${
-        episode.title
+      aria-label={`${player.playing ? 'Pause' : 'Play'} song ${
+        song.title
       }`}
       {...props}
     >

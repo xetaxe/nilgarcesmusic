@@ -1,26 +1,26 @@
-'use client'
+
 
 import { createContext, useContext, useMemo, useReducer, useRef } from 'react'
 
-import { type Episode } from '@/assets/episodes'
+import { type Song } from '@/assets/musicLinks'
 
 interface PlayerState {
   playing: boolean
   muted: boolean
   duration: number
   currentTime: number
-  episode: Episode | null
+  song: Song | null
 }
 
 interface PublicPlayerActions {
-  play: (episode?: Episode) => void
+  play: (song?: Song) => void
   pause: () => void
-  toggle: (episode?: Episode) => void
+  toggle: (song?: Song) => void
   seekBy: (amount: number) => void
   seek: (time: number) => void
   playbackRate: (rate: number) => void
   toggleMute: () => void
-  isPlaying: (episode?: Episode) => boolean
+  isPlaying: (song?: Song) => boolean
 }
 
 export type PlayerAPI = PlayerState & PublicPlayerActions
@@ -35,7 +35,7 @@ const enum ActionKind {
 }
 
 type Action =
-  | { type: ActionKind.SET_META; payload: Episode }
+  | { type: ActionKind.SET_META; payload: Song }
   | { type: ActionKind.PLAY }
   | { type: ActionKind.PAUSE }
   | { type: ActionKind.TOGGLE_MUTE }
@@ -47,7 +47,7 @@ const AudioPlayerContext = createContext<PlayerAPI | null>(null)
 function audioReducer(state: PlayerState, action: Action): PlayerState {
   switch (action.type) {
     case ActionKind.SET_META:
-      return { ...state, episode: action.payload }
+      return { ...state, song: action.payload }
     case ActionKind.PLAY:
       return { ...state, playing: true }
     case ActionKind.PAUSE:
@@ -67,22 +67,22 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
     muted: false,
     duration: 0,
     currentTime: 0,
-    episode: null,
+    song: null,
   })
   let playerRef = useRef<React.ElementRef<'audio'>>(null)
 
   let actions = useMemo<PublicPlayerActions>(() => {
     return {
-      play(episode) {
-        if (episode) {
-          dispatch({ type: ActionKind.SET_META, payload: episode })
+      play(song) {
+        if (song) {
+          dispatch({ type: ActionKind.SET_META, payload: song })
 
           if (
             playerRef.current &&
-            playerRef.current.currentSrc !== episode.audio.src
+            playerRef.current.currentSrc !== song.link
           ) {
             let playbackRate = playerRef.current.playbackRate
-            playerRef.current.src = episode.audio.src
+            playerRef.current.src = song.link
             playerRef.current.load()
             playerRef.current.pause()
             playerRef.current.playbackRate = playbackRate
@@ -95,8 +95,8 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
       pause() {
         playerRef.current?.pause()
       },
-      toggle(episode) {
-        this.isPlaying(episode) ? actions.pause() : actions.play(episode)
+      toggle(song) {
+        this.isPlaying(song) ? actions.pause() : actions.play(song)
       },
       seekBy(amount) {
         if (playerRef.current) {
@@ -116,9 +116,9 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
       toggleMute() {
         dispatch({ type: ActionKind.TOGGLE_MUTE })
       },
-      isPlaying(episode) {
-        return episode
-          ? state.playing && playerRef.current?.currentSrc === episode.audio.src
+      isPlaying(song) {
+        return song
+          ? state.playing && playerRef.current?.currentSrc === song.link
           : state.playing
       },
     }
@@ -156,22 +156,22 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
   )
 }
 
-export function useAudioPlayer(episode?: Episode) {
+export function useAudioPlayer(song?: Song) {
   let player = useContext(AudioPlayerContext)
 
   return useMemo<PlayerAPI>(
     () => ({
       ...player!,
       play() {
-        player!.play(episode)
+        player!.play(song)
       },
       toggle() {
-        player!.toggle(episode)
+        player!.toggle(song)
       },
-    //   get playing() {
-    //     return player!.isPlaying(episode)
-    //   },
+      get playing() {
+        return player!.isPlaying(song)
+      },
     }),
-    [player, episode],
+    [player, song],
   )
 }

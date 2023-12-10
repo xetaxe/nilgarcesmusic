@@ -38,22 +38,22 @@ export function AudioPlayer() {
     setCurrentTime(null)
   }, [player.currentTime])
 
-  if (!player.episode) {
+  if (!player.song) {
     return null
   }
 
   return (
-    <div className="flex items-center gap-6 bg-white/90 px-4 py-4 shadow shadow-slate-200/80 ring-1 ring-slate-900/5 backdrop-blur-sm md:px-6">
+    <div className="flex items-center gap-4 bg-white/90 px-4 py-4 shadow shadow-slate-200/80 ring-1 ring-slate-900/5 backdrop-blur-sm md:px-6 rounded-md">
       <div className="hidden md:block">
         <PlayButton player={player} />
       </div>
       <div className="mb-[env(safe-area-inset-bottom)] flex flex-1 flex-col gap-3 overflow-hidden p-1">
         <Link
-          href={`/${player.episode.id}`}
+          href={`/${player.song.number}`}
           className="truncate text-center text-sm font-bold leading-6 md:text-left"
-          title={player.episode.title}
+          title={player.song.title}
         >
-          {player.episode.title}
+          {player.song.title}
         </Link>
         <div className="flex justify-between gap-6">
           <div className="flex items-center md:hidden">

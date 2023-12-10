@@ -19,7 +19,7 @@ export const socialLinks = [
   },
   {
     name: "YouTube",
-    href: "https://www.youtube.com/@nilgarces9969",
+    href: "https://www.youtube.com/@nilgarces",
     icon: (props: SVGProps<SVGSVGElement>) => YoutubeIcon(props)
   },
   {

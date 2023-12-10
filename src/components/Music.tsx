@@ -3,13 +3,10 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-
 import { Container } from '@/components/layout/Container'
-import { EpisodePlayButton } from './music/EpisodePlayButton'
-import { type Episode, getAllEpisodes } from '@/assets/episodes'
+import { SongPlayButton } from './music/SongPlayButton'
 import { AudioProvider } from '@/components/music/AudioProvider'
 import { AudioPlayer } from '@/components/music/player/AudioPlayer'
-import posterImage from '@/assets/img/captura_subtil.jpg'
 import { SpotifyIcon, YoutubeIcon } from '@/assets/icons'
 import { type Song, musicLinks } from '@/assets/musicLinks'
 import { useState } from 'react'
@@ -34,30 +31,30 @@ function SongEntry({ song }: { song: Song }) {
 
   return (
     <div
-      aria-labelledby={`episode-${song.number}-title`}
+      aria-labelledby={`song-${song.number}-title`}
       className="py-2"
     >
       <Container>
         <div className="flex flex-col lg:flex-row items-start lg:items-center">
           <h2
-            id={`episode-${song.number}-title`}
+            id={`song-${song.number}-title`}
             className="mt-2 text-lg font-bold text-slate-900"
           >
             <div className="flex gap-2">
-              {/* <EpisodePlayButton
+              <SongPlayButton
                 song={song}
                 className="flex items-center gap-x-3 text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900"
                 playing={ <PauseIcon className="h-2.5 w-2.5 fill-current" /> }
                 paused={ <PlayIcon className="h-2.5 w-2.5 fill-current" /> }
-              /> */}
+              />
               {song.number}. {song.title}
             </div>
           </h2>
           <div className="mt-2 lg:mt-0 flex items-center gap-4">
             <Link
-              href={`/${song.link}`}
+              href={`${song.download}`}
               className="flex items-center text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900"
-              aria-label={`Show notes for episode ${song.title}`}
+              aria-label={`Show notes for song ${song.title}`}
             >
               Descarrega
             </Link>
@@ -70,7 +67,7 @@ function SongEntry({ song }: { song: Song }) {
             <Link
               href={`/${song.number}`}
               className="flex items-center text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900"
-              aria-label={`Show notes for episode ${song.title}`}
+              aria-label={`Show notes for song ${song.title}`}
             >
               Partitura
             </Link>
@@ -81,7 +78,7 @@ function SongEntry({ song }: { song: Song }) {
   )
 }
 
-export async function Music() {
+export function Music() {
   
   const [currentAlbum, setCurrentAlbum] = useState(0);
   
@@ -164,7 +161,7 @@ export async function Music() {
               </div>
             </div>
           </div>
-          <div className="fixed inset-x-0 bottom-0 z-10 lg:left-112 xl:left-120">
+          <div className="fixed w-full right-0 bottom-0 z-10 lg:max-w-lg lg:right-12 lg:bottom-12">
             <AudioPlayer />
           </div>
         </Container>

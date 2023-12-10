@@ -31,8 +31,8 @@ export const musicLinks = [
         number: 1,
         title: "Aquell petit arbre",
         engTitle: "",
-        link: "",
-        download: "",
+        link: "https://docs.google.com/uc?export=play&id=1Qou-tYSqi56I3UQe98Tpor_POLdUWVVE", 
+        download: "https://docs.google.com/uc?export=download&id=1Qou-tYSqi56I3UQe98Tpor_POLdUWVVE",
         sheet: "",
       },
       {
@@ -250,7 +250,7 @@ export const musicLinks = [
     engDescription: "",
     img: "/altres.jpg",
     spotifyLink: "https://open.spotify.com/intl-es/artist/0rvOkwdehM4VznxtpJwgC2?si=zyzET0XMQ--lg9LDFHysGA",
-    youtubeLink: "https://www.youtube.com/@nilgarces9969",
+    youtubeLink: "https://www.youtube.com/@nilgarces",
     songs: [
       {
         number: 1,
