@@ -56,7 +56,7 @@ function SongEntry({ song }: { song: Song }) {
           <Link
             href={`${song.sheet}`}
             className="flex items-center text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900"
-            aria-label={`Show notes for song ${song.title}`}
+            aria-label={`See sheet music of ${song.title}`}
             title="Partitura"
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.88 122.94" className="fill-current" width={24} height={24}>
@@ -66,8 +66,7 @@ function SongEntry({ song }: { song: Song }) {
           <Link
             href={`/${song.poem}`}
             className={`flex items-center text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900 ${song.poem ? "" : "hidden"}`}
-            aria-label={`Show notes for song ${song.title}`}
-            target="_blank"
+            aria-label={`See poem of ${song.title}`}
             title="Poema (català)"
           >
             <svg xmlns="http://www.w3.org/2000/svg" height={26} viewBox="0 -960 960 960" width={26} className="fill-current">
