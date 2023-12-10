@@ -1,5 +1,6 @@
 import '@/styles/tailwind.css'
 
+import { Analytics } from '@vercel/analytics/react';
 import { type Metadata } from 'next'
 import { font } from '../styles/fonts'
 
@@ -15,6 +16,7 @@ export default function RootLayout({ children }:{ children: React.ReactNode }) {
       <body className="flex min-h-full">
         <div className="flex w-full flex-col">
           {children}
+          <Analytics />
         </div>
       </body>
     </html>

@@ -14,7 +14,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div className="mx-auto max-w-7xl px-8 py-12 md:flex md:items-center md:justify-between lg:px-8">
             <div className="flex justify-center space-x-6 md:order-2">
               {socialLinks.map((item) => (
-                <a key={item.name} href={item.href} target="_blank" className="text-logo-400">
+                <a key={item.name} href={item.href} target="_blank" title={item.name} className="text-logo-400">
                   <span className="sr-only">{item.name}</span>
                   <item.icon className="h-6 w-6" aria-hidden="true" />
                 </a>

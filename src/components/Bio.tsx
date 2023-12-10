@@ -11,7 +11,7 @@ export function Bio() {
         <h1 className="mx-auto max-w-7xl font-bold text-2xl text-center mb-8">
           Bio
         </h1>
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="mx-auto flex flex-col lg:flex-row justify-center lg:items-center max-w-2xl gap-16 lg:mx-0 lg:max-w-none">
             <div className="mx-auto w-full max-w-lg">
               <div className="xsm:hidden relative overflow-hidden rounded-3xl shadow-2xl px-6 py-48">

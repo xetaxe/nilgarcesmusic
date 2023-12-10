@@ -92,7 +92,7 @@ export function Music() {
           Música
         </h1>
         <div className="mx-auto max-w-[76ch] text-justify py-8">
-          Totes les pistes d'àudio es poden reproduir i descarregar lliurement en bona qualitat. També podeu obtenir gratuïtament bona part de les partitures en format PDF.<br/><br/>
+          Totes les pistes d'àudio es poden reproduir i descarregar lliurement en bona qualitat. També podeu obtenir gratuïtament en PDF les partitures que he pogut escriure.<br/><br/>
           
           Si podeu i voleu fer un donatiu per ajudar a mantenir viu aquest projecte, ho podeu fer des d'<a href="#donate" className=" font-bold text-slate-900 underline">aquí ↓</a>.
         </div>
@@ -130,6 +130,7 @@ export function Music() {
                       href={musicLinks[currentAlbum].spotifyLink}
                       className="group flex items-center"
                       aria-label="spotify"
+                      title="Spotify link"
                       target="_blank"
                     >
                       <SpotifyIcon className="h-8 w-8 fill-slate-400 group-hover:fill-slate-600" />
@@ -141,6 +142,7 @@ export function Music() {
                       href={musicLinks[currentAlbum].youtubeLink}
                       className="group flex items-center"
                       aria-label="youtube"
+                      title="Youtube link"
                       target="_blank"
                     >
                       <YoutubeIcon className="h-8 w-8 fill-slate-400 group-hover:fill-slate-600" />
@@ -172,9 +174,13 @@ export function Music() {
           </div>
         </Container>
         <div id="donate" className="mx-auto max-w-[76ch] text-justify py-8">
-          Nil Garcés és un projecte musical totalment autogestionat. A dia d'avui, no hi ha concerts previstos, tot i ser aquests la principal font d'ingressos de la majoria d'artistes actuals. <br/><br/>
+          <h2 className="text-lg italic font-bold leading-7 text-slate-900">
+            Contribueix <br/><br/>
+          </h2>
+          Nil Garcés és un projecte musical totalment autogestionat. A dia d'avui, no hi ha concerts previstos, tot i ser aquests la principal font d'ingressos dels artistes actualment.<br/><br/>
           Qualsevol contribució econòmica m'ajuda a cobrir despeses de futures creacions i altres aspectes logístics (publicitat, web, etc). Aquests diners també ajuden a tots aquells artistes locals involucrats en l'elaboració de nous treballs, per exemple en els processos de disseny, producció o gravació.<br/><br/>
           Gràcies per fer-ho possible.
+
         </div>
       </section>
     </AudioProvider>
