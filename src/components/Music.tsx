@@ -30,7 +30,7 @@ function PlayIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 function SongEntry({ song }: { song: Song }) {
 
   return (
-    <div aria-labelledby={`song-${song.number}-title`} className="py-2">
+    <div aria-labelledby={`song-${song.number}-title`} className="py-1 md:py-2">
       <div id={`song-${song.number}-title`} className="mt-2 font-bold text-slate-900 flex  justify-between ">
         <span className="flex gap-2">
           <SongPlayButton
@@ -81,7 +81,7 @@ function SongEntry({ song }: { song: Song }) {
 
 export function Music() {
   
-  const [currentAlbum, setCurrentAlbum] = useState(3);
+  const [currentAlbum, setCurrentAlbum] = useState(0);
   
   return (
     <AudioProvider>
@@ -91,7 +91,7 @@ export function Music() {
         <h1 id="music" className="mx-auto max-w-7xl font-bold text-2xl text-center">
           Música
         </h1>
-        <div className="mx-auto max-w-[76ch] py-8">
+        <div className="mx-auto max-w-[76ch] text-justify py-8">
           Totes les pistes d'àudio es poden reproduir i descarregar lliurement en bona qualitat. També podeu obtenir gratuïtament bona part de les partitures en format PDF.<br/><br/>
           
           Si podeu i voleu fer un donatiu per ajudar a mantenir viu aquest projecte, ho podeu fer des d'<a href="#donate" className=" font-bold text-slate-900 underline">aquí ↓</a>.
@@ -112,7 +112,7 @@ export function Music() {
                 />
                 <div className="absolute inset-0 rounded-lg ring-1 ring-inset ring-black/10 sm:rounded-xl lg:rounded-2xl" />
               </span>
-              <div className="mt-10 text-center lg:mt-12 lg:text-left">
+              <div className="mt-8 text-center lg:mt-12 lg:text-left">
                 <p className="text-xl font-bold text-center text-slate-900">
                   { musicLinks[currentAlbum].title }
                 </p>
@@ -171,8 +171,8 @@ export function Music() {
             <AudioPlayer />
           </div>
         </Container>
-        <div id="donate" className="mx-auto max-w-[76ch] py-8">
-          Nil Garcés és un projecte musical completament autogestionat. Actualment, i des de fa uns anys, no hi ha concerts previstos, tot i ser aquests la principal font d'ingressos de la majoria d'artistes avui en dia. <br/><br/>
+        <div id="donate" className="mx-auto max-w-[76ch] text-justify py-8">
+          Nil Garcés és un projecte musical totalment autogestionat. A dia d'avui, no hi ha concerts previstos, tot i ser aquests la principal font d'ingressos de la majoria d'artistes actuals. <br/><br/>
           Qualsevol contribució econòmica m'ajuda a cobrir despeses de futures creacions i altres aspectes logístics (publicitat, web, etc). Aquests diners també ajuden a tots aquells artistes locals involucrats en l'elaboració de nous treballs, per exemple en els processos de disseny, producció o gravació.<br/><br/>
           Gràcies per fer-ho possible.
         </div>

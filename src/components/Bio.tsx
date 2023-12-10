@@ -33,7 +33,7 @@ export function Bio() {
             </div>
             <div className="mx-auto">
               <div className="text-base leading-7 text-gray-900 lg:max-w-lg">
-                <div className="max-w-[80ch]">
+                <div className="max-w-[80ch] text-justify">
                   <p className="">
                     Nil Garcés és un projecte musical en solitari, basat en peces de guitarra instrumentals, a les fronteres del pop. A través d'aquestes, es busca crear un paisatge sonor i evocador on predominen imatges emotives i de natura.
                   </p>
