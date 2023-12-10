@@ -20,6 +20,9 @@ export default {
       '9xl': ['8rem', { lineHeight: '1' }],
     },
     extend: {
+      screens: {
+        'xsm': '500px',
+      },
       borderRadius: {
         '4xl': '2rem',
         '5xl': '2.5rem',
