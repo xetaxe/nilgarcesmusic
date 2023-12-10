@@ -5,10 +5,12 @@ export type Song =       {
   link: string,
   download: string,
   sheet?: string,
+  poem?: string
 }
 
 export type Album = {
   title: string,
+  engTitle: string,
   catDescription: string,
   engDescription: string,
   img: string,
@@ -17,7 +19,7 @@ export type Album = {
   songs: Song[]
 }
 
-export const musicLinks = [
+export const musicLinks: Album[] = [
   {
     title: "Captura subtil",
     engTitle: "Subtle Capture",
@@ -34,6 +36,7 @@ export const musicLinks = [
         link: "https://docs.google.com/uc?export=play&id=1Qou-tYSqi56I3UQe98Tpor_POLdUWVVE", 
         download: "https://docs.google.com/uc?export=download&id=1Qou-tYSqi56I3UQe98Tpor_POLdUWVVE",
         sheet: "",
+        poem: "aquell-petit-arbre",
       },
       {
         number: 2,
@@ -42,6 +45,7 @@ export const musicLinks = [
         link: "",
         download: "",
         sheet: "",
+        poem: "cada-gota",
       },
       {
         number: 3,
@@ -50,6 +54,7 @@ export const musicLinks = [
         link: "",
         download: "",
         sheet: "",
+        poem: "castell-de-sorra",
       },
       {
         number: 4,
@@ -58,6 +63,7 @@ export const musicLinks = [
         link: "",
         download: "",
         sheet: "",
+        poem: "fidipides",
       },
       {
         number: 5,
@@ -66,6 +72,7 @@ export const musicLinks = [
         link: "",
         download: "",
         sheet: "",
+        poem: "seguirem-buscant",
       },
       {
         number: 6,
@@ -74,6 +81,7 @@ export const musicLinks = [
         link: "",
         download: "",
         sheet: "",
+        poem: "el-bosc-dels-records",
       },
       {
         number: 7,
@@ -82,6 +90,7 @@ export const musicLinks = [
         link: "",
         download: "",
         sheet: "",
+        poem: "pres-per-dins",
       },
       {
         number: 8,
@@ -90,6 +99,7 @@ export const musicLinks = [
         link: "",
         download: "",
         sheet: "",
+        poem: "xiprers",
       },
       {
         number: 9,
@@ -98,6 +108,7 @@ export const musicLinks = [
         link: "",
         download: "",
         sheet: "",
+        poem: "ballarismes",
       },
       {
         number: 10,
@@ -106,6 +117,7 @@ export const musicLinks = [
         link: "",
         download: "",
         sheet: "",
+        poem: "d-entre-els-cels",
       },
       {
         number: 11,
@@ -115,6 +127,25 @@ export const musicLinks = [
         download: "",
         sheet: "",
       }
+    ]
+  },
+  {
+    title: "Becaines d'estiu",
+    engTitle: "Summer Siesta",
+    catDescription: "Single estiuenc",
+    engDescription: "",
+    img: "/becaines_destiu.jpg",
+    spotifyLink: "https://open.spotify.com/intl-es/album/3NZSl6a63jfHvzVfrFjsoj?si=xsNTB3nmR9i33vm6IP7RVg",
+    youtubeLink: "https://www.youtube.com/watch?v=ShiWROJ5ARA",
+    songs: [
+      {
+        number: 1,
+        title: "Becaines d'estiu",
+        engTitle: "",
+        link: "",
+        download: "",
+        sheet: "",
+      },
     ]
   },
   {
@@ -242,24 +273,5 @@ export const musicLinks = [
         sheet: "",
       }
     ]
-  },
-  {
-    title: "Altres",
-    engTitle: "Others",
-    catDescription: "Singles o cançons a part",
-    engDescription: "",
-    img: "/altres.jpg",
-    spotifyLink: "https://open.spotify.com/intl-es/artist/0rvOkwdehM4VznxtpJwgC2?si=zyzET0XMQ--lg9LDFHysGA",
-    youtubeLink: "https://www.youtube.com/@nilgarces",
-    songs: [
-      {
-        number: 1,
-        title: "Becaines d'estiu",
-        engTitle: "",
-        link: "",
-        download: "",
-        sheet: "",
-      },
-    ]
-  },
+  }
 ]

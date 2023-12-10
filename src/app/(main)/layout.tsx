@@ -11,7 +11,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <Container>
           <div className="border-logo-400 border-solid border-t mx-12">
           </div>
-          <div className="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
+          <div className="mx-auto max-w-7xl px-8 py-12 md:flex md:items-center md:justify-between lg:px-8">
             <div className="flex justify-center space-x-6 md:order-2">
               {socialLinks.map((item) => (
                 <a key={item.name} href={item.href} target="_blank" className="text-logo-400">

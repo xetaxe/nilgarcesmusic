@@ -32,10 +32,12 @@ export default {
       },
       colors: {
         logo: {
+          300: '#3c4832',
           400: '#2d1f12',
         },
         bg: {
           200: '#fcf9fc',
+          300: '#e7ecf2',
           400: '#d1dfe8',
         },
       },
