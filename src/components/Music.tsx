@@ -32,15 +32,17 @@ function SongEntry({ song }: { song: Song }) {
   return (
     <div aria-labelledby={`song-${song.number}-title`} className="py-1 md:py-2">
       <div id={`song-${song.number}-title`} className="mt-2 font-bold text-slate-900 flex  justify-between ">
-        <span className="flex gap-2">
+        <span className="flex gap-2 items-center">
           <SongPlayButton
             song={song}
             className="flex items-center gap-x-3 text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900"
-            playing={ <PauseIcon className="h-2.5 w-2.5 fill-current" /> }
-            paused={ <PlayIcon className="h-2.5 w-2.5 fill-current" /> }
+            playing={ <PauseIcon className="h-3 w-2.5 fill-current" /> }
+            paused={ <PlayIcon className="h-3 w-3 fill-current" /> }
             title="Reproduir"
           />
-          {song.number}. {song.title}
+          <span>
+            {song.number}. {song.title}
+          </span>
         </span>
         <span className="flex items-center gap-4">
           <Link
@@ -174,10 +176,10 @@ export function Music() {
           </div>
         </Container>
         <div id="donate" className="mx-auto max-w-[76ch] text-justify py-8">
-          <h2 className="text-lg italic font-bold leading-7 text-slate-900">
-            Contribueix <br/><br/>
+          <h2 className=" italic font-bold leading-7 text-slate-900 mb-4">
+            Contribueix
           </h2>
-          Nil Garcés és un projecte musical totalment autogestionat. A dia d'avui, no hi ha concerts previstos, tot i ser aquests la principal font d'ingressos dels artistes actualment.<br/><br/>
+          Nil Garcés és un projecte musical totalment autogestionat. A dia d'avui, no hi ha concerts previstos, tot i ser aquests la principal font d'ingressos dels artistes actualment. Totes les composicions actuals han pogut veure la llum gràcies a la generositat d'aquelles persones que hi han cregut i col·laborat.<br/><br/>
           Qualsevol contribució econòmica m'ajuda a cobrir despeses de futures creacions i altres aspectes logístics (publicitat, web, etc). Aquests diners també ajuden a tots aquells artistes locals involucrats en l'elaboració de nous treballs, per exemple en els processos de disseny, producció o gravació.<br/><br/>
           Gràcies per fer-ho possible.
 
