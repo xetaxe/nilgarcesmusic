@@ -154,7 +154,7 @@ export const musicLinks: Album[] = [
   {
     title: "Versions I",
     engTitle: "Versions I",
-    catDescription: "Recull de versions de cançons ja existents, adaptades a guitarra sola. En aquest treball, el més popular a dia d'avui, les peces seleccionades, d'origens molt diversos, es caracteritzen per la seva estructura amable, estil calmat i so familiar.",
+    catDescription: "Recull de versions de cançons ja existents, adaptades a guitarra sola. Les peces seleccionades, d'origens molt diversos, es caracteritzen per la seva estructura amable, estil calmat i so familiar.",
     engDescription: "",
     img: "/versions.jpg",
     year: 2018,
@@ -230,7 +230,7 @@ export const musicLinks: Album[] = [
   {
     title: "El fred i la primavera",
     engTitle: "Breeze & Spring",
-    catDescription: "Aquest últim disc, més madur i de caire conceptual, busca plasmar musicalment l'ampli ventall d'emocions que som capaços de sentir, i la intensitat amb la que poden aparèixer, esvanir-se, conviure i confondre's... Tristesa, desig, dubte, il·lusió, dolor, enyor, transformació... som barreges de tot això i mil forces més, en xoc continu.",
+    catDescription: "Aquest últim treball, més madur i de caire conceptual, busca plasmar musicalment l'ampli ventall d'emocions que som capaços de sentir, i la intensitat amb què poden aparèixer, esvanir-se, conviure i confondre's... Tristesa, desig, dubte, il·lusió, dolor, enyor, transformació... som barreges de tot això i mil forces més, en xoc continu.",
     engDescription: "",
     img: "/el_fred_i_la_primavera.jpg",
     year: 2022,

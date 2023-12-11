@@ -101,7 +101,7 @@ export function Music() {
         <div className="mx-auto flex gap-4 pb-4 mb-4 over md:justify-center overflow-x-scroll px-2">
           {musicLinks.map((album, index) => (
             <div className={`z-10 flex flex-col p-4 lg:border-slate-200 cursor-pointer rounded-lg max-w-[160px] ${index === currentAlbum ? "bg-bg-500": "bg-bg-400"}`} key={album.title} onClick={() => setCurrentAlbum(index)}>
-              <span className="relative mx-auto block w-32 overflow-hidden rounded-lg bg-slate-200 shadow-md shadow-slate-200 aspect-square" aria-label={album.title}
+              <span className="relative mx-auto block w-32 overflow-hidden rounded-md bg-slate-200 shadow-md shadow-slate-200 aspect-square" aria-label={album.title}
               >
                 <Image
                   className="w-full"
@@ -110,7 +110,7 @@ export function Music() {
                   fill
                   priority
                 />
-                <div className="absolute inset-0 rounded-lg ring-1 ring-inset ring-black/10" />
+                <div className="absolute inset-0 rounded-md ring-1 ring-inset ring-black/10" />
               </span>
               <div className="mt-2 text-center">
                 <p className="font-bold text-slate-900">
@@ -124,7 +124,7 @@ export function Music() {
           ))}
         </div>
         <Container className="mx-auto max-w-7xl flex flex-col md:flex-row justify-center bg-bg-200 rounded-md md:py-4">
-          <div className=" md:basis-80 lg:basis-96 lg:items-start lg:overflow-y-auto xl:basis-120">
+          <div className="md:basis-80 lg:basis-96 lg:items-start lg:overflow-y-auto xl:basis-120">
             <div className="z-10 flex flex-col mx-auto sm:px-4 py-8 lg:border-slate-200">
               <span
                 className="relative mx-auto block w-64 overflow-hidden rounded-lg bg-slate-200 shadow-xl shadow-slate-200 md:w-48 lg:w-64 sm:rounded-xl lg:rounded-2xl aspect-square"
@@ -150,7 +150,7 @@ export function Music() {
               <section className="mt-2">
                 <ul
                   role="list"
-                  className="mt-4 flex justify-center gap-10 text-base font-medium leading-7 text-slate-700 md:gap-8"
+                  className="mt-4 flex flex-wrap content-start justify-center gap-6 xsm:gap-10 md:gap-6 md:text-sm text-base font-medium leading-7 text-slate-700"
                 >
                   <li className="flex">
                     <Link
@@ -161,7 +161,7 @@ export function Music() {
                       target="_blank"
                     >
                       <SpotifyIcon className="h-8 w-8 fill-slate-400 group-hover:fill-slate-600" />
-                      <span className="ml-2">Spotify</span>
+                      <span className="ml-1">Spotify</span>
                     </Link>
                   </li>
                   <li className="flex">
@@ -173,7 +173,20 @@ export function Music() {
                       target="_blank"
                     >
                       <YoutubeIcon className="h-8 w-8 fill-slate-400 group-hover:fill-slate-600" />
-                      <span className="ml-2">Youtube</span>
+                      <span className="ml-1">Youtube</span>
+                    </Link>
+                  </li>
+                  <li className="flex">
+                    <Link
+                      href="./#donate"
+                      className="group flex items-center"
+                      aria-label="buy"
+                      title="Compra"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" className="h-7 w-7 fill-slate-400 group-hover:fill-slate-600">
+                        <path d="M267.691-167.847v-315.227h73.616q6.231 0 12.654 1.307 6.423 1.308 12.654 3.308l258.922 95.692q15.923 5.769 25.962 19.731 10.038 13.961 10.038 30.269 0 16-10.846 25.923-10.846 9.923-25.615 9.923H548.54q-12.693 0-23.655-1.462-10.962-1.462-22.27-5.769l-67.847-25.385-12.231 34.384 77.77 27q10.462 3.693 22.539 5.154 12.078 1.462 23.925 1.462h240.151q29.692 0 51.384 20.5 21.693 20.5 21.693 51.038L560.615-83.846l-292.924-84.001ZM67.694-100.001v-383.073h139.999v383.073H67.694Zm566.152-352.308L475.539-605.462q-28.693-27.692-48.269-61.692-19.577-34-19.577-73.922 0-49.615 34.653-84.269 34.654-34.654 84.269-34.654 32.385 0 59.808 15.616 27.423 15.616 47.423 39.769 20-24.153 47.423-39.769 27.423-15.616 59.807-15.616 49.615 0 84.269 34.654t34.654 84.269q0 39.922-19.27 73.922-19.269 34-47.961 61.692L633.846-452.309Z"/>
+                      </svg>
+                      <span className="ml-1">Compra</span>
                     </Link>
                   </li>
                 </ul>
@@ -204,10 +217,9 @@ export function Music() {
           <h2 className=" italic font-bold leading-7 text-slate-900 mb-4">
             Contribueix
           </h2>
-          Nil Garcés és un projecte musical totalment autogestionat. A dia d'avui, no hi ha concerts previstos, tot i ser aquests la principal font d'ingressos dels artistes actualment. Totes les meves composicions han pogut veure la llum gràcies a la generositat d'aquelles persones que hi han cregut i col·laborat.<br/><br/>
-          Qualsevol contribució econòmica m'ajuda a cobrir despeses de futures creacions i altres aspectes logístics (publicitat, web, etc). Aquests diners també ajuden a tots aquells artistes locals involucrats en l'elaboració de nous treballs, per exemple en els processos de disseny, producció o gravació.<br/><br/>
+          Nil Garcés és un projecte musical totalment autogestionat. A dia d'avui, no hi ha concerts previstos, tot i ser aquests la principal font d'ingressos de la major part d'artistes. Aquestes composicions han pogut veure la llum gràcies a la generositat d'aquelles persones que hi han cregut i col·laborat.<br/><br/>
+          Qualsevol contribució econòmica m'ajuda a cobrir despeses de futures creacions i altres aspectes logístics: publicitat, web, etc. Aquests diners també ajuden a tots aquells artistes locals involucrats en l'elaboració de nous treballs, per exemple en els processos de disseny, producció o gravació.<br/><br/>
           Gràcies per fer-ho possible.
-
         </div>
       </section>
     </AudioProvider>
