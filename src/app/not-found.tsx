@@ -1,5 +1,5 @@
-import { Button } from '@/components/ui/Button'
-import { Container } from '@/components/layout/Container'
+import { Button } from '@/components/Button'
+import { Container } from '@/components/Container'
 import Image from 'next/image'
 import backgroundLeft from '@/assets/img/left.jpg'
 import backgroundRight from '@/assets/img/right.jpg'

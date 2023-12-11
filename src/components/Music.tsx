@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-import { Container } from '@/components/layout/Container'
+import { Container } from '@/components/Container'
 import { SongPlayButton } from './music/SongPlayButton'
 import { AudioProvider } from '@/components/music/AudioProvider'
 import { AudioPlayer } from '@/components/music/player/AudioPlayer'
@@ -96,7 +96,7 @@ export function Music() {
         <div className="mx-auto max-w-[76ch] text-justify py-8">
           Totes les pistes d'àudio es poden reproduir i descarregar lliurement en bona qualitat. També podeu obtenir gratuïtament en PDF les partitures que he pogut escriure.<br/><br/>
           
-          Si podeu i voleu fer un donatiu per ajudar a mantenir viu aquest projecte, ho podeu fer des d'<a href="#donate" className=" font-bold text-slate-900 underline">aquí ↓</a>.
+          Si podeu i voleu fer un donatiu per ajudar a mantenir viu aquest projecte, ho podeu fer des d'<Link href="#donate" className=" font-bold text-slate-900 underline">aquí ↓</Link>.
         </div>
         <div className="mx-auto flex gap-4 pb-4 my-4 over md:justify-center overflow-x-scroll px-2">
           {musicLinks.map((album, index) => (
@@ -180,7 +180,7 @@ export function Music() {
                     <Link
                       href="./#donate"
                       className="group flex items-center"
-                      aria-label="buy"
+                      aria-label="compra"
                       title="Compra"
                     >
                       <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" className="h-7 w-7 fill-slate-400 group-hover:fill-slate-600">
