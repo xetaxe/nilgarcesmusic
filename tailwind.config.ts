@@ -39,6 +39,7 @@ export default {
           200: '#fcf9fc',
           300: '#e7ecf2',
           400: '#d1dfe8',
+          500: '#a8c2d3',
         },
       },
       keyframes: {

@@ -102,7 +102,7 @@ export const poems: Poem[] = [
 
     Fins que un dia 
     em vaig trobar a la finestra,
-    mirant en la llunyania, 
+    mirant la llunyania, 
     buscant-hi una nau.
 
     Des de llavors ho faig cada alba, 
@@ -149,7 +149,7 @@ export const poems: Poem[] = [
     que a New York hi tinc un pis.
 
     Però ja et dic...
-    tota una vida formant-me.
+    és tota una vida formant-me.
     Per aprendre a treure pit.
     Per mirar-me el melic.
     Per vèncer els enemics,

@@ -98,6 +98,31 @@ export function Music() {
           
           Si podeu i voleu fer un donatiu per ajudar a mantenir viu aquest projecte, ho podeu fer des d'<a href="#donate" className=" font-bold text-slate-900 underline">aquí ↓</a>.
         </div>
+        <div className="mx-auto flex gap-4 pb-4 mb-4 over md:justify-center overflow-x-scroll px-2">
+          {musicLinks.map((album, index) => (
+            <div className={`z-10 flex flex-col p-4 lg:border-slate-200 cursor-pointer rounded-lg max-w-[160px] ${index === currentAlbum ? "bg-bg-500": "bg-bg-400"}`} key={album.title} onClick={() => setCurrentAlbum(index)}>
+              <span className="relative mx-auto block w-32 overflow-hidden rounded-lg bg-slate-200 shadow-md shadow-slate-200 aspect-square" aria-label={album.title}
+              >
+                <Image
+                  className="w-full"
+                  src={ album.img }
+                  alt=""
+                  fill
+                  priority
+                />
+                <div className="absolute inset-0 rounded-lg ring-1 ring-inset ring-black/10" />
+              </span>
+              <div className="mt-2 text-center">
+                <p className="font-bold text-slate-900">
+                  { album.title }
+                </p>
+                <p className="text-xs font-medium text-slate-700">
+                  { album.year }
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
         <Container className="mx-auto max-w-7xl flex flex-col md:flex-row justify-center bg-bg-200 rounded-md md:py-4">
           <div className=" md:basis-80 lg:basis-96 lg:items-start lg:overflow-y-auto xl:basis-120">
             <div className="z-10 flex flex-col mx-auto sm:px-4 py-8 lg:border-slate-200">
@@ -114,7 +139,7 @@ export function Music() {
                 />
                 <div className="absolute inset-0 rounded-lg ring-1 ring-inset ring-black/10 sm:rounded-xl lg:rounded-2xl" />
               </span>
-              <div className="mt-8 text-center lg:mt-12 lg:text-left">
+              <div className="mt-8 lg:mt-12 text-center">
                 <p className="text-xl font-bold text-center text-slate-900">
                   { musicLinks[currentAlbum].title }
                 </p>
@@ -179,7 +204,7 @@ export function Music() {
           <h2 className=" italic font-bold leading-7 text-slate-900 mb-4">
             Contribueix
           </h2>
-          Nil Garcés és un projecte musical totalment autogestionat. A dia d'avui, no hi ha concerts previstos, tot i ser aquests la principal font d'ingressos dels artistes actualment. Totes les composicions actuals han pogut veure la llum gràcies a la generositat d'aquelles persones que hi han cregut i col·laborat.<br/><br/>
+          Nil Garcés és un projecte musical totalment autogestionat. A dia d'avui, no hi ha concerts previstos, tot i ser aquests la principal font d'ingressos dels artistes actualment. Totes les meves composicions han pogut veure la llum gràcies a la generositat d'aquelles persones que hi han cregut i col·laborat.<br/><br/>
           Qualsevol contribució econòmica m'ajuda a cobrir despeses de futures creacions i altres aspectes logístics (publicitat, web, etc). Aquests diners també ajuden a tots aquells artistes locals involucrats en l'elaboració de nous treballs, per exemple en els processos de disseny, producció o gravació.<br/><br/>
           Gràcies per fer-ho possible.
 

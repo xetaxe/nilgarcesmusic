@@ -14,6 +14,7 @@ export type Album = {
   catDescription: string,
   engDescription: string,
   img: string,
+  year: number,
   spotifyLink: string,
   youtubeLink: string,
   songs: Song[]
@@ -23,9 +24,10 @@ export const musicLinks: Album[] = [
   {
     title: "Captura subtil",
     engTitle: "Subtle Capture",
-    catDescription: "Primer disc, publicat el 2016. Cada cançó va acompanyada d'un poema.",
+    catDescription: "En aquest primer treball, de caire exploratiu i amb sonoritats diverses, cada cançó va acompanyada d'un poema que n'arrodoneix el missatge. L'àlbum és un homenatge a aquelles emocions i intuïcions nostres que se'ns mouen per dins, profundes i sense fer soroll... fins que afloren de cop, tranquil·les però intenses, i ho prenen tot.",
     engDescription: "",
     img: "/captura_subtil.jpg",
+    year: 2016,
     spotifyLink: "https://open.spotify.com/intl-es/album/3kw6YVcxOHF78yoStWeFGV?si=CUCczvHQTyi-toGwUFgFiw",
     youtubeLink: "https://www.youtube.com/watch?v=4l1vCxnO8D4",
     songs: [
@@ -132,9 +134,10 @@ export const musicLinks: Album[] = [
   {
     title: "Becaines d'estiu",
     engTitle: "Summer Siesta",
-    catDescription: "Single estiuenc",
+    catDescription: "Single compost durant dos dies mandrosos d'estiu, d'aquells xafogosos, on el bon temps se't tira a sobre... la cançó vol captar aquest esperit estiuenc.",
     engDescription: "",
     img: "/becaines_destiu.jpg",
+    year: 2017,
     spotifyLink: "https://open.spotify.com/intl-es/album/3NZSl6a63jfHvzVfrFjsoj?si=xsNTB3nmR9i33vm6IP7RVg",
     youtubeLink: "https://www.youtube.com/watch?v=ShiWROJ5ARA",
     songs: [
@@ -151,9 +154,10 @@ export const musicLinks: Album[] = [
   {
     title: "Versions I",
     engTitle: "Versions I",
-    catDescription: "Disc de versions",
+    catDescription: "Recull de versions de cançons ja existents, adaptades a guitarra sola. En aquest treball, el més popular a dia d'avui, les peces seleccionades, d'origens molt diversos, es caracteritzen per la seva estructura amable, estil calmat i so familiar.",
     engDescription: "",
     img: "/versions.jpg",
+    year: 2018,
     spotifyLink: "https://open.spotify.com/intl-es/album/3VsXXCGpDk4DmhfqFq0U7k?si=7aQXHg5sTL-dLGCXJRz02g",
     youtubeLink: "https://www.youtube.com/watch?v=NfcBHuHtOe0",
     songs: [
@@ -226,9 +230,10 @@ export const musicLinks: Album[] = [
   {
     title: "El fred i la primavera",
     engTitle: "Breeze & Spring",
-    catDescription: "Últim disc, de caire conceptual",
+    catDescription: "Aquest últim disc, més madur i de caire conceptual, busca plasmar musicalment l'ampli ventall d'emocions que som capaços de sentir, i la intensitat amb la que poden aparèixer, esvanir-se, conviure i confondre's... Tristesa, desig, dubte, il·lusió, dolor, enyor, transformació... som barreges de tot això i mil forces més, en xoc continu.",
     engDescription: "",
     img: "/el_fred_i_la_primavera.jpg",
+    year: 2022,
     spotifyLink: "https://open.spotify.com/intl-es/album/7rV5S7qfyVeDpGZsfrzo1c?si=o6snXPNAQoivGFoguYGYKw",
     youtubeLink: "https://www.youtube.com/watch?v=AdoTT5BJvzs",
     songs: [
