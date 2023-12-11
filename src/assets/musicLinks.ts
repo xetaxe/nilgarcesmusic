@@ -24,7 +24,7 @@ export const musicLinks: Album[] = [
   {
     title: "Captura subtil",
     engTitle: "Subtle Capture",
-    catDescription: "En aquest primer treball, de caire exploratiu i amb sonoritats diverses, cada cançó va acompanyada d'un poema que n'arrodoneix el missatge. L'àlbum és un homenatge a aquelles emocions i intuïcions nostres que se'ns mouen per dins, profundes i sense fer soroll... fins que afloren de cop, tranquil·les però intenses, i ho prenen tot.",
+    catDescription: "Aquest primer treball, on cada cançó va acompanyada d'un poema, és un homenatge a aquelles emocions i intuïcions que se'ns mouen per dins, profundes i sense fer soroll... fins que afloren de cop i ho prenen tot.",
     engDescription: "",
     img: "/captura_subtil.jpg",
     year: 2016,
@@ -154,7 +154,7 @@ export const musicLinks: Album[] = [
   {
     title: "Versions I",
     engTitle: "Versions I",
-    catDescription: "Recull de versions de cançons ja existents, adaptades a guitarra sola. Les peces seleccionades, d'origens molt diversos, es caracteritzen per la seva estructura amable, estil calmat i so familiar.",
+    catDescription: "Recull de versions de cançons ja existents, adaptades a guitarra sola. Les peces seleccionades, d'origens diversos, es caracteritzen pel seu so calmat i familiar.",
     engDescription: "",
     img: "/versions.jpg",
     year: 2018,
@@ -230,7 +230,7 @@ export const musicLinks: Album[] = [
   {
     title: "El fred i la primavera",
     engTitle: "Breeze & Spring",
-    catDescription: "Aquest últim treball, més madur i de caire conceptual, busca plasmar musicalment l'ampli ventall d'emocions que som capaços de sentir, i la intensitat amb què poden aparèixer, esvanir-se, conviure i confondre's... Tristesa, desig, dubte, il·lusió, dolor, enyor, transformació... som barreges de tot això i mil forces més, en xoc continu.",
+    catDescription: "Aquest últim àlbum, més madur i de caire conceptual, busca plasmar musicalment l'ampli ventall d'emocions que som capaços de sentir, i la intensitat amb què poden aparèixer, esvanir-se, conviure, confondre's... Tristesa, desig, dubte, il·lusió, dolor, enyor, transformació... som barreges de tot això i mil forces més, en xoc continu.",
     engDescription: "",
     img: "/el_fred_i_la_primavera.jpg",
     year: 2022,

@@ -87,7 +87,7 @@ export function Music() {
   
   return (
     <AudioProvider>
-      <div className="bg-bg-300 py-10 md:py-16 bg-gradient-to-b from-[#d1dfe8] sc">
+      <div className="bg-bg-300 py-8 md:py-14 bg-gradient-to-b from-[#d1dfe8] sc">
       </div>
       <section id="music" className="bg-gradient-to-b from-[#e7ecf2] bg-bg-200 w-full py-8 px-4 lg:px-8">
         <h1 id="music" className="mx-auto max-w-7xl font-bold text-2xl text-center">
@@ -98,10 +98,10 @@ export function Music() {
           
           Si podeu i voleu fer un donatiu per ajudar a mantenir viu aquest projecte, ho podeu fer des d'<a href="#donate" className=" font-bold text-slate-900 underline">aquí ↓</a>.
         </div>
-        <div className="mx-auto flex gap-4 pb-4 mb-4 over md:justify-center overflow-x-scroll px-2">
+        <div className="mx-auto flex gap-4 pb-4 my-4 over md:justify-center overflow-x-scroll px-2">
           {musicLinks.map((album, index) => (
-            <div className={`z-10 flex flex-col p-4 lg:border-slate-200 cursor-pointer rounded-lg max-w-[160px] ${index === currentAlbum ? "bg-bg-500": "bg-bg-400"}`} key={album.title} onClick={() => setCurrentAlbum(index)}>
-              <span className="relative mx-auto block w-32 overflow-hidden rounded-md bg-slate-200 shadow-md shadow-slate-200 aspect-square" aria-label={album.title}
+            <div className={`z-10 flex flex-col p-4 lg:border-slate-200 cursor-pointer rounded-lg ${index === currentAlbum ? "bg-bg-500": "bg-bg-400"}`} key={album.title} onClick={() => setCurrentAlbum(index)}>
+              <span className="relative mx-auto block w-40 overflow-hidden rounded-md bg-slate-200 shadow-md shadow-slate-200 aspect-square" aria-label={album.title}
               >
                 <Image
                   className="w-full"
@@ -214,7 +214,7 @@ export function Music() {
           </div>
         </Container>
         <div id="donate" className="mx-auto max-w-[76ch] text-justify py-8">
-          <h2 className=" italic font-bold leading-7 text-slate-900 mb-4">
+          <h2 className=" italic font-bold leading-7 text-slate-600 mb-4">
             Contribueix
           </h2>
           Nil Garcés és un projecte musical totalment autogestionat. A dia d'avui, no hi ha concerts previstos, tot i ser aquests la principal font d'ingressos de la major part d'artistes. Aquestes composicions han pogut veure la llum gràcies a la generositat d'aquelles persones que hi han cregut i col·laborat.<br/><br/>
