@@ -1,7 +1,7 @@
-import { Hero } from '@/components/Hero'
-import { Bio } from '@/components/Bio'
-import { Music } from '@/components/Music'
-import { Contact } from '@/components/Contact'
+import { Hero } from './Hero'
+import { Bio } from './Bio'
+import { Music } from './Music'
+import { Contact } from './Contact'
 
 export default function Home() {
   return (

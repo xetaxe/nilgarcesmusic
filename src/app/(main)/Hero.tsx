@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Container } from '@/components/Container'
 import { logoFont } from '@/styles/fonts'
 import backgroundImage from '@/assets/img/background.jpg'
-import { Button } from './Button'
+import { Button } from '../../components/Button'
 
 export function Hero() {
   return (
