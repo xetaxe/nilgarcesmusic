@@ -8,7 +8,7 @@ import { SongPlayButton } from '@/components/music/SongPlayButton'
 import { AudioProvider } from '@/components/music/AudioProvider'
 import { AudioPlayer } from '@/components/music/player/AudioPlayer'
 import { SpotifyIcon, YoutubeIcon } from '@/assets/icons'
-import { type Song, musicLinks } from '@/assets/musicLinks'
+import { type Song, albums } from '@/app/_data/albums'
 import { useState } from 'react'
 
 function PauseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
@@ -99,7 +99,7 @@ export function Music() {
           Si podeu i voleu fer un donatiu per ajudar a mantenir viu aquest projecte, ho podeu fer des d'<Link href="#donate" className=" font-bold text-slate-900 underline">aquí ↓</Link>.
         </div>
         <div className="mx-auto flex gap-4 pb-4 my-4 over md:justify-center overflow-x-scroll px-2">
-          {musicLinks.map((album, index) => (
+          {albums.map((album, index) => (
             <div className={`z-10 flex flex-col p-4 lg:border-slate-200 cursor-pointer rounded-lg ${index === currentAlbum ? "bg-bg-500": "bg-bg-400"}`} key={album.title} onClick={() => setCurrentAlbum(index)}>
               <span className="relative mx-auto block w-40 overflow-hidden rounded-md bg-slate-200 shadow-md shadow-slate-200 aspect-square" aria-label={album.title}
               >
@@ -132,7 +132,7 @@ export function Music() {
               >
                 <Image
                   className="w-full"
-                  src={ musicLinks[currentAlbum].img }
+                  src={ albums[currentAlbum].img }
                   alt=""
                   fill
                   priority
@@ -141,10 +141,10 @@ export function Music() {
               </span>
               <div className="mt-8 lg:mt-12 text-center">
                 <p className="text-xl font-bold text-center text-slate-900">
-                  { musicLinks[currentAlbum].title }
+                  { albums[currentAlbum].title }
                 </p>
                 <p className="mt-3 font-medium leading-8 text-slate-700">
-                  { musicLinks[currentAlbum].catDescription }
+                  { albums[currentAlbum].catDescription }
                 </p>
               </div>
               <section className="mt-2">
@@ -154,7 +154,7 @@ export function Music() {
                 >
                   <li className="flex">
                     <Link
-                      href={musicLinks[currentAlbum].spotifyLink}
+                      href={albums[currentAlbum].spotifyLink}
                       className="group flex items-center"
                       aria-label="spotify"
                       title="Spotify link"
@@ -166,7 +166,7 @@ export function Music() {
                   </li>
                   <li className="flex">
                     <Link
-                      href={musicLinks[currentAlbum].youtubeLink}
+                      href={albums[currentAlbum].youtubeLink}
                       className="group flex items-center"
                       aria-label="youtube"
                       title="Youtube link"
@@ -202,7 +202,7 @@ export function Music() {
                   </h1>
                 </Container>
                 <div className="divide-y mt-2 lg:mt-4">
-                  {musicLinks[currentAlbum].songs.map((song) => (
+                  {albums[currentAlbum].songs.map((song) => (
                     <SongEntry key={song.number} song={song} />
                   ))}
                 </div>

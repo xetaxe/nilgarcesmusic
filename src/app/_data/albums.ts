@@ -20,7 +20,7 @@ export type Album = {
   songs: Song[]
 }
 
-export const musicLinks: Album[] = [
+export const albums: Album[] = [
   {
     title: "Captura subtil",
     engTitle: "Subtle Capture",

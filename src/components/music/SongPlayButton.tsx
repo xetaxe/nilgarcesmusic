@@ -1,7 +1,7 @@
 'use client'
 
 import { useAudioPlayer } from './AudioProvider'
-import { type Song } from '@/assets/musicLinks'
+import { type Song } from '@/app/_data/albums'
 
 export function SongPlayButton({
   song,
