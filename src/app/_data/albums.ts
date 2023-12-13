@@ -154,7 +154,7 @@ export const albums: Album[] = [
   {
     title: "Versions I",
     engTitle: "Versions I",
-    catDescription: "Recull de versions de cançons ja existents, adaptades a guitarra sola. Les peces seleccionades, d'origens diversos, es caracteritzen pel seu so calmat i familiar.",
+    catDescription: "Recull de versions de cançons ja existents, adaptades a guitarra sola. Totes les peces, d'origens diversos, es caracteritzen pel seu so calmat i familiar.",
     engDescription: "",
     img: "/versions.jpg",
     year: 2018,
