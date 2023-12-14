@@ -40,9 +40,10 @@ function SongEntry({ song }: { song: Song }) {
           </Link>
           <Link
             href={`${song.sheet}`}
-            className="flex items-center text-sm font-bold leading-6 text-slate-400 hover:text-slate-600 active:text-slate-600"
+            className={`flex items-center text-sm font-bold leading-6 text-slate-400 hover:text-slate-600 active:text-slate-600 ${song.sheet ? "" : "hidden"}`}
             aria-label={`See sheet music of ${song.title}`}
             title="Partitura"
+            target="_blank"
           >
             <SheetIcon className="h-6 w-6"/>
           </Link>

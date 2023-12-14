@@ -2,7 +2,7 @@ import '@/styles/tailwind.css'
 
 import { Analytics } from '@vercel/analytics/react';
 import { type Metadata } from 'next'
-import { font } from '../styles/fonts'
+import { font } from '@/styles/fonts'
 
 
 export const metadata: Metadata = {
