@@ -64,12 +64,18 @@ function SongEntry({ song }: { song: Song }) {
 export function Music() {
   
   const [currentAlbum, setCurrentAlbum] = useState(0);
+  const [currency, setCurrency] = useState<"€" | "$">("€");
+  const [donateString, setDonateString] = useState("0");
+
+  const donateValue = Number.isNaN(parseFloat(donateString))
+  ? 0
+  : parseFloat(donateString)
   
   return (
     <AudioProvider>
       <div className="bg-bg-300 py-8 md:py-14 bg-gradient-to-b from-[#d1dfe8] sc">
       </div>
-      <section id="music" className="bg-gradient-to-b from-[#e7ecf2] bg-bg-200 w-full">
+      <section id="music" className="bg-gradient-to-b from-[#e7ecf2] bg-bg-200 w-full pb-12">
         <Container>
           <h1 id="music" className="font-bold text-2xl text-center">
             Música
@@ -197,11 +203,39 @@ export function Music() {
 
           <div id="donate" className="mx-auto max-w-[80ch] text-justify py-8">
             <h2 className=" italic font-bold leading-7 text-slate-600 mb-4">
-              Contribueix
+              Donatius
             </h2>
             Nil Garcés és un projecte musical totalment autogestionat. A dia d'avui, no hi ha concerts previstos, tot i ser aquests la principal font d'ingressos de la major part d'artistes. Si aquestes composicions han pogut veure la llum, és gràcies a les persones que hi han cregut i col·laborat.<br/><br/>
             Qualsevol contribució econòmica m'ajuda a cobrir despeses de futures creacions i altres aspectes logístics: publicitat, web, etc. Aquests diners també ajuden a tots aquells artistes locals involucrats en l'elaboració de nous treballs, per exemple en els processos de disseny, producció o gravació.<br/><br/>
             Gràcies per fer-ho possible.
+          </div>
+          <div>
+            <form action="https://www.paypal.com/donate" method="post" target="_top" className="flex flex-col gap-4 max-w-sm mx-auto">
+              <span className="flex justify-center gap-2 px-8">
+                <span className="rounded-xl p-2 font-semibold invisible">{currency}</span>
+                <input type="text" className="rounded-xl p-2 font-semibold text-center text-xl grow min-w-0" value={donateString} onChange={(e) => setDonateString(e.currentTarget.value)
+                } />
+                <span className="rounded-xl px-2 py-2 font-semibold text-xl bg-slate-200 cursor-pointer" onClick={() => setCurrency((prev) => prev === "€" ? "$" : "€")}>{currency}</span>
+              </span>
+              <input type="hidden" name="hosted_button_id" value="HAY35FC9W2ZDS" />
+              <span className="flex flex-col md:flex-row md:gap-4 items-center md:justify-center">
+                {
+                  currency === "€"
+                    ?
+                <span>
+                  Donatiu final: <b>{Math.max(Math.round((0.956 * donateValue - 0.39) * 100) / 100, 0) } {currency}</b>
+                </span>
+                :
+                <span>
+                  Donatiu final: <b>{Math.max(Math.round((0.956 * donateValue - 0.49) * 100) / 100, 0) } {currency}</b>
+                </span>
+                }
+                <span className="text-xs">
+                  (tarifes Paypal: {currency === "€" ? "0.39€" : "0.49$"} fix + 4.4%)
+                </span>  
+              </span>
+              <input type="submit" name="submit" value="Fer donatiu" title="PayPal" alt="Donar a través de PayPal" className="inline-flex justify-center rounded-2xl bg-logo-400 hover:bg-logo-300 active:bg-logo-300 p-4 text-base font-semibold text-white focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 active:text-white/70 cursor-pointer w-full" />
+            </form>
           </div>
         </Container>
       </section>

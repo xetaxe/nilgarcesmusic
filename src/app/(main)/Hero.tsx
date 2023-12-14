@@ -43,7 +43,7 @@ export function Hero() {
             </Button>
           </div>
 
-          <div className="w-full px-4 lg:hidden absolute bottom-[14.3%] lg:left-1/2 text-center animate-fadein">
+          <div className="w-full px-4 lg:hidden absolute bottom-1/4 lg:left-1/2 text-center animate-fadein">
             <Button href="https://open.spotify.com/intl-es/album/7rV5S7qfyVeDpGZsfrzo1c?si=IjH70tsBT8-4Xrs4-GLYdQ" target="_blank" className="inline-block w-full max-w-sm mt-4">
               Escolta'l a Spotify
               <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" className="ml-2 inline-block">
