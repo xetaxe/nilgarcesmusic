@@ -4,7 +4,7 @@ import left from '@/assets/img/left.jpg'
 import background2 from '@/assets/img/background2.jpg'
 import background3 from '@/assets/img/background3.jpg'
 import background4 from '@/assets/img/background4.jpg'
-import { poems } from '@/app/_data/poems'
+import { poems } from '@/data/poems'
 import { logoFont } from '@/styles/fonts'
 import Link from 'next/link'
 

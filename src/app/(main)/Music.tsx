@@ -7,7 +7,7 @@ import { Container } from '@/components/Container'
 import { AudioProvider, useAudioPlayer } from '@/components/AudioProvider'
 import { AudioPlayer } from '@/components/player/AudioPlayer'
 import { DonateIcon, DownloadIcon, PauseIcon, PlayIcon, PoemIcon, SheetIcon, SpotifyIcon, YoutubeIcon } from '@/assets/icons'
-import { type Song, albums } from '@/app/_data/albums'
+import { type Song, albums } from '@/data/albums'
 import { useState } from 'react'
 
 function SongEntry({ song }: { song: Song }) {

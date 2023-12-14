@@ -1,6 +1,6 @@
 import { createContext, useContext, useMemo, useReducer, useRef } from 'react'
 
-import { type Song } from '@/app/_data/albums'
+import { type Song } from '@/data/albums'
 
 interface PlayerState {
   closed: boolean,
