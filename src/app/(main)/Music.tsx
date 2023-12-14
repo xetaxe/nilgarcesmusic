@@ -4,42 +4,27 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import { Container } from '@/components/Container'
-import { SongPlayButton } from '@/components/music/SongPlayButton'
-import { AudioProvider } from '@/components/music/AudioProvider'
+import { AudioProvider, useAudioPlayer } from '@/components/music/AudioProvider'
 import { AudioPlayer } from '@/components/music/player/AudioPlayer'
-import { DonateIcon, DownloadIcon, PoemIcon, SheetIcon, SpotifyIcon, YoutubeIcon } from '@/assets/icons'
+import { DonateIcon, DownloadIcon, PauseIcon, PlayIcon, PoemIcon, SheetIcon, SpotifyIcon, YoutubeIcon } from '@/assets/icons'
 import { type Song, albums } from '@/app/_data/albums'
 import { useState } from 'react'
 
-function PauseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
-  return (
-    <svg aria-hidden="true" viewBox="0 0 10 10" {...props}>
-      <path fillRule="evenodd" clipRule="evenodd" d="M1.496 0a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5H2.68a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5H1.496Zm5.82 0a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5H8.5a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5H7.316Z" />
-    </svg>
-  )
-}
-
-function PlayIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
-  return (
-    <svg aria-hidden="true" viewBox="0 0 10 10" {...props}>
-      <path d="M8.25 4.567a.5.5 0 0 1 0 .866l-7.5 4.33A.5.5 0 0 1 0 9.33V.67A.5.5 0 0 1 .75.237l7.5 4.33Z" />
-    </svg>
-  )
-}
-
 function SongEntry({ song }: { song: Song }) {
+
+  let player = useAudioPlayer(song)
 
   return (
     <div aria-labelledby={`song-${song.number}-title`} className="py-1 md:py-2">
       <div id={`song-${song.number}-title`} className="mt-2 font-bold text-slate-900 flex  justify-between ">
         <span className="flex gap-2 items-center">
-          <SongPlayButton
-            song={song}
-            className="flex items-center gap-x-3 text-sm font-bold leading-6 text-slate-400 hover:text-slate-600 active:text-slate-600"
-            playing={ <PauseIcon className="h-3 w-2.5 fill-current" /> }
-            paused={ <PlayIcon className="h-3 w-3 fill-current" /> }
-            title="Reproduir"
-          />
+          <button type="button" onClick={() => player.toggle()} aria-label={`${player.playing ? 'Pause' : 'Play'} song ${ song.title }`} className="flex items-center gap-x-3 text-sm font-bold leading-6 text-slate-400 hover:text-slate-600 active:text-slate-600"
+            title="Reproduir">
+            {player.playing 
+              ? <PauseIcon className="h-3 w-2.5 fill-current" /> 
+              : <PlayIcon className="h-3 w-3 fill-current" /> 
+            }
+          </button>
           <span>
             {song.number}. {song.title}
           </span>

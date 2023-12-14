@@ -9,5 +9,7 @@ import { DonateIcon } from "./DonateIcon"
 import { DownloadIcon } from "./DownloadIcon"
 import { SheetIcon } from "./SheetIcon"
 import { PoemIcon } from "./PoemIcon"
+import { PlayIcon } from "./PlayIcon"
+import { PauseIcon } from "./PauseIcon"
 
-export { SpotifyIcon, AppleMusicIcon, InstagramIcon, YoutubeIcon, FacebookIcon, EngIcon, CatIcon, DonateIcon, DownloadIcon, SheetIcon, PoemIcon}
+export { SpotifyIcon, AppleMusicIcon, InstagramIcon, YoutubeIcon, FacebookIcon, EngIcon, CatIcon, DonateIcon, DownloadIcon, SheetIcon, PoemIcon, PlayIcon, PauseIcon}
