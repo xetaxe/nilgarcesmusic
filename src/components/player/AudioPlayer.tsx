@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 
-import { useAudioPlayer } from '@/components/music/AudioProvider'
+import { useAudioPlayer } from '@/components/AudioProvider'
 import { ForwardButton } from './ForwardButton'
 import { MuteButton } from './MuteButton'
 import { PlaybackRateButton } from './PlaybackRateButton'
