@@ -32,7 +32,7 @@ function SongEntry({ song }: { song: Song }) {
         <span className="flex items-center gap-4">
           <Link
             href={`${song.download}`}
-            className="flex items-center text-sm font-bold leading-6 text-slate-400 hover:text-slate-600 active:text-slate-600"
+            className={`flex items-center text-sm font-bold leading-6 text-slate-400 hover:text-slate-600 active:text-slate-600 ${song.download ? "" : "hidden"}`}
             aria-label={`Download song ${song.title}`}
             title="Descarregar"
           >
