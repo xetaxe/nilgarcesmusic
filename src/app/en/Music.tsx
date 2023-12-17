@@ -16,7 +16,7 @@ function SongEntry({ song }: { song: Song }) {
 
   return (
     <div aria-labelledby={`song-${song.number}-title`} className="py-1 md:py-2">
-      <div id={`song-${song.number}-title`} className="mt-2 font-bold text-slate-900 flex gap-2 justify-between ">
+      <div id={`song-${song.number}-title`} className="mt-2 font-bold text-slate-900 flex gap-2  justify-between ">
         <span className="flex gap-2 items-center">
           <button type="button" onClick={() => player.toggle()} aria-label={`${player.playing ? 'Pause' : 'Play'} song ${ song.title }`} className="flex items-center gap-x-3 text-sm font-bold leading-6 text-slate-400 hover:text-slate-600 active:text-slate-600"
             title="Reproduir">
@@ -25,8 +25,13 @@ function SongEntry({ song }: { song: Song }) {
               : <PlayIcon className="h-3 w-3 fill-current" /> 
             }
           </button>
-          <span>
-            {song.number}. {song.title}
+          <span className="flex flex-col">
+            <span>
+              {song.number}. {song.title}
+            </span>
+            <span className="pl-4 text-sm font-medium">
+              {!!song.engTitle ? `(${song.engTitle})` : null}
+            </span>
           </span>
         </span>
         <span className="flex items-center gap-4">
@@ -78,13 +83,13 @@ export function Music() {
       <section id="music" className="bg-gradient-to-b from-[#e7ecf2] bg-bg-200 w-full pb-12">
         <Container>
           <h1 id="music" className="font-bold text-2xl text-center">
-            Música
+            Music
           </h1>
 
           <div className="mx-auto max-w-[80ch] text-justify py-8">
-            Totes les pistes d'àudio es poden reproduir i descarregar lliurement en bona qualitat més avall. També estan disponibles en PDF les partitures que he pogut escriure.<br/><br/>
+            All sound tracks can be freely played and downloaded below in good quality. All the music sheets that I have had the time to transcribe are also available.<br/><br/>
             
-            Si podeu i voleu fer un donatiu per ajudar a mantenir viu aquest projecte, ho podeu fer des d'<Link href="#donate" className=" font-bold text-slate-900 underline">aquí ↓</Link>.
+            If you can and want to donate to help keeping this project possible, you can do it from the link <Link href="#donate" className=" font-bold text-slate-900 underline">below ↓</Link>.
           </div>
 
           <div className="flex gap-4 pb-4 my-4 lg:justify-center overflow-x-scroll">
@@ -104,6 +109,9 @@ export function Music() {
                 <div className="mt-2 text-center">
                   <p className="font-bold text-slate-900">
                     { album.title }
+                  </p>
+                  <p className="font-medium text-sm text-slate-900">
+                    { !!album.engTitle ? `(${album.engTitle})` : null}
                   </p>
                   <p className="text-xs font-medium text-slate-700">
                     { album.year }
@@ -133,8 +141,11 @@ export function Music() {
                   <p className="text-xl font-bold text-center text-slate-900">
                     { albums[currentAlbum].title }
                   </p>
+                  <p className="text-base font-medium text-center text-slate-900">
+                    { !!albums[currentAlbum].engTitle ? `(${albums[currentAlbum].engTitle})` : null}
+                  </p>
                   <p className="mt-3 font-medium leading-8 text-slate-700">
-                    { albums[currentAlbum].catDescription }
+                    { albums[currentAlbum].engDescription }
                   </p>
                 </div>
                 <section className="mt-2">
@@ -171,10 +182,10 @@ export function Music() {
                         href="/#donate"
                         className="group flex items-center"
                         aria-label="compra"
-                        title="Compra"
+                        title="Buy"
                       >
                         <DonateIcon className="h-7 w-7 fill-slate-400 hover:fill-slate-600" />
-                        <span className="ml-1">Compra</span>
+                        <span className="ml-1">Buy</span>
                       </Link>
                     </li>
                   </ul>
@@ -185,7 +196,7 @@ export function Music() {
               <div className="relative">
                 <div className="sm:px-4 py-4 md:pt-8">
                   <h1 className="text-xl text-center font-bold leading-7 text-slate-900">
-                    Cançons
+                    Songs
                   </h1>
                   <div className="divide-y mt-2 lg:mt-4">
                     {albums[currentAlbum].songs.map((song) => (
@@ -203,12 +214,12 @@ export function Music() {
 
           <div id="donate" className="mx-auto max-w-[80ch] text-justify py-8">
             <h2 className=" italic font-bold leading-7 text-slate-600 mb-4">
-              Donatius
+              Donate
             </h2>
-            Nil Garcés és un projecte musical totalment autogestionat. A dia d'avui, no hi ha concerts previstos, tot i ser aquests la principal font d'ingressos de la major part d'artistes. Si aquestes composicions han pogut veure la llum, és gràcies a les persones que hi han cregut i col·laborat.<br/><br/>
-            Qualsevol contribució econòmica m'ajuda a cobrir despeses de futures creacions i altres aspectes logístics: publicitat, web, etc. Aquests diners també ajuden a tots aquells artistes locals involucrats en l'elaboració de nous treballs, per exemple en els processos de disseny, producció o gravació.<br/><br/>
-            Podeu fer-ho via <Link href="https://ko-fi.com/nilgarces" className=" font-bold text-slate-900 underline" target="_blank">Ko-fi</Link> (i desbloquejar alguns continguts extra) o directament des de baix ↓.<br/><br/>
-            Gràcies per fer-ho possible.
+            Nil Garcés is a completely self-managed musical project. As of today, there are no concerts planned, despite them being the main source of income for most artists. If these compositions were able to see the light of day, it is thanks to the people who believed in them and helped me along the way.<br/><br/>
+            Any financial contribution helps me cover expenses for future creations and other logistic aspects: advertising, web, etc. This money also helps all those local artists involved in the creation of new works, for example in the design, production or recording processes.<br/><br/>
+            You can donate via <Link href="https://ko-fi.com/nilgarces" className=" font-bold text-slate-900 underline" target="_blank">Ko-fi</Link> (which will give you access to some extra content!) or directly using the button below ↓.<br/><br/>
+            Thank you for making this possible.
           </div>
           {/* <iframe id='kofiframe' src='https://ko-fi.com/nilgarces/?hidefeed=true&widget=true&embed=true&preview=true' className="mx-auto border-none w-full pt-6 rounded-lg bg-white max-w-lg"  height="712" title='nilgarces'></iframe> */}
           <div className="mt-4">
@@ -225,18 +236,18 @@ export function Music() {
                   currency === "€"
                     ?
                 <span>
-                  Donatiu final: <b>{Math.max(Math.round((0.956 * donateValue - 0.39) * 100) / 100, 0) } {currency}</b>
+                  Final amount: <b>{Math.max(Math.round((0.956 * donateValue - 0.39) * 100) / 100, 0) } {currency}</b>
                 </span>
                 :
                 <span>
-                  Donatiu final: <b>{Math.max(Math.round((0.956 * donateValue - 0.49) * 100) / 100, 0) } {currency}</b>
+                  Final amount: <b>{Math.max(Math.round((0.956 * donateValue - 0.49) * 100) / 100, 0) } {currency}</b>
                 </span>
                 }
                 <span className="text-xs">
-                  (tarifa Paypal: {currency === "€" ? "0.39€" : "0.49$"} fix + 4.4%)
+                  (Paypal fee: {currency === "€" ? "0.39€" : "0.49$"} fixed + 4.4%)
                 </span>  
               </span>
-              <input type="submit" name="submit" value="Fer donatiu" title="PayPal" alt="Donar a través de PayPal" className="inline-flex justify-center rounded-2xl bg-logo-400 hover:bg-logo-300 active:bg-logo-300 p-4 text-base font-semibold text-white focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 active:text-white/70 cursor-pointer w-full" />
+              <input type="submit" name="submit" value="Donate" title="PayPal" alt="Donate via PayPal" className="inline-flex justify-center rounded-2xl bg-logo-400 hover:bg-logo-300 active:bg-logo-300 p-4 text-base font-semibold text-white focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 active:text-white/70 cursor-pointer w-full" />
             </form>
           </div>
         </Container>

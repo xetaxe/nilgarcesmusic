@@ -36,7 +36,7 @@ export function Hero() {
             </svg>
 
             <Button href="https://open.spotify.com/intl-es/album/7rV5S7qfyVeDpGZsfrzo1c?si=IjH70tsBT8-4Xrs4-GLYdQ" target="_blank" className="hidden lg:inline-block mt-4">
-              Escolta'l a Spotify
+              Listen on Spotify
               <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" className="ml-1 inline-block">
                 <path fill="#fff" d="m553.846-253.847-42.153-43.384 152.77-152.77H180.001v-59.998h484.462l-152.77-152.77 42.153-43.384L779.999-480 553.846-253.847Z"/>
               </svg>
@@ -45,7 +45,7 @@ export function Hero() {
 
           <div className="w-full px-4 lg:hidden absolute bottom-1/4 lg:left-1/2 text-center animate-fadein">
             <Button href="https://open.spotify.com/intl-es/album/7rV5S7qfyVeDpGZsfrzo1c?si=IjH70tsBT8-4Xrs4-GLYdQ" target="_blank" className="inline-block w-full max-w-sm mt-4">
-              Escolta'l a Spotify
+              Listen on Spotify
               <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" className="ml-2 inline-block">
                 <path fill="#fff" d="m553.846-253.847-42.153-43.384 152.77-152.77H180.001v-59.998h484.462l-152.77-152.77 42.153-43.384L779.999-480 553.846-253.847Z"/>
               </svg>

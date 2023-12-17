@@ -44,9 +44,16 @@ export default function MobileMenu( { lang="CAT" }: { lang?: string } ) {
                   <item.icon className="h-6 w-6" aria-hidden="true" />
                 </Link>
               ))}
-              <Link href="" className="relative flex ml-auto">
-                {lang === "CAT" ? <EngIcon /> : <CatIcon />}
-              </Link>
+              { lang === "CAT" 
+                ? 
+                  <Link href="/en" className="relative flex ml-auto">
+                    <EngIcon />
+                  </Link> 
+                : 
+                  <Link href="." className="relative flex ml-auto">
+                    <CatIcon />
+                  </Link>
+              }
             </span>
           </div>
         </Popover.Panel>

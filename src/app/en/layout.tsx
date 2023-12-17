@@ -4,7 +4,7 @@ import { Container } from '@/components/Container'
 import { socialLinks } from '@/assets/socialLinks'
 import MobileMenu from '@/components/MobileMenu'
 import { logoFont } from '@/styles/fonts'
-import { EngIcon } from '@/assets/icons'
+import { CatIcon } from '@/assets/icons'
 
 function Header() {
   return (
@@ -20,9 +20,9 @@ function Header() {
           </Link>
         </div>
         <div className="hidden mt-3 pr-10 md:flex lg:grow lg:basis-0 justify-end text-lg gap-8 font-medium">
-          <Link href="#music" className="text-logo-400">MÚSICA</Link>
+          <Link href="#music" className="text-logo-400">MUSIC</Link>
           <Link href="#bio" className="text-logo-400">BIO</Link>
-          <Link href="#contact" className="text-logo-400">CONTACTE</Link>
+          <Link href="#contact" className="text-logo-400">CONTACT</Link>
           <span className="flex justify-center gap-2 pt-1">
             {socialLinks.map((item) => (
               item.name === "Apple Music" || item.name === "Facebook" ? null :
@@ -33,10 +33,10 @@ function Header() {
             ))}
           </span>
         </div>
-        <Link href="/en" className="hidden md:inline-block absolute top-9 right-3 basis-0">
-          <EngIcon />
+        <Link href="." className="hidden md:inline-block absolute top-9 right-3 basis-0">
+          <CatIcon />
         </Link>
-        <MobileMenu />
+        <MobileMenu lang="ENG" />
       </Container>
     </div>
   )

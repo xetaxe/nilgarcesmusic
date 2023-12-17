@@ -124,7 +124,7 @@ export const albums: Album[] = [
       {
         number: 11,
         title: "Allegro",
-        engTitle: "Allegro",
+        engTitle: "",
         link: "https://docs.google.com/uc?export=play&id=1PGj9uRFLdqWUAtP1anH8yZRrHMCjnxyb",
         download: "https://docs.google.com/uc?export=download&id=1PGj9uRFLdqWUAtP1anH8yZRrHMCjnxyb",
         sheet: "https://docs.google.com/file/d/1vNjiz4q0_04xlM9XRn8e0PgBjFtfKGH2/view"
@@ -152,7 +152,7 @@ export const albums: Album[] = [
   },
   {
     title: "Versions I",
-    engTitle: "Versions I",
+    engTitle: "",
     catDescription: "Recull de versions de cançons ja existents, adaptades a guitarra sola. Totes les peces, d'origens diversos, es caracteritzen pel seu so calmat i familiar.",
     engDescription: "Collection of 8 versions of already existing songs, adapted for solo guitar. All the pieces, from various origins, are characterized by their calm and familiar sound.",
     img: "/versions.jpg",
