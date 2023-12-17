@@ -207,9 +207,11 @@ export function Music() {
             </h2>
             Nil Garcés és un projecte musical totalment autogestionat. A dia d'avui, no hi ha concerts previstos, tot i ser aquests la principal font d'ingressos de la major part d'artistes. Si aquestes composicions han pogut veure la llum, és gràcies a les persones que hi han cregut i col·laborat.<br/><br/>
             Qualsevol contribució econòmica m'ajuda a cobrir despeses de futures creacions i altres aspectes logístics: publicitat, web, etc. Aquests diners també ajuden a tots aquells artistes locals involucrats en l'elaboració de nous treballs, per exemple en els processos de disseny, producció o gravació.<br/><br/>
+            Podeu fer-ho via <Link href="https://ko-fi.com/nilgarces" className=" font-bold text-slate-900 underline" target="_blank">Ko-fi</Link> (i desbloquejar alguns continguts extra) o directament des de baix ↓.<br/><br/>
             Gràcies per fer-ho possible.
           </div>
-          <div>
+          {/* <iframe id='kofiframe' src='https://ko-fi.com/nilgarces/?hidefeed=true&widget=true&embed=true&preview=true' className="mx-auto border-none w-full pt-6 rounded-lg bg-white max-w-lg"  height="712" title='nilgarces'></iframe> */}
+          <div className="mt-4">
             <form action="https://www.paypal.com/donate" method="post" target="_top" className="flex flex-col gap-4 max-w-sm mx-auto">
               <span className="flex justify-center gap-2 px-8">
                 <span className="rounded-xl p-2 font-semibold invisible">{currency}</span>
@@ -218,7 +220,7 @@ export function Music() {
                 <span className="rounded-xl px-2 py-2 font-semibold text-xl bg-slate-200 cursor-pointer" onClick={() => setCurrency((prev) => prev === "€" ? "$" : "€")}>{currency}</span>
               </span>
               <input type="hidden" name="hosted_button_id" value="HAY35FC9W2ZDS" />
-              <span className="flex flex-col md:flex-row md:gap-4 items-center md:justify-center">
+              <span className="flex flex-col sm:flex-row sm:gap-4 items-center sm:justify-center">
                 {
                   currency === "€"
                     ?
@@ -231,7 +233,7 @@ export function Music() {
                 </span>
                 }
                 <span className="text-xs">
-                  (tarifes Paypal: {currency === "€" ? "0.39€" : "0.49$"} fix + 4.4%)
+                  (tarifa Paypal: {currency === "€" ? "0.39€" : "0.49$"} fix + 4.4%)
                 </span>  
               </span>
               <input type="submit" name="submit" value="Fer donatiu" title="PayPal" alt="Donar a través de PayPal" className="inline-flex justify-center rounded-2xl bg-logo-400 hover:bg-logo-300 active:bg-logo-300 p-4 text-base font-semibold text-white focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 active:text-white/70 cursor-pointer w-full" />
