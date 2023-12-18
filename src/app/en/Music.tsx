@@ -87,9 +87,9 @@ export function Music() {
           </h1>
 
           <div className="mx-auto max-w-[80ch] text-justify py-8">
-            All sound tracks can be freely played and downloaded below in good quality. All the music sheets that I have had the time to transcribe are also available.<br/><br/>
+            All soundtracks can be freely played and downloaded below in good quality. Additionally, all the music sheets that I have had the time to transcribe are also available.<br/><br/>
             
-            If you can and want to donate to help keeping this project possible, you can do it from the link <Link href="#donate" className=" font-bold text-slate-900 underline">below ↓</Link>.
+            If you can and want to donate to help keep this project possible, you can do so from the link <Link href="#donate" className=" font-bold text-slate-900 underline">below ↓</Link>.
           </div>
 
           <div className="flex gap-4 pb-4 my-4 lg:justify-center overflow-x-scroll">
@@ -216,8 +216,8 @@ export function Music() {
             <h2 className=" italic font-bold leading-7 text-slate-600 mb-4">
               Donate
             </h2>
-            Nil Garcés is a completely self-managed musical project. As of today, there are no concerts planned, despite them being the main source of income for most artists. If these compositions were able to see the light of day, it is thanks to the people who believed in them and helped me along the way.<br/><br/>
-            Any financial contribution helps me cover expenses for future creations and other logistic aspects: advertising, web, etc. This money also helps all those local artists involved in the creation of new works, for example in the design, production or recording processes.<br/><br/>
+            Nil Garcés is a completely self-managed musical project. As of today, no concerts are planned, despite being the main source of income for most artists. The existence of these compositions is thanks to the people who believed in them and supported me along the way.<br/><br/>
+            Any financial contribution helps cover expenses for future creations and other logistical aspects such as advertising and web maintenance. Moreover, this support aids other local artists involved in the creation of new works, including design, production, or recording processes.<br/><br/>
             You can donate via <Link href="https://ko-fi.com/nilgarces" className=" font-bold text-slate-900 underline" target="_blank">Ko-fi</Link> (which will give you access to some extra content!) or directly using the button below ↓.<br/><br/>
             Thank you for making this possible.
           </div>
