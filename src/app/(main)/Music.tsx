@@ -170,11 +170,11 @@ export function Music() {
                       <Link
                         href="/#donate"
                         className="group flex items-center"
-                        aria-label="compra"
-                        title="Compra"
+                        aria-label="donatiu"
+                        title="Donatiu"
                       >
                         <DonateIcon className="h-7 w-7 fill-slate-400 hover:fill-slate-600" />
-                        <span className="ml-1">Compra</span>
+                        <span className="ml-1">Donatiu</span>
                       </Link>
                     </li>
                   </ul>

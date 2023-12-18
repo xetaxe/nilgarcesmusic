@@ -33,8 +33,9 @@ function Header() {
             ))}
           </span>
         </div>
-        <Link href="." className="hidden md:inline-block absolute top-9 right-3 basis-0">
-          <CatIcon />
+        <Link href="." className="hidden md:inline-block absolute top-10 right-3 basis-0 text-sm">
+          {/* <EngIcon /> */}
+          CAT
         </Link>
         <MobileMenu lang="ENG" />
       </Container>

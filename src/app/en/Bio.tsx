@@ -34,7 +34,7 @@ export function Bio() {
             <div className="text-base leading-7 text-gray-900 lg:max-w-lg">
               <div className="max-w-[80ch] text-justify">
                 <p className="">
-                  Nil Garcés is a solo musical project, based on instrumental guitar pieces that explore the margins of pop guitar. The songs aim to create a sound landscape in which emotive and nature-inspired images are predominant.
+                  Nil Garcés is a solo musical project, based on instrumental guitar pieces that explore the margins of pop guitar. The songs aim to create a sound landscape dominated by emotive and nature-inspired imagery.
                 </p>
                 <p className="mt-4">
                   <em>Captura subtil</em> ("Subtle capture", 2016), the first work, has eleven songs + poems (in Catalan) of various styles that explore the acoustic and compositional limits of the guitar. The next release, <em>Versions I</em> (2018), is a collection of eight existing songs, adapted for solo guitar. After a period of creative inactivity, he returns with <em>El fred i la primavera</em> ("Breeze & Spring", 2022), more mature, conceptual in nature, and with an introspective look.

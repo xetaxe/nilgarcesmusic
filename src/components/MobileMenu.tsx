@@ -46,12 +46,14 @@ export default function MobileMenu( { lang="CAT" }: { lang?: string } ) {
               ))}
               { lang === "CAT" 
                 ? 
-                  <Link href="/en" className="relative flex ml-auto">
-                    <EngIcon />
+                  <Link href="/en" className="relative flex ml-auto text-sm">
+                    {/* <EngIcon /> */}
+                    ENG
                   </Link> 
                 : 
-                  <Link href="." className="relative flex ml-auto">
-                    <CatIcon />
+                  <Link href="." className="relative flex ml-auto text-sm">
+                    {/* <CatIcon /> */}
+                    CAT
                   </Link>
               }
             </span>

@@ -39,7 +39,7 @@ function SongEntry({ song }: { song: Song }) {
             href={`${song.download}`}
             className={`flex items-center text-sm font-bold leading-6 text-slate-400 hover:text-slate-600 active:text-slate-600 ${song.download ? "" : "hidden"}`}
             aria-label={`Download song ${song.title}`}
-            title="Descarregar"
+            title="Download"
           >
             <DownloadIcon className="h-7 w-7"/>
           </Link>
@@ -47,7 +47,7 @@ function SongEntry({ song }: { song: Song }) {
             href={`${song.sheet}`}
             className={`flex items-center text-sm font-bold leading-6 text-slate-400 hover:text-slate-600 active:text-slate-600 ${song.sheet ? "" : "hidden"}`}
             aria-label={`See sheet music of ${song.title}`}
-            title="Partitura"
+            title="Music sheet"
             target="_blank"
           >
             <SheetIcon className="h-6 w-6"/>
@@ -56,7 +56,7 @@ function SongEntry({ song }: { song: Song }) {
             href={`/${song.poem}`}
             className={`flex items-center text-sm font-bold leading-6 text-slate-400 hover:text-slate-600 active:text-slate-600 ${song.poem ? "" : "hidden"}`}
             aria-label={`See poem of ${song.title}`}
-            title="Poema (català)"
+            title="Poem (in Catalan)"
           >
             <PoemIcon className="h-6 w-6" />
           </Link>
@@ -181,11 +181,11 @@ export function Music() {
                       <Link
                         href="/#donate"
                         className="group flex items-center"
-                        aria-label="compra"
-                        title="Buy"
+                        aria-label="donate"
+                        title="Donate"
                       >
                         <DonateIcon className="h-7 w-7 fill-slate-400 hover:fill-slate-600" />
-                        <span className="ml-1">Buy</span>
+                        <span className="ml-1">Donate</span>
                       </Link>
                     </li>
                   </ul>

@@ -33,8 +33,9 @@ function Header() {
             ))}
           </span>
         </div>
-        <Link href="/en" className="hidden md:inline-block absolute top-9 right-3 basis-0">
-          <EngIcon />
+        <Link href="/en" className="hidden md:inline-block absolute top-10 right-3 basis-0 text-sm">
+          {/* <EngIcon /> */}
+          ENG
         </Link>
         <MobileMenu />
       </Container>
