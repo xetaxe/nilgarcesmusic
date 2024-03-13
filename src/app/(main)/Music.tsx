@@ -63,7 +63,7 @@ function SongEntry({ song }: { song: Song }) {
 
 export function Music() {
   
-  const [currentAlbum, setCurrentAlbum] = useState(0);
+  const [currentAlbum, setCurrentAlbum] = useState(3);
   const [currency, setCurrency] = useState<"€" | "$">("€");
   const [donateString, setDonateString] = useState("0");
 
@@ -86,6 +86,13 @@ export function Music() {
             
             Si podeu i voleu fer un donatiu per ajudar a mantenir viu aquest projecte, ho podeu fer des d'<Link href="#donate" className=" font-bold text-slate-900 underline">aquí ↓</Link>.
           </div>
+          {/* <audio controls> */}
+            {/* <iframe src="https://drive.usercontent.google.com/uc?id=1Qou-tYSqi56I3UQe98Tpor_POLdUWVVE" /> */}
+            <iframe src="https://docs.google.com/uc?export=play&id=1Qou-tYSqi56I3UQe98Tpor_POLdUWVVE" />
+            {/* Your browser does not support the audio element.
+          </audio> */}
+
+          <iframe style={{borderRadius: 12}} src="https://open.spotify.com/embed/track/6lGpaxPe78iSqsCxMu6KLx" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
           <div className="flex gap-4 pb-4 my-4 lg:justify-center overflow-x-scroll">
             {albums.map((album, index) => (

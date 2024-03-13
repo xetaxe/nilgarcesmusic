@@ -68,7 +68,7 @@ function SongEntry({ song }: { song: Song }) {
 
 export function Music() {
   
-  const [currentAlbum, setCurrentAlbum] = useState(0);
+  const [currentAlbum, setCurrentAlbum] = useState(3);
   const [currency, setCurrency] = useState<"€" | "$">("€");
   const [donateString, setDonateString] = useState("0");
 
