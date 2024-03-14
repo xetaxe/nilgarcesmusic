@@ -35,8 +35,7 @@ export const albums: Album[] = [
         number: 1,
         title: "Aquell petit arbre",
         engTitle: "Little Tree",
-        // link: "https://docs.google.com/uc?export=play&id=1Qou-tYSqi56I3UQe98Tpor_POLdUWVVE", 
-        link: "https://open.spotify.com/track/6lGpaxPe78iSqsCxMu6KLx.mp3", 
+        link: "https://open.spotify.com/embed/track/6lGpaxPe78iSqsCxMu6KLx?utm_source=generator", 
         download: "https://docs.google.com/uc?export=download&id=1Qou-tYSqi56I3UQe98Tpor_POLdUWVVE",
         sheet: "https://docs.google.com/file/d/1GCmfvdGbjNxH8acGMFwcHT9w0ITrLfvA/view",
         poem: "aquell-petit-arbre"
@@ -45,7 +44,7 @@ export const albums: Album[] = [
         number: 2,
         title: "Cada gota",
         engTitle: "Every Raindrop",
-        link: "https://docs.google.com/uc?export=play&id=1V5ZOb_FBWT2KS-1OcF28fVSlYK0NpAt0",
+        link: "https://open.spotify.com/embed/track/2kOtn5qrSKarC0o4fVUagd?utm_source=generator",
         download: "https://docs.google.com/uc?export=download&id=1V5ZOb_FBWT2KS-1OcF28fVSlYK0NpAt0",
         sheet: "https://docs.google.com/file/d/11iMuvQNk62FEWCMDP7ksDon6qTLEp-Sj/view",
         poem: "cada-gota"
