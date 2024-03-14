@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import { Container } from '@/components/Container'
-import { DonateIcon, DownloadIcon, PauseIcon, PlayIcon, PoemIcon, SheetIcon, SpotifyIcon, YoutubeIcon } from '@/assets/icons'
+import { DonateIcon, DownloadIcon, PlayIcon, PoemIcon, SheetIcon, SpotifyIcon, YoutubeIcon } from '@/assets/icons'
 import { type Song, albums } from '@/data/albums'
 import { useEffect, useRef, useState } from 'react'
 

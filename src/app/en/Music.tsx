@@ -4,26 +4,23 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import { Container } from '@/components/Container'
-import { AudioProvider, useAudioPlayer } from '@/components/AudioProvider'
-import { AudioPlayer } from '@/components/player/AudioPlayer'
-import { DonateIcon, DownloadIcon, PauseIcon, PlayIcon, PoemIcon, SheetIcon, SpotifyIcon, YoutubeIcon } from '@/assets/icons'
+import { DonateIcon, DownloadIcon, PlayIcon, PoemIcon, SheetIcon, SpotifyIcon, YoutubeIcon } from '@/assets/icons'
 import { type Song, albums } from '@/data/albums'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
-function SongEntry({ song }: { song: Song }) {
-
-  let player = useAudioPlayer(song)
+function SongEntry({ song, selectSong }: { song: Song, selectSong: (song: Song) => void }) {
 
   return (
     <div aria-labelledby={`song-${song.number}-title`} className="py-1 md:py-2">
       <div id={`song-${song.number}-title`} className="mt-2 font-bold text-slate-900 flex gap-2  justify-between ">
         <span className="flex gap-2 items-center">
-          <button type="button" onClick={() => player.toggle()} aria-label={`${player.playing ? 'Pause' : 'Play'} song ${ song.title }`} className="flex items-center gap-x-3 text-sm font-bold leading-6 text-slate-400 hover:text-slate-600 active:text-slate-600"
-            title="Reproduir">
-            {player.playing 
-              ? <PauseIcon className="h-3 w-2.5 fill-current" /> 
-              : <PlayIcon className="h-3 w-3 fill-current" /> 
-            }
+          <button
+            type="button"
+            onClick={() => selectSong(song)}
+            aria-label={`Play song ${ song.title }`} className="flex items-center gap-x-3 text-sm font-bold leading-6 text-slate-400 hover:text-slate-600 active:text-slate-600"
+            title="Play"
+          >
+            <PlayIcon className="h-3 w-3 fill-current" /> 
           </button>
           <span className="flex flex-col">
             <span>
@@ -68,16 +65,40 @@ function SongEntry({ song }: { song: Song }) {
 
 export function Music() {
   
+  const playerRef = useRef(null);
+  const [playingSong, setPlayingSong] = useState<Song | null>(null)
+  const [showClose, setShowClose] = useState(false);
+  const intervalRef = useRef<number | null>();
+
+  
   const [currentAlbum, setCurrentAlbum] = useState(3);
   const [currency, setCurrency] = useState<"€" | "$">("€");
   const [donateString, setDonateString] = useState("0");
-
+  
   const donateValue = Number.isNaN(parseFloat(donateString))
   ? 0
   : parseFloat(donateString)
+
+  const selectSong = (song: Song) => {
+    setPlayingSong(song);
+    setShowClose(false);
+  }
+
+  useEffect(() => {
+    intervalRef.current = window.setInterval(() => {
+      if (!showClose && !!playingSong)
+        setShowClose(true);
+    }, 1000);
+
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
+  }, [playingSong, showClose]);
   
   return (
-    <AudioProvider>
+    <>
       <div className="bg-bg-300 py-8 md:py-14 bg-gradient-to-b from-[#d1dfe8] sc">
       </div>
       <section id="music" className="bg-gradient-to-b from-[#e7ecf2] bg-bg-200 w-full pb-12">
@@ -196,11 +217,11 @@ export function Music() {
               <div className="relative">
                 <div className="sm:px-4 py-4 md:pt-8">
                   <h1 className="text-xl text-center font-bold leading-7 text-slate-900">
-                    Songs
+                    Cançons
                   </h1>
                   <div className="divide-y mt-2 lg:mt-4">
                     {albums[currentAlbum].songs.map((song) => (
-                      <SongEntry key={song.number} song={song} />
+                      <SongEntry key={song.number} song={song} selectSong={selectSong} />
                     ))}
                   </div>
                 </div>
@@ -208,9 +229,20 @@ export function Music() {
             </div>
           </div>
 
-          <div className="fixed w-full right-0 bottom-0 z-10 lg:max-w-lg lg:right-12 lg:bottom-12">
-            <AudioPlayer />
-          </div>
+          { playingSong && 
+            <div ref={playerRef} className="group fixed right-2 bottom-0 h-28 md:right-12 md:bottom-4 z-10">
+              <iframe style={{display: 'block', width: '340px', height: '100%'}} className="peer" src={playingSong.link} allow="encrypted-media; autoplay" loading="lazy">
+              </iframe>
+              {showClose &&
+                <button className="absolute top-1 right-1 p-1 text-xl font-bold bg-slate-300 opacity-80 md:opacity-0 duration-500 group-hover:opacity-80 rounded-full" onClick={() => {
+                  setPlayingSong(null);
+                  setShowClose(false);
+                }}>
+                  <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+                </button>
+              }
+            </div>
+          }
 
           <div id="donate" className="mx-auto max-w-[80ch] text-justify py-8">
             <h2 className=" italic font-bold leading-7 text-slate-600 mb-4">
@@ -252,6 +284,6 @@ export function Music() {
           </div>
         </Container>
       </section>
-    </AudioProvider>
+    </>
   )
 }
