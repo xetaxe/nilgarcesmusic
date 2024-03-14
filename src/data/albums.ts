@@ -53,7 +53,7 @@ export const albums: Album[] = [
         number: 3,
         title: "Castell de sorra",
         engTitle: "Sandcastle",
-        link: "https://docs.google.com/uc?export=play&id=1sDvEG7H6wqmEI-53KgxDWs0quOW1apgw",
+        link: "https://open.spotify.com/embed/track/6ZcXLQD5aybm9ThhyAJoIy?utm_source=generator",
         download: "https://docs.google.com/uc?export=download&id=1sDvEG7H6wqmEI-53KgxDWs0quOW1apgw",
         sheet: "https://docs.google.com/file/d/16qj2wuD869uL2PuBisaGUcNbOfAqSipC/view",
         poem: "castell-de-sorra",
@@ -62,7 +62,7 @@ export const albums: Album[] = [
         number: 4,
         title: "Fidipides",
         engTitle: "Pheidippides",
-        link: "https://docs.google.com/uc?export=play&id=1dwhrH-BCxZJ7UAyTPNUvmzkH_guMyVm4",
+        link: "https://open.spotify.com/embed/track/1hLRRBcJqBLWT7IjMv6qiX?utm_source=generator",
         download: "https://docs.google.com/uc?export=download&id=1dwhrH-BCxZJ7UAyTPNUvmzkH_guMyVm4",
         sheet: "https://docs.google.com/file/d/1huNbNJJt0iyng83gRuMhFlt-WOXJg9Li/view",
         poem: "fidipides"
@@ -71,7 +71,7 @@ export const albums: Album[] = [
         number: 5,
         title: "Seguirem buscant",
         engTitle: "We Will Keep Searching",
-        link: "https://docs.google.com/uc?export=play&id=1wJOURRWdcXgQ0_JkGVK4Q3fLw3LpvtTS",
+        link: "https://open.spotify.com/embed/track/0QkFGZ3tpOaYmCdKyGmR0H?utm_source=generator",
         download: "https://docs.google.com/uc?export=download&id=1wJOURRWdcXgQ0_JkGVK4Q3fLw3LpvtTS",
         sheet: "https://docs.google.com/file/d/1umD3Zte_6j23RNNmO2RHxvCmQkl_2QZm/view",
         poem: "seguirem-buscant"
@@ -80,7 +80,7 @@ export const albums: Album[] = [
         number: 6,
         title: "El bosc dels records",
         engTitle: "The Forest of Memories",
-        link: "https://docs.google.com/uc?export=play&id=1uSOaACTgJ9rhME5Bel8p9AIezW6J0geG",
+        link: "https://open.spotify.com/embed/track/6tzWK9QtnB6TPrNdLwM7Jp?utm_source=generator",
         download: "https://docs.google.com/uc?export=download&id=1uSOaACTgJ9rhME5Bel8p9AIezW6J0geG",
         sheet: "https://docs.google.com/file/d/1PHpRpaA-LnvkmulMl1l60gIiz20o9OUe/view",
         poem: "el-bosc-dels-records"
@@ -89,7 +89,7 @@ export const albums: Album[] = [
         number: 7,
         title: "Pres per dins",
         engTitle: "Caught on the Inside",
-        link: "https://docs.google.com/uc?export=play&id=1cOWRRVLIN9S_2-QLRhNe25ATI-wef9Hs",
+        link: "https://open.spotify.com/embed/track/2HrHAmz4B25Ifxl4Stzous?utm_source=generator",
         download: "https://docs.google.com/uc?export=download&id=1cOWRRVLIN9S_2-QLRhNe25ATI-wef9Hs",
         sheet: "https://docs.google.com/file/d/1Al7N__RBMfAT2cJFnpKOdBLDSMJsDNSe/view",
         poem: "pres-per-dins"
@@ -98,7 +98,7 @@ export const albums: Album[] = [
         number: 8,
         title: "Xiprers",
         engTitle: "Cypresses",
-        link: "https://docs.google.com/uc?export=play&id=1-i6cg18RvsJe25saZuRAV7D5NsLg9PXj",
+        link: "https://open.spotify.com/embed/track/4ul9fARx7F3r830boI6lYK?utm_source=generator",
         download: "https://docs.google.com/uc?export=download&id=1-i6cg18RvsJe25saZuRAV7D5NsLg9PXj",
         sheet: "https://docs.google.com/file/d/1HqqXbqp79BArjVrHLxO2Ms5q__3ffvCi/view",
         poem: "xiprers"
@@ -107,7 +107,7 @@ export const albums: Album[] = [
         number: 9,
         title: "Ballarismes",
         engTitle: "Dancerisms",
-        link: "https://docs.google.com/uc?export=play&id=18XybJL5LBgVwgaMWX-_tLZr3Xj3NOp6r",
+        link: "https://open.spotify.com/embed/track/1zo7kvQj0Hs1PtY9ohCggJ?utm_source=generator",
         download: "https://docs.google.com/uc?export=download&id=18XybJL5LBgVwgaMWX-_tLZr3Xj3NOp6r",
         sheet: "https://docs.google.com/file/d/1151QDBGxxLgLnj5LbHhO5VlPIYhz_tgc/view",
         poem: "ballarismes"
@@ -116,7 +116,7 @@ export const albums: Album[] = [
         number: 10,
         title: "D'entre els cels",
         engTitle: "Up from the Skies",
-        link: "https://docs.google.com/uc?export=play&id=1N6NNd2vJ0_KDI-3PcOt3Kq0BuSlAnKSU",
+        link: "https://open.spotify.com/embed/track/1CyRwq3N64y7Awd3RCr9oT?utm_source=generator",
         download: "https://docs.google.com/uc?export=download&id=1N6NNd2vJ0_KDI-3PcOt3Kq0BuSlAnKSU",
         sheet: "https://docs.google.com/file/d/184o3cK8mMyfdw21oZbkdHD15sqF3CIXO/view",
         poem: "d-entre-els-cels"
@@ -125,7 +125,7 @@ export const albums: Album[] = [
         number: 11,
         title: "Allegro",
         engTitle: "",
-        link: "https://docs.google.com/uc?export=play&id=1PGj9uRFLdqWUAtP1anH8yZRrHMCjnxyb",
+        link: "https://open.spotify.com/embed/track/34B6IW4WzKrOfePItO8Z4v?utm_source=generator",
         download: "https://docs.google.com/uc?export=download&id=1PGj9uRFLdqWUAtP1anH8yZRrHMCjnxyb",
         sheet: "https://docs.google.com/file/d/1vNjiz4q0_04xlM9XRn8e0PgBjFtfKGH2/view"
       }
@@ -145,7 +145,7 @@ export const albums: Album[] = [
         number: 1,
         title: "Becaines d'estiu",
         engTitle: "Summer Siesta",
-        link: "https://docs.google.com/uc?export=play&id=1oNLDPSTv1JWPKEN8baxMEO8Sug2NqJJk",
+        link: "https://open.spotify.com/embed/track/4AhTQjlaS4oAJI5pG1fZBx?utm_source=generator",
         download: "https://docs.google.com/uc?export=download&id=1oNLDPSTv1JWPKEN8baxMEO8Sug2NqJJk"
       },
     ]
@@ -163,7 +163,7 @@ export const albums: Album[] = [
       {
         number: 1,
         title: "Reflections in D",
-        link: "https://docs.google.com/uc?export=play&id=1qmxWYNm76UKBJOApkw4l86cetFTdmhi7",
+        link: "https://open.spotify.com/embed/track/0pr5jWaqNWLHAeGCm8vXek?utm_source=generator",
         download: "https://docs.google.com/uc?export=download&id=1qmxWYNm76UKBJOApkw4l86cetFTdmhi7",
         sheet: "https://docs.google.com/file/d/1X_Vn3TBTaLwjSm7K4-rYKFMNtMY3d8pj/view"
       },
@@ -171,47 +171,47 @@ export const albums: Album[] = [
         number: 2,
         title: "Cançó de suburbi",
         engTitle: "Song from the Suburbs",
-        link: "https://docs.google.com/uc?export=play&id=1XqJPpe5nhk1zKlsn4a6Bu5W5SUWsox1g",
+        link: "https://open.spotify.com/embed/track/1lU6cuUOs6ys7CivnOrNvZ?utm_source=generator",
         download: "https://docs.google.com/uc?export=download&id=1XqJPpe5nhk1zKlsn4a6Bu5W5SUWsox1g",
         sheet: "https://docs.google.com/file/d/1cmJp4qIJbs4uTEKU2w74gEyQCwVy6s1C/view"
       },
       {
         number: 3,
         title: "Bad Day",
-        link: "https://docs.google.com/uc?export=play&id=1ASRsC-Sc9_RqO7k_7Yzljecz21FdGt8b",
+        link: "https://open.spotify.com/embed/track/6HJcooYZESsRgHhxIuU72W?utm_source=generator",
         download: "https://docs.google.com/uc?export=download&id=1ASRsC-Sc9_RqO7k_7Yzljecz21FdGt8b",
         sheet: "https://docs.google.com/file/d/12rJ_CjRQHw48sQaghsBsBBve8c8sNpDo/view"
       },
       {
         number: 4,
         title: "The Girl from Ipanema",
-        link: "https://docs.google.com/uc?export=play&id=1ECQ5VhZ7rA870_VEQ8HByxkON09Mb0bS",
+        link: "https://open.spotify.com/embed/track/4TYO1BHNGKGNxxjbQoUmoV?utm_source=generator",
         download: "https://docs.google.com/uc?export=download&id=1ECQ5VhZ7rA870_VEQ8HByxkON09Mb0bS"
       },
       {
         number: 5,
         title: "Waltz of Chihiro",
-        link: "https://docs.google.com/uc?export=play&id=12WBZlLQIRt4wSlhDHGhYFSBN3GExRK1h",
+        link: "https://open.spotify.com/embed/track/1LYJUcO70NElhuh8XaeCqt?utm_source=generator",
         download: "https://docs.google.com/uc?export=download&id=12WBZlLQIRt4wSlhDHGhYFSBN3GExRK1h",
         sheet: "https://docs.google.com/file/d/1XyVP17cpisl-CW9QOAtYxiJ4evIwmaO0/view"
       },
       {
         number: 6,
         title: "Fletcher's Song in a Club",
-        link: "https://docs.google.com/uc?export=play&id=1VMQ3xXdq5Dp_ycleOAvORwF27zzaJlzT",
+        link: "https://open.spotify.com/embed/track/0ffSOHoyGYANibe10in9vO?utm_source=generator",
         download: "https://docs.google.com/uc?export=download&id=1VMQ3xXdq5Dp_ycleOAvORwF27zzaJlzT",
         sheet: "https://docs.google.com/file/d/1ZRsW9gNUZPBnt7x6NnwgYTGHn8gqchbf/view"
       },
       {
         number: 7,
         title: "You Raise Me Up",
-        link: "https://docs.google.com/uc?export=play&id=1c3QSf0hyN7AAdelMOFjUs4c02KwgSWvV",
+        link: "https://open.spotify.com/embed/track/1Bsma3u2BrvQSeqLjdDFKx?utm_source=generator",
         download: "https://docs.google.com/uc?export=download&id=1c3QSf0hyN7AAdelMOFjUs4c02KwgSWvV"
       },
       {
         number: 8,
         title: "What a Wonderful World",
-        link: "https://docs.google.com/uc?export=play&id=1KR7Phb_c20Cv_JHSE9mekAg-8JMz5am7",
+        link: "https://open.spotify.com/embed/track/6a3RLIX0On6HsZXGe7mg3W?utm_source=generator",
         download: "https://docs.google.com/uc?export=download&id=1KR7Phb_c20Cv_JHSE9mekAg-8JMz5am7",
         sheet: "https://docs.google.com/file/d/1Jx3iqaTXpMs2TKzELh2pmUSTlikXIEAY/view"
       }
@@ -231,7 +231,7 @@ export const albums: Album[] = [
         number: 1,
         title: "Flor de cirerer",
         engTitle: "Cherry Blossom",
-        link: "https://docs.google.com/uc?export=play&id=1RwU_oi9A20aJMnSlnuQmPQP-xS1xvaey",
+        link: "https://open.spotify.com/embed/track/6zA3Kg3iICIt4qG4ndjPhv?utm_source=generator",
         download: "https://docs.google.com/uc?export=download&id=1RwU_oi9A20aJMnSlnuQmPQP-xS1xvaey",
         sheet: "https://docs.google.com/file/d/1qZQhzhQXH3ja-B_cDfs4M6SBgM0WPD7d/view"
       },
@@ -239,7 +239,7 @@ export const albums: Album[] = [
         number: 2,
         title: "Les fulles verdes",
         engTitle: "Green leaves",
-        link: "https://docs.google.com/uc?export=play&id=1Zp4F9Bn5toDMRNPD0zK70lA2p1mC2Inz",
+        link: "https://open.spotify.com/embed/track/75w9ztTtsxS4RxNOUTvseI?utm_source=generator",
         download: "https://docs.google.com/uc?export=download&id=1Zp4F9Bn5toDMRNPD0zK70lA2p1mC2Inz",
         sheet: "https://docs.google.com/file/d/1mMMakBsTZDQWTh620ww8S_rXhRrMJN7r/view"
       },
@@ -247,7 +247,7 @@ export const albums: Album[] = [
         number: 3,
         title: "Els ocells",
         engTitle: "Birds",
-        link: "https://docs.google.com/uc?export=play&id=1-gGzF3zhtczwT-oPf3fIh-bsFx5IXTkO",
+        link: "https://open.spotify.com/embed/track/4yNKDleRhM9aiuFotxPbI3?utm_source=generator",
         download: "https://docs.google.com/uc?export=download&id=1-gGzF3zhtczwT-oPf3fIh-bsFx5IXTkO",
         sheet: "https://docs.google.com/file/d/1nQYCo5nel2rA5o7k0OD1CoJOb22V6Xup/view"
       },
@@ -255,7 +255,7 @@ export const albums: Album[] = [
         number: 4,
         title: "Llavor",
         engTitle: "Seed",
-        link: "https://docs.google.com/uc?export=play&id=1WoNThuzmSBvYdYyaSEMUoiL24tYpd6Y0",
+        link: "https://open.spotify.com/embed/track/3LiSuTFm8iyDwcsIraTJz7?utm_source=generator",
         download: "https://docs.google.com/uc?export=download&id=1WoNThuzmSBvYdYyaSEMUoiL24tYpd6Y0",
         sheet: "https://docs.google.com/file/d/1aasUA4yeiIDGxGG7Hn0Z_1PVN1q0T0eQ/view"
       },
@@ -263,7 +263,7 @@ export const albums: Album[] = [
         number: 5,
         title: "Els ocells tornen",
         engTitle: "Birds Return",
-        link: "https://docs.google.com/uc?export=play&id=17Or_ZvGunOdMinP2RtC4Lb5Fs6z1ZSJc",
+        link: "https://open.spotify.com/embed/track/1TyCkbpD6sdPbG13G0kbXb?utm_source=generator",
         download: "https://docs.google.com/uc?export=download&id=17Or_ZvGunOdMinP2RtC4Lb5Fs6z1ZSJc",
         sheet: "https://docs.google.com/file/d/1FNsCtwlkYmKSMbm7POdc4daqdLePDFTW/view"
       }
