@@ -66,7 +66,7 @@ export function Music() {
   const intervalRef = useRef<number | null>();
 
   
-  const [currentAlbum, setCurrentAlbum] = useState(3);
+  const [currentAlbum, setCurrentAlbum] = useState(0);
   const [currency, setCurrency] = useState<"€" | "$">("€");
   const [donateString, setDonateString] = useState("0");
   
