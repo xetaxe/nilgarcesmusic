@@ -237,9 +237,9 @@ export function Music() {
             <h2 className=" italic font-bold leading-7 text-slate-600 mb-4">
               Donatius
             </h2>
-            Nil Garcés és un projecte musical totalment autogestionat. A dia d'avui, no hi ha concerts previstos, tot i ser aquests la principal font d'ingressos de la major part d'artistes. Si aquestes composicions han pogut veure la llum, és gràcies a les persones que hi han cregut i col·laborat.<br/><br/>
-            Qualsevol contribució econòmica m'ajuda a cobrir despeses de futures creacions i altres aspectes logístics: publicitat, web, etc. Aquests diners també ajuden a tots aquells artistes locals involucrats en l'elaboració de nous treballs, per exemple en els processos de disseny, producció o gravació.<br/><br/>
-            Podeu fer-ho via <Link href="https://ko-fi.com/nilgarces" className=" font-bold text-slate-900 underline" target="_blank">Ko-fi</Link> (i desbloquejar alguns continguts extra) o directament des de baix ↓.<br/><br/>
+            Nil Garcés és un projecte musical autogestionat. A dia d'avui, no hi ha concerts previstos, tot i ser aquests la principal font d'ingressos de la majoria d'artistes. Si aquestes composicions han pogut veure la llum, és gràcies a les persones que hi han cregut i col·laborat.<br/><br/>
+            Qualsevol contribució econòmica m'ajuda a cobrir despeses de futures creacions i altres aspectes operacionals: publicitat, manteniment de la web, etc. Aquests donatius també arriben a totes aquelles persones involucrades en l'elaboració de nous treballs, per exemple en els processos de disseny, producció i gravació.<br/><br/>
+            Podeu fer-ho via <Link href="https://ko-fi.com/nilgarces" className=" font-bold text-slate-900 underline" target="_blank">Ko-fi</Link> (i desbloquejar alguns continguts extra!) o directament des de baix ↓.<br/><br/>
             Gràcies per fer-ho possible.
           </div>
           {/* <iframe id='kofiframe' src='https://ko-fi.com/nilgarces/?hidefeed=true&widget=true&embed=true&preview=true' className="mx-auto border-none w-full pt-6 rounded-lg bg-white max-w-lg"  height="712" title='nilgarces'></iframe> */}

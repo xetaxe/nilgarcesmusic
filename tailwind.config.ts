@@ -1,5 +1,6 @@
 import headlessuiPlugin from '@headlessui/tailwindcss'
 import { type Config } from 'tailwindcss'
+import plugin from 'tailwindcss/plugin';
 
 export default {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
@@ -55,5 +56,18 @@ export default {
     },
   },
   
-  plugins: [headlessuiPlugin],
+  plugins: [
+    headlessuiPlugin,
+    plugin(function({ addUtilities }) {
+      addUtilities({
+        ".no-scrollbar::-webkit-scrollbar": {
+          display: "none",
+        },
+        ".no-scrollbar": {
+          "-ms-overflow-style": "none",
+          "scrollbar-width": "none",
+        },
+      });
+    }),
+  ],
 } satisfies Config

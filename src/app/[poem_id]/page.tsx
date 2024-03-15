@@ -32,21 +32,25 @@ export default function Page({ params }: { params: { poem_id: string } }) {
           </svg>
         </Link>
       </div>
-      <div className="relative flex h-full items-center pt-32 pb-16">
-        <picture>
-          <source media="(max-width: 540px)" srcSet={background2.src} />
-          <source media="(max-width: 768px)" srcSet={left.src} />
-          <source media="(max-width: 1024px)" srcSet={background3.src} />
-          <Image src={background4} alt="alt text here" fill className="bg-repeat object-fill" />
-        </picture>
-        <Container className="relative flex w-full flex-col items-center justify-center">
-          <h1 className="mt-4 text-2xl font-medium tracking-tighter text-logo-400 sm:text-3xl text-center mb-4">
-            {title}
-          </h1>
-          <div className="max-w-[80ch] whitespace-break-spaces">
-            {content}
-          </div>
-        </Container>
+      <div className="relative h-screen max-h-screen bg-gradient-to-r from-[#F7F3F1] from-45% via-[#F7F3F1] to-[#DCE3E9] to-55%">
+        <div className="absolute inset-0 max-w-5xl mx-auto bg-gradient-to-r to-[#DCE3E9]">
+          <picture>
+            <source media="(max-width: 500px)" srcSet={background2.src} />
+            <source media="(max-width: 700px)" srcSet={left.src} />
+            <source media="(max-width: 900px)" srcSet={background3.src} />
+            <Image src={background4} alt="alt text here" fill className="bg-repeat object-fill" />
+          </picture>
+          <Container className="absolute lg:inset-y-0 left-0 w-8 mx-auto bg-gradient-to-r from-[#F7F3F1]"></Container>
+          <Container className="absolute lg:inset-y-0 right-0 w-8 mx-auto bg-gradient-to-l from-[#DCE3E9]"></Container>
+          <Container className="absolute inset-0 mt-32 pb-16 flex w-full flex-col items-center overflow-y-auto no-scrollbar">
+            <h1 className="mt-4 text-2xl font-medium tracking-tighter text-logo-400 sm:text-3xl text-center mb-4">
+              {title}
+            </h1>
+            <div className="max-w-[80ch] whitespace-break-spaces">
+              {content}
+            </div>
+          </Container>
+        </div>
       </div>
     </>
   )

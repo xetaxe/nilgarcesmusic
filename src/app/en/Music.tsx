@@ -248,8 +248,8 @@ export function Music() {
             <h2 className=" italic font-bold leading-7 text-slate-600 mb-4">
               Donate
             </h2>
-            Nil Garcés is a completely self-managed musical project. As of today, no concerts are planned, despite being the main source of income for most artists. The existence of these compositions is thanks to the people who believed in them and supported me along the way.<br/><br/>
-            Any financial contribution helps cover expenses for future creations and other logistical aspects such as advertising and web maintenance. Moreover, this support aids other local artists involved in the creation of new works, including design, production, or recording processes.<br/><br/>
+            Nil Garcés is a self-managed musical project. As of today, no concerts are planned, despite being the main source of income for most artists. The existence of these compositions is thanks to the people who believed in them and supported me along the way.<br/><br/>
+            Any financial contribution helps me cover expenses for future creations and other operational aspects such as advertising and web maintenance. Moreover, these donations also support other people involved in the creation of new works, including the design, production and recording processes.<br/><br/>
             You can donate via <Link href="https://ko-fi.com/nilgarces" className=" font-bold text-slate-900 underline" target="_blank">Ko-fi</Link> (which will give you access to some extra content!) or directly using the button below ↓.<br/><br/>
             Thank you for making this possible.
           </div>
