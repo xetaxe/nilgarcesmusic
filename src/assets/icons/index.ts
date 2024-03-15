@@ -10,6 +10,5 @@ import { DownloadIcon } from "./DownloadIcon"
 import { SheetIcon } from "./SheetIcon"
 import { PoemIcon } from "./PoemIcon"
 import { PlayIcon } from "./PlayIcon"
-import { PauseIcon } from "./PauseIcon"
 
-export { SpotifyIcon, AppleMusicIcon, InstagramIcon, YoutubeIcon, FacebookIcon, EngIcon, CatIcon, DonateIcon, DownloadIcon, SheetIcon, PoemIcon, PlayIcon, PauseIcon}
+export { SpotifyIcon, AppleMusicIcon, InstagramIcon, YoutubeIcon, FacebookIcon, EngIcon, CatIcon, DonateIcon, DownloadIcon, SheetIcon, PoemIcon, PlayIcon }
