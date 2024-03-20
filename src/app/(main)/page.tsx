@@ -9,6 +9,14 @@ export const metadata: Metadata = {
   description: "Música per guitarra. Descarrega les cançons, partitures i més.",
   authors: { name: "Nil Garcés", url: "https://nilgarces.com" },
   keywords: [ "Nil Garcés", "música", "guitarra", "instrumental", "guitarra clàssica", "Nil música"],
+  alternates: {
+    canonical: "https://nilgarces.com",
+    languages: {
+      'es-ES': "https://nilgarces.com",
+      'en-US': "https://nilgarces.com/en",
+      'en-GB': "https://nilgarces.com/en",
+    },
+  },
   openGraph: {
     title: "Nil Garcés - MÚSICA",
     description: "Música per guitarra. Descarrega les cançons, partitures i més.",
@@ -24,6 +32,18 @@ export const metadata: Metadata = {
     locale: "ca_ES",
     alternateLocale: "es_ES",
     type: "website",
+  },
+  twitter: {
+    title: "Nil Garcés - MÚSICA",
+    description: "Música per guitarra. Descarrega les cançons, partitures i més.",
+    creator: "Nil Garcés",
+    images: [
+      {
+        url: "https://nilgarces.com/og_img.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ]
   },
 }
 

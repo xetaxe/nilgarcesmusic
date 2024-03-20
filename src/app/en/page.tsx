@@ -25,6 +25,18 @@ export const metadata: Metadata = {
     alternateLocale: "es_GB",
     type: "website",
   },
+  twitter: {
+    title: "Nil Garcés - MUSIC",
+    description: "Guitar music for you soul. Download all the songs, music sheets and more.",
+    creator: "Nil Garcés",
+    images: [
+      {
+        url: "https://nilgarces.com/og_img.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ]
+  },
 }
 
 export default function Home() {
