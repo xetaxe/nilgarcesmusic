@@ -1,14 +1,7 @@
 import '@/styles/tailwind.css'
 
 import { Analytics } from '@vercel/analytics/react';
-import { type Metadata } from 'next'
 import { font } from '@/styles/fonts'
-
-
-export const metadata: Metadata = {
-  title: "Nil Garcés - MUSIC",
-  description: "Music page of Nil Garcés. Solo guitar compositions to heal your soul"
-}
 
 export default function RootLayout({ children }:{ children: React.ReactNode }) {
   return (

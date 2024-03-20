@@ -7,6 +7,29 @@ import background4 from '@/assets/img/background4.jpg'
 import { poems } from '@/data/poems'
 import { logoFont } from '@/styles/fonts'
 import Link from 'next/link'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: "Nil Garcés - Poemes",
+  description: "Música per guitarra. Descarrega les cançons, partitures i més.",
+  authors: { name: "Nil Garcés", url: "https://nilgarces.com" },
+  keywords: [ "Nil Garcés", "música", "guitarra", "instrumental", "guitarra clàssica", "Nil música"],
+  openGraph: {
+    title: "Nil Garcés - Poemes",
+    description: "Música per guitarra. Descarrega les cançons, partitures i més.",
+    url: "https://nilgarces.com",
+    images: [
+      {
+        url: "https://nilgarces.com/og_img.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "ca_ES",
+    alternateLocale: "es_ES",
+    type: "website",
+  },
+}
 
 export async function generateStaticParams() {
  
