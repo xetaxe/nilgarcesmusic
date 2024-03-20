@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       },
     ],
     locale: "en_US",
-    alternateLocale: "es_GB",
+    alternateLocale: "en_GB",
     type: "website",
   },
   twitter: {
