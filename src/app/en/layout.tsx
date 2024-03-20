@@ -4,14 +4,13 @@ import { Container } from '@/components/Container'
 import { socialLinks } from '@/assets/socialLinks'
 import MobileMenu from '@/components/MobileMenu'
 import { logoFont } from '@/styles/fonts'
-import { CatIcon } from '@/assets/icons'
 
 function Header() {
   return (
     <div className="w-full bg-bg-400">
       <Container className="relative flex justify-between pt-6">
         <div className="">
-          <Link href="">
+          <Link href="" aria-label="Navigate to main page">
             <svg aria-hidden="true" viewBox="0 0 183 48" className={`h-12 w-auto ${logoFont.className} text-5xl`}>
               <text x="0" y="35" style={{fill: "#2d1f12"}}>
                 Nil Garcés

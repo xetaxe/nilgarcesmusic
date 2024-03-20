@@ -258,23 +258,19 @@ export function Music() {
             <form action="https://www.paypal.com/donate" method="post" target="_top" className="flex flex-col gap-4 max-w-sm mx-auto">
               <span className="flex justify-center gap-2 px-8">
                 <span className="rounded-xl p-2 font-semibold invisible">{currency}</span>
-                <input type="text" className="rounded-xl p-2 font-semibold text-center text-xl grow min-w-0" value={donateString} onChange={(e) => setDonateString(e.currentTarget.value)
+                <input id="donate" type="text" className="rounded-xl p-2 font-semibold text-center text-xl grow min-w-0" value={donateString} onChange={(e) => setDonateString(e.currentTarget.value)
                 } />
                 <span className="rounded-xl px-2 py-2 font-semibold text-xl bg-slate-200 cursor-pointer" onClick={() => setCurrency((prev) => prev === "€" ? "$" : "€")}>{currency}</span>
               </span>
               <input type="hidden" name="hosted_button_id" value="HAY35FC9W2ZDS" />
               <span className="flex flex-col sm:flex-row sm:gap-4 items-center sm:justify-center">
-                {
-                  currency === "€"
-                    ?
                 <span>
-                  Final amount: <b>{Math.max(Math.round((0.956 * donateValue - 0.39) * 100) / 100, 0) } {currency}</b>
+                  <label htmlFor="donate">Final amount: </label>
+                  { currency === "€"
+                    ? <b>{Math.max(Math.round((0.956 * donateValue - 0.39) * 100) / 100, 0) } {currency}</b>
+                    : <b>{Math.max(Math.round((0.956 * donateValue - 0.49) * 100) / 100, 0) } {currency}</b>
+                  }
                 </span>
-                :
-                <span>
-                  Final amount: <b>{Math.max(Math.round((0.956 * donateValue - 0.49) * 100) / 100, 0) } {currency}</b>
-                </span>
-                }
                 <span className="text-xs">
                   (Paypal fee: {currency === "€" ? "0.39€" : "0.49$"} fixed + 4.4%)
                 </span>  

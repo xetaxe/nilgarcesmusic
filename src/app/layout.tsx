@@ -5,7 +5,7 @@ import { font } from '@/styles/fonts'
 
 export default function RootLayout({ children }:{ children: React.ReactNode }) {
   return (
-    <html className={`h-full bg-white antialiased scroll-smooth ${font.className}`}>
+    <html lang="ca" className={`h-full bg-white antialiased scroll-smooth ${font.className}`}>
       <body className="flex min-h-full">
         <div className="flex w-full flex-col">
           {children}
