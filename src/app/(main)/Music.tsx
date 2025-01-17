@@ -237,7 +237,7 @@ export function Music() {
             <h2 className=" italic font-bold leading-7 text-slate-600 mb-4">
               Donatius
             </h2>
-            Nil Garcés és un projecte musical autogestionat. A dia d'avui, no hi ha concerts previstos, tot i ser aquests la principal font d'ingressos de la majoria d'artistes. Si aquestes composicions han pogut veure la llum, és gràcies a les persones que hi han cregut i col·laborat.<br/><br/>
+            Nil Garcés és un projecte musical senzill i autogestionat. Si aquestes composicions han pogut veure la llum, és gràcies a les persones que hi han cregut i col·laborat.<br/><br/>
             Qualsevol contribució econòmica m'ajuda a cobrir despeses de futures creacions i altres aspectes operacionals: publicitat, manteniment de la web, etc. Aquests donatius també arriben a totes aquelles persones involucrades en l'elaboració de nous treballs, per exemple en els processos de disseny, producció i gravació.<br/><br/>
             Podeu fer-ho via <Link href="https://ko-fi.com/nilgarces" className=" font-bold text-slate-900 underline" target="_blank">Ko-fi</Link> (i desbloquejar alguns continguts extra!) o directament des de baix ↓.<br/><br/>
             Gràcies per fer-ho possible.

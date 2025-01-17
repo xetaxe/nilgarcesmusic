@@ -7,9 +7,11 @@ import { Container } from '@/components/Container'
 import { DonateIcon, DownloadIcon, PlayIcon, PoemIcon, SheetIcon, SpotifyIcon, YoutubeIcon } from '@/assets/icons'
 import { type Song, albums } from '@/data/albums'
 import { useEffect, useRef, useState } from 'react'
+import { usePathname } from 'next/navigation'
 
 function SongEntry({ song, selectSong }: { song: Song, selectSong: (song: Song) => void }) {
 
+  const pathname = usePathname();
   return (
     <div aria-labelledby={`song-${song.number}-title`} className="py-1 md:py-2">
       <div id={`song-${song.number}-title`} className="mt-2 font-bold text-slate-900 flex gap-2  justify-between ">
@@ -50,7 +52,7 @@ function SongEntry({ song, selectSong }: { song: Song, selectSong: (song: Song) 
             <SheetIcon className="h-6 w-6"/>
           </Link>
           <Link
-            href={`/${song.poem}`}
+            href={`${pathname}/${song.poem}`}
             className={`flex items-center text-sm font-bold leading-6 text-slate-400 hover:text-slate-600 active:text-slate-600 ${song.poem ? "" : "hidden"}`}
             aria-label={`See poem of ${song.title}`}
             title="Poem (in Catalan)"
@@ -248,7 +250,7 @@ export function Music() {
             <h2 className=" italic font-bold leading-7 text-slate-600 mb-4">
               Donate
             </h2>
-            Nil Garcés is a self-managed musical project. As of today, no concerts are planned, despite being the main source of income for most artists. The existence of these compositions is thanks to the people who believed in them and supported me along the way.<br/><br/>
+            Nil Garcés is a self-managed musical project. The existence of these compositions is thanks to the people who believed in them and supported me along the way.<br/><br/>
             Any financial contribution helps me cover expenses for future creations and other operational aspects such as advertising and web maintenance. Moreover, these donations also support other people involved in the creation of new works, including the design, production and recording processes.<br/><br/>
             You can donate via <Link href="https://ko-fi.com/nilgarces" className=" font-bold text-slate-900 underline" target="_blank">Ko-fi</Link> (which will give you access to some extra content!) or directly using the button below ↓.<br/><br/>
             Thank you for making this possible.

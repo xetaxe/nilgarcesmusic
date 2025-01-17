@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   description: "Música per guitarra. Descarrega les cançons, partitures i més.",
   authors: { name: "Nil Garcés", url: "https://nilgarces.com" },
   keywords: [ "Nil Garcés", "música", "guitarra", "instrumental", "guitarra clàssica", "Nil música"],
+  metadataBase: new URL("https://nilgarces.com"),
   alternates: {
     canonical: "https://nilgarces.com",
     languages: {

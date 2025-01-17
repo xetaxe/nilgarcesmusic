@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   description: "Guitar music for you soul. Download all the songs, music sheets and more.",
   authors: { name: "Nil Garcés", url: "https://nilgarces.com" },
   keywords: [ "Nil Garcés", "Nil Garces", "music", "guitar", "instrumental", "classic guitar", "Nil music"],
+  metadataBase: new URL("https://nilgarces.com"),
   openGraph: {
     title: "Nil Garcés - MUSIC",
     description: "Guitar music for your soul. Download all the songs, music sheets and more.",

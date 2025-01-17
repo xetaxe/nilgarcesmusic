@@ -19,9 +19,9 @@ function Header() {
           </Link>
         </div>
         <div className="hidden mt-3 pr-10 md:flex lg:grow lg:basis-0 justify-end text-lg gap-8 font-medium">
-          <Link href="#music" className="text-logo-400">MUSIC</Link>
-          <Link href="#bio" className="text-logo-400">BIO</Link>
-          <Link href="#contact" className="text-logo-400">CONTACT</Link>
+          <Link href="/en#music" className="text-logo-400">MUSIC</Link>
+          <Link href="/en#bio" className="text-logo-400">BIO</Link>
+          <Link href="/en#contact" className="text-logo-400">CONTACT</Link>
           <span className="flex justify-center gap-2 pt-1">
             {socialLinks.map((item) => (
               item.name === "Apple Music" || item.name === "Facebook" ? null :

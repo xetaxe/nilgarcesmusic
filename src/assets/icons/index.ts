@@ -1,4 +1,5 @@
 import { AppleMusicIcon } from "./AppleMusicIcon"
+import { TiktokIcon } from "./TiktokIcon"
 import { FacebookIcon } from "./FacebookIcon"
 import { InstagramIcon } from "./InstagramIcon"
 import { SpotifyIcon } from "./SpotifyIcon"
@@ -11,4 +12,4 @@ import { SheetIcon } from "./SheetIcon"
 import { PoemIcon } from "./PoemIcon"
 import { PlayIcon } from "./PlayIcon"
 
-export { SpotifyIcon, AppleMusicIcon, InstagramIcon, YoutubeIcon, FacebookIcon, EngIcon, CatIcon, DonateIcon, DownloadIcon, SheetIcon, PoemIcon, PlayIcon }
+export { SpotifyIcon, AppleMusicIcon, InstagramIcon, YoutubeIcon, FacebookIcon, TiktokIcon, EngIcon, CatIcon, DonateIcon, DownloadIcon, SheetIcon, PoemIcon, PlayIcon }

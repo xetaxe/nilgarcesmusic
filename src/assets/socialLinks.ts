@@ -1,5 +1,5 @@
 import { SVGProps } from 'react'
-import { SpotifyIcon, AppleMusicIcon, InstagramIcon, YoutubeIcon, FacebookIcon } from "./icons";
+import { SpotifyIcon, AppleMusicIcon, InstagramIcon, YoutubeIcon, FacebookIcon, TiktokIcon } from "./icons";
 
 export const socialLinks = [
   {
@@ -8,9 +8,9 @@ export const socialLinks = [
     icon: (props: SVGProps<SVGSVGElement>) => InstagramIcon(props)
   },
   {
-    name: "Facebook",
-    href: "https://www.facebook.com/nilgarces",
-    icon: (props: SVGProps<SVGSVGElement>) => FacebookIcon(props)
+    name: "TikTok",
+    href: "https://www.tiktok.com/@nil.garces",
+    icon: (props: SVGProps<SVGSVGElement>) => TiktokIcon(props)
   },
   {
     name: "Spotify",
@@ -21,6 +21,11 @@ export const socialLinks = [
     name: "YouTube",
     href: "https://www.youtube.com/@nilgarces",
     icon: (props: SVGProps<SVGSVGElement>) => YoutubeIcon(props)
+  },
+  {
+    name: "Facebook",
+    href: "https://www.facebook.com/nilgarces",
+    icon: (props: SVGProps<SVGSVGElement>) => FacebookIcon(props)
   },
   {
     name: "Apple Music",

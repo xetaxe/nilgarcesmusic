@@ -7,30 +7,6 @@ import background4 from '@/assets/img/background4.jpg'
 import { poems } from '@/data/poems'
 import { logoFont } from '@/styles/fonts'
 import Link from 'next/link'
-import { Metadata } from 'next'
-
-export const metadata: Metadata = {
-  title: "Nil Garcés - Poemes",
-  description: "Música per guitarra. Descarrega les cançons, partitures i més.",
-  authors: { name: "Nil Garcés", url: "https://nilgarces.com" },
-  keywords: [ "Nil Garcés", "música", "guitarra", "instrumental", "guitarra clàssica", "Nil música"],
-  metadataBase: new URL("https://nilgarces.com"),
-  openGraph: {
-    title: "Nil Garcés - Poemes",
-    description: "Música per guitarra. Descarrega les cançons, partitures i més.",
-    url: "https://nilgarces.com",
-    images: [
-      {
-        url: "https://nilgarces.com/og_img.jpg",
-        width: 1200,
-        height: 630,
-      },
-    ],
-    locale: "ca_ES",
-    alternateLocale: "es_ES",
-    type: "website",
-  },
-}
 
 export async function generateStaticParams() {
  
@@ -48,7 +24,7 @@ export default function Page({ params }: { params: { poem_id: string } }) {
   return (
     <>
       <div className="absolute z-10 inset-x-0 top-6 text-center">
-        <Link href="" className="inline-block">
+        <Link href="/en" className="inline-block">
           <svg aria-hidden="true" viewBox="0 0 183 48" className={`h-12 w-auto ${logoFont.className} text-5xl`}>
             <text x="0" y="35" style={{fill: "#2d1f12"}}>
               Nil Garcés
