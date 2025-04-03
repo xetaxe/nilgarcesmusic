@@ -157,13 +157,13 @@ export const albums: Album[] = [
     engDescription: "Collection of 8 versions of existing songs, adapted for solo guitar. All the pieces, from various origins, are characterized by their tranquil and familiar sound.",
     img: "/versions.jpg",
     year: 2018,
-    spotifyLink: "https://open.spotify.com/intl-es/album/3VsXXCGpDk4DmhfqFq0U7k?si=7aQXHg5sTL-dLGCXJRz02g",
+    spotifyLink: "https://open.spotify.com/intl-es/album/2699M4nijbfOqZ7IdUYXu6?si=LgRglsEnThSi1zuKrn0Ovw",
     youtubeLink: "https://www.youtube.com/watch?v=NfcBHuHtOe0",
     songs: [
       {
         number: 1,
         title: "Reflections in D",
-        link: "https://open.spotify.com/embed/track/0pr5jWaqNWLHAeGCm8vXek?utm_source=generator",
+        link: "https://open.spotify.com/embed/track/0P1khNiNsJYhdI8wehob5h?utm_source=generator",
         download: "https://docs.google.com/uc?export=download&id=1qmxWYNm76UKBJOApkw4l86cetFTdmhi7",
         sheet: "https://docs.google.com/file/d/1X_Vn3TBTaLwjSm7K4-rYKFMNtMY3d8pj/view"
       },
@@ -171,47 +171,47 @@ export const albums: Album[] = [
         number: 2,
         title: "Cançó de suburbi",
         engTitle: "Song from the Suburbs",
-        link: "https://open.spotify.com/embed/track/1lU6cuUOs6ys7CivnOrNvZ?utm_source=generator",
+        link: "https://open.spotify.com/embed/track/7Elh2aI0ypmpA0XkOIiGvr?utm_source=generator",
         download: "https://docs.google.com/uc?export=download&id=1XqJPpe5nhk1zKlsn4a6Bu5W5SUWsox1g",
         sheet: "https://docs.google.com/file/d/1cmJp4qIJbs4uTEKU2w74gEyQCwVy6s1C/view"
       },
       {
         number: 3,
         title: "Bad Day",
-        link: "https://open.spotify.com/embed/track/6HJcooYZESsRgHhxIuU72W?utm_source=generator",
+        link: "https://open.spotify.com/embed/track/5N9t6UjxU3pbgbe8ntYtck?utm_source=generator",
         download: "https://docs.google.com/uc?export=download&id=1ASRsC-Sc9_RqO7k_7Yzljecz21FdGt8b",
         sheet: "https://docs.google.com/file/d/12rJ_CjRQHw48sQaghsBsBBve8c8sNpDo/view"
       },
       {
         number: 4,
         title: "The Girl from Ipanema",
-        link: "https://open.spotify.com/embed/track/4TYO1BHNGKGNxxjbQoUmoV?utm_source=generator",
+        link: "https://open.spotify.com/embed/track/3TlqbLo1LCcimCSZudMCJh?utm_source=generator",
         download: "https://docs.google.com/uc?export=download&id=1ECQ5VhZ7rA870_VEQ8HByxkON09Mb0bS"
       },
       {
         number: 5,
         title: "Waltz of Chihiro",
-        link: "https://open.spotify.com/embed/track/1LYJUcO70NElhuh8XaeCqt?utm_source=generator",
+        link: "https://open.spotify.com/embed/track/7ASB0sA4rpe0nMwXcJbt5i?utm_source=generator",
         download: "https://docs.google.com/uc?export=download&id=12WBZlLQIRt4wSlhDHGhYFSBN3GExRK1h",
         sheet: "https://docs.google.com/file/d/1XyVP17cpisl-CW9QOAtYxiJ4evIwmaO0/view"
       },
       {
         number: 6,
         title: "Fletcher's Song in a Club",
-        link: "https://open.spotify.com/embed/track/0ffSOHoyGYANibe10in9vO?utm_source=generator",
+        link: "https://open.spotify.com/embed/track/3d5ndV2Q1pyFvZ9FVfQ1eK?utm_source=generator",
         download: "https://docs.google.com/uc?export=download&id=1VMQ3xXdq5Dp_ycleOAvORwF27zzaJlzT",
         sheet: "https://docs.google.com/file/d/1ZRsW9gNUZPBnt7x6NnwgYTGHn8gqchbf/view"
       },
       {
         number: 7,
         title: "You Raise Me Up",
-        link: "https://open.spotify.com/embed/track/1Bsma3u2BrvQSeqLjdDFKx?utm_source=generator",
+        link: "https://open.spotify.com/embed/track/7xfMQopRqBWdHSCMx5BpOa?utm_source=generator",
         download: "https://docs.google.com/uc?export=download&id=1c3QSf0hyN7AAdelMOFjUs4c02KwgSWvV"
       },
       {
         number: 8,
         title: "What a Wonderful World",
-        link: "https://open.spotify.com/embed/track/6a3RLIX0On6HsZXGe7mg3W?utm_source=generator",
+        link: "https://open.spotify.com/embed/track/3g4bPzeHygSBBhUKPzsH6i?utm_source=generator",
         download: "https://docs.google.com/uc?export=download&id=1KR7Phb_c20Cv_JHSE9mekAg-8JMz5am7",
         sheet: "https://docs.google.com/file/d/1Jx3iqaTXpMs2TKzELh2pmUSTlikXIEAY/view"
       }
