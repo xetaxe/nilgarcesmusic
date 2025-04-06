@@ -112,7 +112,7 @@ export function Music() {
           <div className="mx-auto max-w-[80ch] text-justify py-8">
             All soundtracks can be freely played and downloaded below in good quality. Additionally, all the music sheets that I have had the time to transcribe are also available.<br/><br/>
             
-            If you can and want to donate to help keep this project possible, you can do so from the link <Link href="#donate" className=" font-bold text-slate-900 underline">below ↓</Link>.
+            If you can and want to donate to help keep this project possible, you can do so from the link <Link href="/en#donate" className=" font-bold text-slate-900 underline">below ↓</Link>.
           </div>
 
           <div className="flex gap-4 pb-4 my-4 lg:justify-center overflow-x-auto">
@@ -202,7 +202,7 @@ export function Music() {
                     </li>
                     <li className="flex">
                       <Link
-                        href="/#donate"
+                        href="/en#donate"
                         className="group flex items-center"
                         aria-label="donate"
                         title="Donate"
