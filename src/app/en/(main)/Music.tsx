@@ -115,7 +115,7 @@ export function Music() {
             If you can and want to donate to help keep this project possible, you can do so from the link <Link href="#donate" className=" font-bold text-slate-900 underline">below ↓</Link>.
           </div>
 
-          <div className="flex gap-4 pb-4 my-4 lg:justify-center overflow-x-scroll">
+          <div className="flex gap-4 pb-4 my-4 lg:justify-center overflow-x-auto">
             {albums.map((album, index) => (
               <div className={`z-10 flex flex-col p-4 lg:border-slate-200 cursor-pointer rounded-lg ${index === currentAlbum ? "bg-bg-500": "bg-bg-400"}`} key={album.title} onClick={() => setCurrentAlbum(index)}>
                 <span className="relative mx-auto block w-40 overflow-hidden rounded-md bg-slate-200 shadow-md shadow-slate-200 aspect-square" aria-label={album.title}
@@ -219,7 +219,7 @@ export function Music() {
               <div className="relative">
                 <div className="sm:px-4 py-4 md:pt-8">
                   <h1 className="text-xl text-center font-bold leading-7 text-slate-900">
-                    Cançons
+                    Songs
                   </h1>
                   <div className="divide-y mt-2 lg:mt-4">
                     {albums[currentAlbum].songs.map((song) => (
