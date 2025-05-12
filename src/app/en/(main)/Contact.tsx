@@ -9,7 +9,7 @@ export function Contact() {
         </h1>
           <p className="py-4">
             <strong>
-              <a href="mailto:xetaxe@gmail.com">xetaxe@gmail.com</a>
+              <a href="mailto:nilgarcesmusic@gmail.com">nilgarcesmusic@gmail.com</a>
             </strong>
             <span className=""> → Direct contact
             </span>
