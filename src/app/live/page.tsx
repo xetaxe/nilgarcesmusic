@@ -5,34 +5,76 @@
 // joan reig 27.30
 // alba luz
 
+import { logoFont } from '@/styles/fonts'
+
 export default function Live() {
   return (
-    <div className="bg-white text-gray-800">
+    <>
       {/* Hero */}
-      <section
-        className="h-screen bg-cover bg-center text-white"
-        style={{
-          backgroundImage: "url('/live/hero.jpg')",
-        }}
-      >
-        <div className="flex h-full flex-col items-center justify-center bg-black bg-opacity-60 px-4 text-center">
-          <h1 className="mb-4 text-4xl font-bold md:text-6xl">Nil Garcés</h1>
-          <p className="mb-6 text-xl md:text-2xl">
-            Música en viu per fer especial el teu esdeveniment
-          </p>
-          <div className="space-x-4">
-            <a
-              href="#audio"
-              className="rounded-full bg-red-500 px-6 py-2 text-white hover:bg-red-600"
-            >
-              Escolta'm
+      <section className="relative min-h-screen">
+        <div className="relative mx-auto h-full max-w-[1920px] bg-[url('/live/hero3.jpg')] bg-cover bg-top md:bg-[url('/live/hero2.jpg')]">
+          <div className="absolute inset-x-0 top-0 flex justify-end gap-6 bg-black2 px-6 py-3 text-white">
+            <a href="/live">
+              <span className="flex items-center gap-2">
+                Castellano
+                <svg xmlns="http://www.w3.org/2000/svg" height="16" width="24">
+                  <rect width="24" height="16" fill="#c60b1e" />
+                  <rect width="24" height="8" y="4" fill="#ffc400" />
+                </svg>
+              </span>
             </a>
-            <a
-              href="#contacte"
-              className="rounded-full bg-white px-6 py-2 text-gray-800 hover:bg-gray-100"
-            >
-              Contacta'm
+            <a href="/live">
+              <span className="flex items-center gap-2">
+                English
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 60 40"
+                  width="24"
+                  height="16"
+                >
+                  <defs>
+                    <clipPath id="t">
+                      <path d="M30,15H60V30zM30,15V30H0zM30,15H0V0zM30,15V0H60z" />
+                    </clipPath>
+                  </defs>
+                  <rect width="60" height="40" style={{ fill: '#00247d' }} />
+                  <g
+                    style={{
+                      stroke: '#ffffff',
+                      strokeWidth: '6.93225527',
+                      fill: 'none',
+                    }}
+                  >
+                    <path d="M0,0L60,40M60,0L0,40" />
+                    <path
+                      d="M0,0L60,30M60,0L0,30"
+                      style={{ stroke: '#cf142b', strokeWidth: '4' }}
+                      clipPath="url(#t)"
+                      transform="scale(1,1.3333333)"
+                    />
+                    <path
+                      d="M30,0V40M0,20H60"
+                      style={{ strokeWidth: '11.55375878' }}
+                    />
+                    <path d="M30,0V40M0,20H60" style={{ stroke: '#cf142b' }} />
+                  </g>
+                </svg>
+              </span>
             </a>
+          </div>
+          <div className="absolute flex flex-col justify-stretch gap-2 text-center text-black2 max-md:inset-x-0 max-md:bottom-0 max-md:bg-white max-md:bg-opacity-80 max-md:py-6 md:right-[10%] md:top-1/4 lg:right-[13%]">
+            <h1
+              className={`text-7xl tracking-wider  2xl:text-8xl ${logoFont.className}`}
+            >
+              Nil Garcés
+            </h1>
+            <span className="uppercase tracking-[4px] text-[#3a4a45] 2xl:tracking-[6px]">
+              Guitarrista i compositor
+            </span>
+            <span className="flex justify-center gap-4 py-4">
+              <button className='uppercase border-2 border-black2 bg-black2 font-medium text-white py-2 w-32 rounded-full'>+ info</button>
+              <button className='uppercase border-2 border-black2 bg-transparent font-medium text-black2 py-2 w-32 rounded-full'>Contacta</button>
+            </span>
           </div>
         </div>
       </section>
@@ -111,41 +153,16 @@ export default function Live() {
       {/* Contacte */}
       <section id="contacte" className="mx-auto max-w-3xl px-6 py-16">
         <h2 className="mb-6 text-center text-3xl font-bold">Contacte</h2>
-        <form className="space-y-4">
-          <input
-            className="w-full rounded border border-gray-300 p-3"
-            type="text"
-            placeholder="Nom"
-            required
-          />
-          <input
-            className="w-full rounded border border-gray-300 p-3"
-            type="email"
-            placeholder="Correu electrònic"
-            required
-          />
-          <textarea
-            className="w-full rounded border border-gray-300 p-3"
-            placeholder="Missatge"
-            required
-          ></textarea>
-          <button
-            className="rounded-full bg-red-500 px-6 py-2 text-white hover:bg-red-600"
-            type="submit"
-          >
-            Envia
-          </button>
-        </form>
         <div className="mt-6 text-center">
-          <p>📞 +34 600 000 000 · 📧 niltorres.music@gmail.com</p>
-          <p>📍 Catalunya i voltants</p>
+          <p>📞 +34 649 372 689 · 📧 nilgarcesmusic@gmail.com</p>
+          <p>📍 Barcelona i voltants</p>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-black py-4 text-center text-white">
-        © Nil Torres · Música en directe per a moments únics
+      <footer className="bg-black2 py-4 text-center text-white">
+        © Nil Garcés
       </footer>
-    </div>
+    </>
   )
 }
