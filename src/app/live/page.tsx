@@ -120,7 +120,7 @@ export default function Live() {
       {/* Resum */}
       <section id="about">
         <div className="text-black2 mx-auto max-w-[1280px] px-4 py-20 md:px-6">
-          <div className="mx-auto max-w-[60ch] text-center text-lg font-medium ">
+          <div className="mx-auto max-w-[60ch] text-center text-lg font-medium">
             <p>
               Sóc un guitarrista professional amb anys d'experiència tocant en
               públic i en hotels, restaurants i altres esdeveniments.
@@ -145,12 +145,12 @@ export default function Live() {
       <section className="text-black2">
         <div className="mx-auto max-w-[1280px] px-4 py-12 md:px-6 md:py-20">
           <h2 className="mb-12 text-center text-3xl font-bold">Projecte</h2>
-          <div className="flex flex-col-reverse items-center justify-center gap-12 lg:flex-row text-lg">
+          <div className="flex flex-col-reverse items-center lg:items-start justify-center gap-12 lg:flex-row text-lg">
             <div className="basis-2/5">
               <ImageCarousel />
             </div>
             <div className="basis-3/5">
-              <ul className="mt-4 list-inside list-disc space-y-4 lg:text-lg">
+              <ul className="mt-4 list-inside list-disc space-y-4 text-lg max-w-[70ch] mx-auto px-4">
                 <li>
                   <span className="font-semibold">Música:</span> composicions
                   pròpies d'estil mediterrani, peces calmades de guitarra
@@ -179,13 +179,13 @@ export default function Live() {
           <h2 className="text-center text-3xl font-bold">Escolta'm</h2>
           <div className="mx-auto max-w-[75ch] py-12 text-center text-lg">
             Per més informació sobre les meves composicions i projecte
-            artístic-creatiu, podeu consultar la seva pàgina principal fent clic{' '}
+            artístic-creatiu, podeu consultar la pàgina principal fent clic{' '}
             <a
               href="https://nilgarces.com/"
               className="underline"
               target="_blank"
             >
-              aquí↗️
+              aquí ↗
             </a>
           </div>
           <div className="grid items-center gap-12 md:grid-cols-2">

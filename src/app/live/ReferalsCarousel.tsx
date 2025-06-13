@@ -79,6 +79,14 @@ export default function ReferalsCarousel({
       </button>
 
       {/* Navigation dots */}
+      <div className="mt-8 flex md:hidden justify-center space-x-4">
+        {reviews.map((_, i) => (
+          <button
+            key={i}
+            className="h-2 w-2 rounded-full bg-gray2"
+          ></button>
+        ))}
+      </div>
       <div className="mt-20 hidden md:flex justify-center space-x-4">
         {grouped.map((_, i) => (
           <button
