@@ -32,6 +32,8 @@ export default {
         '2xl': '40rem',
       },
       colors: {
+        black2: '#1a1f1d',
+        gray2: '#3a4a45',
         logo: {
           300: '#3c4832',
           400: '#2d1f12',
