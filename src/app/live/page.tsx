@@ -1,6 +1,7 @@
 import { logoFont } from '@/styles/fonts'
 import ImageCarousel from './ImageCarousel'
 import ReferalsCarousel from './ReferalsCarousel'
+import { Metadata } from 'next'
 
 const reviews = [
   {
@@ -34,6 +35,33 @@ const reviews = [
   //   headline: 'Músic i cantautor',
   // },
 ]
+
+export const metadata: Metadata = {
+  title: "Nil Garcés - LIVE",
+  description: "Música per esdeveniments",
+  openGraph: {
+    title: "Nil Garcés - LIVE",
+    description: "Música per esdeveniments",
+    images: [
+      {
+        url: "https://nilgarces.com/live/hero2.jpg",
+        width: 2048,
+        height: 1272,
+      },
+    ],
+  },
+  twitter: {
+    title: "Nil Garcés - LIVE",
+    description: "Música per esdeveniments",
+    images: [
+      {
+        url: "https://nilgarces.com/live/hero2.jpg",
+        width: 2048,
+        height: 1272,
+      },
+    ]
+  },
+}
 
 export default function Live() {
   return (
