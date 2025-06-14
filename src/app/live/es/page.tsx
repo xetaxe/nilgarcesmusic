@@ -1,17 +1,17 @@
 import { logoFont } from '@/styles/fonts'
-import ImageCarousel from './ImageCarousel'
-import ReferalsCarousel from './ReferalsCarousel'
+import ImageCarousel from '../ImageCarousel'
+import ReferalsCarousel from '../ReferalsCarousel'
 
 const reviews = [
   {
-    text: "Va ser un plaer comptar amb el Nil durant l’Hora del planeta. La seva música va aportar l'atmosfera càlida i especial que el caràcter de la vetllada demanava, els clients van gaudir de l'experiència i nosaltres també. Gràcies per fer-ho tan fàcil i bonic!",
+    text: 'Fue un placer contar con Nil durante la Hora del planeta. Su música aportó la atmósfera cálida y especial que el carácter de la velada requería, los clientes disfrutaron de la experiencia y nosotros también. Gracias por hacerlo tan fácil y bonito!',
     name: 'Alba González',
     headline: 'Guest experience manager, Hotel Meliá',
   },
   {
-    text: 'Gràcies Nil per aquesta versió de Cançó de Suburbi tan ben trobada.',
+    text: 'Gracias Nil por esta versión de Cançó de Suburbi tan bien conseguida.',
     name: 'Toti Soler',
-    headline: "Guitarrista, acompanyant d'Ovidi Montllor",
+    headline: 'Guitarrista, acompañante de Ovidi Montllor',
   },
   // {
   //   text: 'Missatge genèric.',
@@ -19,14 +19,14 @@ const reviews = [
   //   headline: 'Cantautora i poeta',
   // },
   {
-    text: 'Et vam estar escoltant de tornada del concert i ens va agradar moltíssim, gràcies!',
+    text: 'Te estuvimos escuchando de vuelta del concierto y nos gustó muchísimo, gracias!',
     name: 'Jo Jet i Maria Ribot',
-    headline: "Grup destacat de música d'autor",
+    headline: 'Grupo destacado de música de autor',
   },
   {
-    text: 'I no tens pensat en algun moment agrupar aquestes peces teves en format físic, per a que les poguem comprar?',
+    text: 'Y no tienes pensado en algún momento agrupar estas piezas que tienes en formato físico, para que las podamos comprar?',
     name: 'Joan Reig',
-    headline: "Músic, bateria d'Els Pets",
+    headline: "Músico, batería del grupo Els Pets",
   },
   // {
   //   text: 'Missatge genèric',
@@ -42,12 +42,21 @@ export default function Live() {
       <section className="relative min-h-screen">
         <div className="relative mx-auto h-full max-w-[1920px] bg-[url('/live/hero3.jpg')] bg-cover bg-top md:bg-[url('/live/hero2.jpg')]">
           <div className="bg-black2 absolute inset-x-0 top-0 flex justify-end gap-6 px-6 py-3 text-white">
-            <a href="/live/es">
+            <a href="/live">
               <span className="flex items-center gap-2">
-                Castellano
-                <svg xmlns="http://www.w3.org/2000/svg" height="16" width="24">
-                  <rect width="24" height="16" fill="#c60b1e" />
-                  <rect width="24" height="8" y="4" fill="#ffc400" />
+                Català
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 810 540"
+                  width="24"
+                  height="16"
+                >
+                  <rect width="810" height="540" fill="#FCDD09" />
+                  <path
+                    stroke="#DA121A"
+                    strokeWidth="60"
+                    d="M0,90H810m0,120H0m0,120H810m0,120H0"
+                  />
                 </svg>
               </span>
             </a>
@@ -97,7 +106,7 @@ export default function Live() {
               Nil Garcés
             </h1>
             <span className="uppercase tracking-[4px] text-[#3a4a45] 2xl:tracking-[6px]">
-              Guitarrista i compositor
+              Guitarrista y compositor
             </span>
             <span className="flex justify-center gap-4 py-4">
               <a
@@ -122,13 +131,13 @@ export default function Live() {
         <div className="text-black2 mx-auto max-w-[1280px] px-4 py-20 md:px-6">
           <div className="mx-auto max-w-[60ch] text-center text-lg font-medium">
             <p>
-              Sóc un guitarrista professional amb anys d'experiència tocant en
-              públic i en hotels, restaurants i altres esdeveniments.
+              Soy un guitarrista profesional con años de experiencia tocando en
+              público y en hoteles, restaurantes y otros eventos.
             </p>
             <p className="mt-4">
-              Transforma el teu espai en una experiència única amb una sonoritat
-              que captiva per la seva delicadesa, sensibilitat i elegància a
-              parts iguals.
+              Transforma tu espacio en una experiencia única con una sonoridad
+              que cautiva por su delicadeza, sensibilidad y elegancia a partes
+              iguales.
             </p>
           </div>
         </div>
@@ -144,7 +153,7 @@ export default function Live() {
       {/* Projecte */}
       <section className="text-black2">
         <div className="mx-auto max-w-[1280px] px-4 py-12 md:px-6 md:py-20">
-          <h2 className="mb-12 text-center text-3xl font-bold">Projecte</h2>
+          <h2 className="mb-12 text-center text-3xl font-bold">Proyecto</h2>
           <div className="flex flex-col-reverse items-center justify-center gap-12 text-lg lg:flex-row lg:items-start">
             <div className="basis-2/5">
               <ImageCarousel />
@@ -152,20 +161,22 @@ export default function Live() {
             <div className="basis-3/5">
               <ul className="mx-auto mt-4 max-w-[70ch] list-inside list-none space-y-4 px-4 text-lg">
                 <li>
-                  <span className="font-semibold">Música:</span> composicions
-                  pròpies d'estil mediterrani, peces calmades de guitarra
-                  clàssica, versions de jazz i pop. Es pot adaptar en funció del lloc i
-                  esdeveniment.
+                  <span className="font-semibold">Música:</span> composiciones
+                  propias de estilo mediterráneo, piezas tranquilas de guitarra
+                  clásica, versiones de jazz y pop. Se puede adaptar en función
+                  del lugar y el evento.
                 </li>
                 <li>
-                  <span className="font-semibold">Espais:</span> els més adequats serien lounges,
-                  chill-outs, restaurants elegants, recepcions,... llocs on la gent vol relaxar-se o gaudir d'una estona agradable.
+                  <span className="font-semibold">Espacios:</span> los más
+                  adecuados serían lounges, chill-outs, restaurantes elegantes,
+                  recepciones,... lugares donde la gente quiere relajarse o
+                  disfrutar de un momento agradable.
                 </li>
                 <li>
-                  <span className="font-semibold">Format:</span> guitarra
-                  clàssica instrumental, amplificable. Preferiblement amb
-                  sistema de so, si no compto amb un amplificador portàtil
-                  petit.
+                  <span className="font-semibold">Formato:</span> guitarra
+                  clásica instrumental, amplificable. Preferiblemente con
+                  sistema de sonido, si no, cuento con un amplificador portátil
+                  pequeño.
                 </li>
               </ul>
             </div>
@@ -177,12 +188,10 @@ export default function Live() {
       <section id="about" className="bg-dark2 py-12 text-gray-100 md:py-20">
         <div className="mx-auto max-w-[1280px] px-4 md:px-6">
           <h2 className="text-center text-3xl font-bold">
-            Descobreix la meva música
+            Descubre mi música
           </h2>
           <div className="mx-auto max-w-[75ch] py-12 text-center text-lg">
-            Per més informació sobre les meves composicions, treballs publicats
-            i projecte artístic-creatiu, podeu consultar la pàgina principal
-            fent clic{' '}
+          Para más información sobre mis composiciones, trabajos publicados y proyecto artístico-creativo, puedes consultar la página principal haciendo clic{' '}
             <a
               href="https://nilgarces.com/"
               className="underline"
@@ -199,8 +208,8 @@ export default function Live() {
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
               loading="lazy"
             ></iframe>
-            <div className='flex flex-col gap-4'>
-              <h3 className="text-center text-xl font-medium">Vídeos</h3>
+            <div className="flex flex-col gap-4">
+              <h3 className="text-center text-xl font-medium">Videos</h3>
               <iframe
                 className="aspect-video w-full"
                 src="https://www.youtube.com/embed/OlnRnAPVHEE"
@@ -220,15 +229,14 @@ export default function Live() {
 
       {/* Contacte */}
       <section id="contact" className="px-4 py-12 md:px-6 md:py-20">
-        <h2 className="mb-12 text-center text-3xl font-bold">Contacte</h2>
+        <h2 className="mb-12 text-center text-3xl font-bold">Contacto</h2>
         <div className="mx-auto mb-12 max-w-[60ch] text-center text-lg">
-          Contacta per saber més detalls, resoldre dubtes o descobrir com
-          ajustar l'experiència al teu cas:
+          Contacta para saber más detalles, resolver dudas o descubrir cómo ajustar la experiencia a tu caso:
         </div>
         <div className="mt-6 flex flex-wrap justify-center gap-6 text-center max-md:flex-col">
           <p>📞 +34 649 372 689 </p>
           <p>📧 nilgarcesmusic@gmail.com</p>
-          <p>📍 Barcelona i voltants</p>
+          <p>📍 Barcelona y alrededores</p>
         </div>
       </section>
 
