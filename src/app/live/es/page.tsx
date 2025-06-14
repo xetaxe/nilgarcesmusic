@@ -60,7 +60,7 @@ export default function Live() {
                 </svg>
               </span>
             </a>
-            {/* <a href="/live">
+            <a href="/live/en">
               <span className="flex items-center gap-2">
                 English
                 <svg
@@ -97,7 +97,7 @@ export default function Live() {
                   </g>
                 </svg>
               </span>
-            </a> */}
+            </a>
           </div>
           <div className="text-black2 absolute flex flex-col justify-stretch gap-2 text-center max-md:inset-x-0 max-md:bottom-0  max-md:bg-gradient-to-b max-md:from-white/70 max-md:to-white max-md:py-6 md:right-[10%] md:top-1/4 lg:right-[13%]">
             <h1
