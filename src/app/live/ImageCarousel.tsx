@@ -34,7 +34,7 @@ export default function ImageCarousel() {
           <img
             key={i}
             src={src}
-            className="w-full flex-shrink-0 object-cover"
+            className="w-full flex-shrink-0 object-cover brightness-[0.9]"
             alt={`Slide ${i + 1}`}
           />
         ))}

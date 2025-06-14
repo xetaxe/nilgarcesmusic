@@ -13,11 +13,11 @@ const reviews = [
     name: 'Toti Soler',
     headline: "Guitarrista, acompanyant d'Ovidi Montllor",
   },
-  {
-    text: 'Missatge genèric.',
-    name: 'Alba Luz',
-    headline: 'Cantautora i poeta',
-  },
+  // {
+  //   text: 'Missatge genèric.',
+  //   name: 'Alba Luz',
+  //   headline: 'Cantautora i poeta',
+  // },
   {
     text: 'Et vam estar escoltant de tornada del concert i ens va agradar moltíssim, gràcies!',
     name: 'Jo Jet i Maria Ribot',
@@ -28,11 +28,11 @@ const reviews = [
     name: 'Joan Reig',
     headline: "Músic, bateria d'Els Pets",
   },
-  {
-    text: 'Missatge genèric',
-    name: 'Pol Orobitg',
-    headline: 'Músic i cantautor',
-  },
+  // {
+  //   text: 'Missatge genèric',
+  //   name: 'Pol Orobitg',
+  //   headline: 'Músic i cantautor',
+  // },
 ]
 
 export default function Live() {
@@ -51,7 +51,7 @@ export default function Live() {
                 </svg>
               </span>
             </a>
-            <a href="/live">
+            {/* <a href="/live">
               <span className="flex items-center gap-2">
                 English
                 <svg
@@ -88,7 +88,7 @@ export default function Live() {
                   </g>
                 </svg>
               </span>
-            </a>
+            </a> */}
           </div>
           <div className="text-black2 absolute flex flex-col justify-stretch gap-2 text-center max-md:inset-x-0 max-md:bottom-0  max-md:bg-gradient-to-b max-md:from-white/70 max-md:to-white max-md:py-6 md:right-[10%] md:top-1/4 lg:right-[13%]">
             <h1
@@ -135,7 +135,7 @@ export default function Live() {
       </section>
 
       {/* Testimonis */}
-      <section className="bg-black2">
+      <section className="bg-dark2">
         <div className="mx-auto max-w-[1280px] px-4 py-20 md:px-6">
           <ReferalsCarousel reviews={reviews} />
         </div>
@@ -145,25 +145,25 @@ export default function Live() {
       <section className="text-black2">
         <div className="mx-auto max-w-[1280px] px-4 py-12 md:px-6 md:py-20">
           <h2 className="mb-12 text-center text-3xl font-bold">Projecte</h2>
-          <div className="flex flex-col-reverse items-center lg:items-start justify-center gap-12 lg:flex-row text-lg">
+          <div className="flex flex-col-reverse items-center justify-center gap-12 text-lg lg:flex-row lg:items-start">
             <div className="basis-2/5">
               <ImageCarousel />
             </div>
             <div className="basis-3/5">
-              <ul className="mt-4 list-inside list-disc space-y-4 text-lg max-w-[70ch] mx-auto px-4">
+              <ul className="mx-auto mt-4 max-w-[70ch] list-inside list-none space-y-4 px-4 text-lg">
                 <li>
                   <span className="font-semibold">Música:</span> composicions
                   pròpies d'estil mediterrani, peces calmades de guitarra
-                  clàssica, versions de jazz i pop. A adaptar segons
-                  l'esdeveniment.
+                  clàssica, versions de jazz i pop. Es pot adaptar en funció del lloc i
+                  esdeveniment.
                 </li>
                 <li>
-                  <span className="font-semibold">Espais:</span> lounges,
-                  chill-outs, restaurants elegants, recepcions,...
+                  <span className="font-semibold">Espais:</span> els més adequats serien lounges,
+                  chill-outs, restaurants elegants, recepcions,... llocs on la gent vol relaxar-se o gaudir d'una estona agradable.
                 </li>
                 <li>
                   <span className="font-semibold">Format:</span> guitarra
-                  clàssica instrumental (es pot amplificar). Preferiblement amb
+                  clàssica instrumental, amplificable. Preferiblement amb
                   sistema de so, si no compto amb un amplificador portàtil
                   petit.
                 </li>
@@ -174,12 +174,15 @@ export default function Live() {
       </section>
 
       {/* Escolta'm */}
-      <section id="about" className="bg-black2 py-12 text-gray-100 md:py-20">
+      <section id="about" className="bg-dark2 py-12 text-gray-100 md:py-20">
         <div className="mx-auto max-w-[1280px] px-4 md:px-6">
-          <h2 className="text-center text-3xl font-bold">Escolta'm</h2>
+          <h2 className="text-center text-3xl font-bold">
+            Descobreix la meva música
+          </h2>
           <div className="mx-auto max-w-[75ch] py-12 text-center text-lg">
-            Per més informació sobre les meves composicions i projecte
-            artístic-creatiu, podeu consultar la pàgina principal fent clic{' '}
+            Per més informació sobre les meves composicions, treballs publicats
+            i projecte artístic-creatiu, podeu consultar la pàgina principal
+            fent clic{' '}
             <a
               href="https://nilgarces.com/"
               className="underline"
@@ -192,16 +195,25 @@ export default function Live() {
             <iframe
               src="https://open.spotify.com/embed/playlist/6m00gAmps9ShiZnJvA8Fak"
               width="100%"
-              height="480"
+              height="600"
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
               loading="lazy"
             ></iframe>
-            <iframe
-              className="aspect-video w-full"
-              src="https://www.youtube.com/embed/cpgxEnzPgUI"
-              title="YouTube video"
-              allowFullScreen
-            ></iframe>
+            <div className='flex flex-col gap-4'>
+              <h3 className="text-center text-xl font-medium">Vídeos</h3>
+              <iframe
+                className="aspect-video w-full"
+                src="https://www.youtube.com/embed/OlnRnAPVHEE"
+                title="YouTube Cançó de suburbi"
+                allowFullScreen
+              ></iframe>
+              <iframe
+                className="aspect-video w-full"
+                src="https://www.youtube.com/embed/cpgxEnzPgUI"
+                title="YouTube Seguirem buscant"
+                allowFullScreen
+              ></iframe>
+            </div>
           </div>
         </div>
       </section>
@@ -209,6 +221,10 @@ export default function Live() {
       {/* Contacte */}
       <section id="contact" className="px-4 py-12 md:px-6 md:py-20">
         <h2 className="mb-12 text-center text-3xl font-bold">Contacte</h2>
+        <div className="mx-auto mb-12 max-w-[60ch] text-center text-lg">
+          Contacta per saber més detalls, resoldre dubtes o descobrir com
+          ajustar l'experiència al teu cas:
+        </div>
         <div className="mt-6 flex flex-wrap justify-center gap-6 text-center max-md:flex-col">
           <p>📞 +34 649 372 689 </p>
           <p>📧 nilgarcesmusic@gmail.com</p>
