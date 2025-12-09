@@ -38,6 +38,7 @@ const reviews = [
 export const metadata: Metadata = {
   title: 'Nil Garcés - LIVE',
   description: 'Música per esdeveniments',
+  metadataBase: new URL("https://nilgarces.com"),
   openGraph: {
     title: 'Nil Garcés - LIVE',
     description: 'Música per esdeveniments',
