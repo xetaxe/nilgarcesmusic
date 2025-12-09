@@ -4,6 +4,7 @@ import { Container } from '@/components/Container'
 import { socialLinks } from '@/assets/socialLinks'
 import MobileMenu from '@/components/MobileMenu'
 import { logoFont } from '@/styles/fonts'
+import BottomBanner from './BottomBanner'
 
 function Header() {
   return (
@@ -75,6 +76,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <main className="flex-auto">
         {children}
       </main>
+      <BottomBanner />
       <Footer/>
     </>
   )

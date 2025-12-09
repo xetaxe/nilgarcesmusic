@@ -22,16 +22,16 @@ export function Hero() {
           <div className="absolute top-[10%] left-[49%] sm:left-[55%] lg:top-[20%] lg:left-1/2 text-right animate-fadein">
             <svg aria-hidden="true" viewBox="0 0 360 72" height="64" width="348" className={`hidden lg:block ${logoFont.className} text-6xl`}>
               <text x="0" y="48" style={{fill: "#2d1f12"}}>
-                El fred i la primavera
+                Breeze & Spring
               </text>
             </svg>
 
-            <svg aria-hidden="true" viewBox="0 0 360 72" height="108" width="348" className={` lg:hidden ${logoFont.className}  text-5xl sm:text-6xl`}>
-              <text x="0" y="24" style={{fill: "#2d1f12"}}>
-                El fred
+            <svg aria-hidden="true" viewBox="0 0 360 140" height="120" width="360" className={` lg:hidden ${logoFont.className}  text-[56px] sm:text-6xl`}>
+              <text x="0" y="48" style={{fill: "#2d1f12"}}>
+                Breeze
               </text>
-              <text x="8" y="80" style={{fill: "#2d1f12"}}>
-                i la primavera
+              <text x="8" y="120" style={{fill: "#2d1f12"}}>
+                & Spring
               </text>
             </svg>
 
