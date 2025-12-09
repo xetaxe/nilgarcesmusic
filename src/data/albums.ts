@@ -14,7 +14,7 @@ export type Album = {
   catDescription: string,
   engDescription: string,
   img: string,
-  year: number,
+  year: number | null,
   spotifyLink: string,
   youtubeLink: string,
   songs: Song[]
@@ -129,25 +129,6 @@ export const albums: Album[] = [
         download: "https://docs.google.com/uc?export=download&id=1PGj9uRFLdqWUAtP1anH8yZRrHMCjnxyb",
         sheet: "https://docs.google.com/file/d/1vNjiz4q0_04xlM9XRn8e0PgBjFtfKGH2/view"
       }
-    ]
-  },
-  {
-    title: "Becaines d'estiu",
-    engTitle: "Summer Siesta",
-    catDescription: "Single compost durant dos dies mandrosos d'estiu, d'aquells xafogosos, on el bon temps se't tira a sobre... la cançó vol captar aquest esperit estiuenc.",
-    engDescription: "Composed during two idle summer days, when the sun yellows the landscape and the heat invades everything, this single attempts to capture the essence of this summery image.",
-    img: "/becaines_destiu.jpg",
-    year: 2017,
-    spotifyLink: "https://open.spotify.com/intl-es/album/3NZSl6a63jfHvzVfrFjsoj?si=xsNTB3nmR9i33vm6IP7RVg",
-    youtubeLink: "https://www.youtube.com/watch?v=ShiWROJ5ARA",
-    songs: [
-      {
-        number: 1,
-        title: "Becaines d'estiu",
-        engTitle: "Summer Siesta",
-        link: "https://open.spotify.com/embed/track/4AhTQjlaS4oAJI5pG1fZBx?utm_source=generator",
-        download: "https://docs.google.com/uc?export=download&id=1oNLDPSTv1JWPKEN8baxMEO8Sug2NqJJk"
-      },
     ]
   },
   {
@@ -268,5 +249,24 @@ export const albums: Album[] = [
         sheet: "https://docs.google.com/file/d/1FNsCtwlkYmKSMbm7POdc4daqdLePDFTW/view"
       }
     ]
-  }
+  },
+  {
+    title: "Singles",
+    engTitle: "",
+    catDescription: "Becaines d'estiu va ser composta durant dos dies mandrosos d'estiu, d'aquells xafogosos, on el bon temps se't tira a sobre... la cançó vol captar aquest esperit estiuenc.",
+    engDescription: "Summer Siesta was composed during two idle summer days, when the sun yellows the landscape and the heat invades everything, this single attempts to capture the essence of this summery image.",
+    img: "/becaines_destiu.jpg",
+    year: null,
+    spotifyLink: "https://open.spotify.com/intl-es/album/3NZSl6a63jfHvzVfrFjsoj?si=xsNTB3nmR9i33vm6IP7RVg",
+    youtubeLink: "https://www.youtube.com/watch?v=ShiWROJ5ARA",
+    songs: [
+      {
+        number: 1,
+        title: "Becaines d'estiu (2017)",
+        engTitle: "Summer Siesta",
+        link: "https://open.spotify.com/embed/track/4AhTQjlaS4oAJI5pG1fZBx?utm_source=generator",
+        download: "https://docs.google.com/uc?export=download&id=1oNLDPSTv1JWPKEN8baxMEO8Sug2NqJJk"
+      },
+    ]
+  },
 ]

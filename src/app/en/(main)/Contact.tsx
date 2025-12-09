@@ -11,8 +11,6 @@ export function Contact() {
             <strong>
               <a href="mailto:nilgarcesmusic@gmail.com">nilgarcesmusic@gmail.com</a>
             </strong>
-            <span className=""> → Direct contact
-            </span>
           </p>
           <p className="py-4">
             Or message me on social media
